@@ -1,0 +1,31 @@
+Priority: optional
+Maintainer: Valentin Lefebvre <valentin.lefebvre@iot.bzh>
+Source: sec-gate-oidc
+Build-Depends: debhelper (>=5), 
+    pkg-config,
+    cmake,
+    g++,
+    sec-gate-fedid-binding-types-dev,
+    libpam0g-dev,
+    libpcsclite-dev,
+    uthash-dev,
+    libcurl4-gnutls-dev,
+    linux-libc-dev,
+    afb-cmake-modules,
+    libjson-c-dev,
+    afb-binding-dev,
+    afb-libhelpers-dev,
+    libafb-dev,
+Standards-Version: 3.8.2
+Homepage: http://git.ovh.iot/redpesk/redpesk-common/sec-gate-oidc.git
+
+Package: sec-gate-oidc
+Section: libs
+Architecture: any
+Description: secure gateway protecting Websockets API imported through --ws-client=xxx as well as HTML5 or REST page/api serve by afb-binder
+
+Package: sec-gate-oidc-dev
+Section: dev
+Architecture: any
+Description: sec-sgate-oidc-devel helping developping binding which use the secure gateway
+Depends: sec-gate-oidc

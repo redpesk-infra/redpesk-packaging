@@ -1,0 +1,18 @@
+afb-supervisor (4.0.1-1) stretch buster; urgency=medium
+
+* Version 4.2.0
+  Bump to version 4.2.0
+
+ -- José Bollo jose.bollo@iot.bzh  Fri, 20 Jan 2023 14:56:22 +0100
+
+* Version 4.1.0
+  - Update copyrights
+  - Update to newer version of libafb
+
+ -- Jose Bollo jose.bollo@iot.bzh  Wed, 20 Apr 2022 15:39:43 +0200
+
+* Version 4.0.1
+  - Version 4.0.1
+
+ -- Jose Bollo jose.bollo@iot.bzh Thu, 1 Jul 2021 11:45:26 +0200 Wed
+

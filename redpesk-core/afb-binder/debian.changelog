@@ -1,0 +1,8 @@
+afb-binder (5.1.1-1) stretch buster; urgency=medium
+
+  * Version 5.0.0
+
+  * Packaging of libafb-binder
+
+  -- José Bollo jose.bollo@iot.bzh  Tue, 10 Jan 2023 15:12:24 +0100
+

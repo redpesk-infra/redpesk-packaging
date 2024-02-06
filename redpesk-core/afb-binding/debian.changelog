@@ -1,0 +1,69 @@
+afb-binding (4.1.8) stretch buster; urgency=medium
+
+* Version 4.1.1
+  - Fix reference to afb_api_new_api
+  - Prepare version 4.1.0
+  - afb-errno: Improve naming (switch ERROR to ERRNO)
+  - afb-errno: Create generic error for applications
+  - afb-binding-x4: Add userdata to requests
+  - Update copyrights
+  - Improve documentation
+  - hello4: Add verbs "eventstart" & "eventstop"
+  - Improve tutorial V4 #1
+  - Add metapkg file
+  - Version 4.1.1
+
+ -- José Bollo jose.bollo@iot.bzh  Thu, 05 Jan 2023 10:21:56 +0100
+
+* Version 4.0.3
+  - [CI] Create MAINTAINERS file
+  - tutorial: Add use of patterned verb's name
+  - Prepare version 4.0.3
+  - C++ wrapper: Fix ambiguity data constructors
+  - C++ wrapper: Improvement of reply, push, broadcast
+  - tutorial v4: Add verb getbin
+  - Prepare specialized interfaces for requests
+  - Introduce specialized HTTP interface
+  - afb-wrap-v[34]: Fix g++ issues
+  - Add tic-tac-toe tutorial
+  - Version 4.0.3
+
+ -- José Bollo jose.bollo@iot.bzh  Fri, 19 Nov 2021 09:38:51 +0100
+
+* Version 4.0.2
+  - Fix of tuto output
+  - Removes direct call interfacing
+  - Improve revision management of interfaces v4
+  - Add predefined type bytearray
+  - [DOC] Better signatures for the reply functions
+  - Add conversion for parameters of requests
+  - Version 4.0.2
+
+ -- Jose Bollo jose.bollo@iot.bzh  Wed, 16 Jun 2021 09:34:32 +0200
+
+* Version 4.0.1
+
+
+ -- José Bollo jose.bollo@iot.bzh  Tue, 13 Apr 2021 16:08:07 +0200
+
+* Version 4.0.0
+  - hello4: Add get file verb
+  - afb-binding-v4: Fix missing definitions
+  - afb-binding-v4: Fix comments
+  - mkbuild: Allow build every where
+  - Version 4.0.0
+
+ -- José Bollo jose.bollo@iot.bzh  Fri, 09 Apr 2021 15:24:59 +0200
+
+* Version 4.0.0beta6
+  - afb-binding-x4-itf: Modify handling of context
+  - More change on managing context
+  - Version 4.0.0beta6
+
+ -- José Bollo jose.bollo@iot.bzh  Thu, 25 Mar 2021 10:19:53 +0100
+
+  * Version 4.0.0beta2
+  - listing of apis
+  - getting LOA
+
+ -- José Bollo <jose.bollo@iot.bzh>  Tue, 10 Dec 2020 12:00:00 +0100

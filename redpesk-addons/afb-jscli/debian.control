@@ -1,0 +1,20 @@
+Priority: medium
+Maintainer: José Bollo <jose.bollo@iot.bzh>
+Source: afb-jscli
+Build-Depends:
+ debhelper (>= 5),
+ dpkg-dev,
+ pkg-config,	
+ cmake,
+ gcc,
+ libsystemd-dev,
+ libafbcli-dev
+Standards-Version: 3.8.2
+Homepage: https://github.com/redpesk-addons/afb-jscli
+
+Package: afb-jscli
+Section: libs
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: afb-jscli
+

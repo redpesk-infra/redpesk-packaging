@@ -1,0 +1,32 @@
+Priority: optional
+Maintainer: Ronan Le Martret <ronan.lemartret@iot.bzh>
+Source: modbus-binding
+Build-Depends:
+ debhelper (>= 5),
+ pkg-config,
+ dpkg-dev,
+ cmake,
+ afb-cmake-modules,
+ afb-binding-dev,
+ libjson-c-dev,
+ librp-utils-static,
+ afb-libhelpers4-static (>= 10.0.5),
+ libmodbus-dev (>= 3.1.6),
+Standards-Version: 3.8.2
+Homepage: https://github.com/redpesk-industrial/modbus-binding
+
+Package: modbus-binding
+Section: libs
+Architecture: any
+Description: Binding to serve an API connected to modbus hardware
+
+Package: modbus-binding-simulation
+Section: libs
+Architecture: any
+Description: Binding to serve an API connected to modbus hardware simulation
+
+Package: modbus-binding-dev
+Section: libs
+Architecture: any
+Depends: modbus-binding-bin
+Description: Binding to serve an API connected to modbus hardware devel

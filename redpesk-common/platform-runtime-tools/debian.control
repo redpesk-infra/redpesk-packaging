@@ -1,0 +1,14 @@
+Source: platform-runtime-tools
+Section: tools
+Priority: optional
+Maintainer: Valentin Lefebvre <valentin.lefebvre@iot.bzh>
+Build-Depends:
+ cmake,
+ gcc, g++,
+ debhelper (>= 10)
+Standards-Version: 4.1.2
+Homepage: http://http://git.ovh.iot/redpesk/redpesk-common/platform-runtime-tools.git
+
+Package: platform-runtime-tools
+Architecture: any
+Description: Cmake project using script file and executable to save hard / soft information during the first boot. It also add services for systemd to run anytime and get information in generated file.

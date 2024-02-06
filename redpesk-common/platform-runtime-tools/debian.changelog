@@ -1,0 +1,5 @@
+platform-runtime-tools (0.1.0-0) stable; urgency=low
+
+  * [service] Correct service to run even if chsmack is not installed
+
+ -- Valentin Lefebvre <valentin.lefebvre@iot.bzh>  Tue, 24 Aug 2021 15:52:38 +0100

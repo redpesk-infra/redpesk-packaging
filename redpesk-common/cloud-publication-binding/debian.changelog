@@ -1,0 +1,5 @@
+cloud-publication-binding (1.0.0) unstable; urgency=low
+
+  * Init build
+
+ -- Corentin LE GALL <corentin.legall@iot.bzh>  Thu, 8 Dec 2020 15:41:25 +0100

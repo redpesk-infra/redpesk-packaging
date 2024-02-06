@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+export VERSION=$(shell grep -E "^Version" ../*dsc | sed -r 's/^.*: (.*)-.*/\1/')
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	dh_auto_configure -- -DVERSION=${VERSION} -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/var/local/lib/afm/applications/ -DCMAKE_INSTALL_LIBDIR:PATH=lib/${DEB_HOST_MULTIARCH}
+
+override_dh_auto_install:
+	dh_auto_install --destdir=/usr/src/packages/BUILD/debian/tmp

@@ -1,0 +1,5 @@
+canbus-plugins-community (0.1.0) unstable; urgency=low
+
+  * init build
+
+ -- Corentin LE GALL <corentin.legall@iot.bzh>  Fri, 6 Nov 2020 9:56:22 +0100

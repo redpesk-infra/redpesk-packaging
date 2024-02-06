@@ -1,0 +1,5 @@
+canopen-binding (1.0.1-1) unstable; urgency=medium
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- unknown <corentin@unknown>  Wed, 16 Dec 2020 15:31:32 +0100

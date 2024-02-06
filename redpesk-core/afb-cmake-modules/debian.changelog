@@ -1,0 +1,15 @@
+afb-cmake-modules (9.90-0) unstable; urgency=low
+
+* Version 10.0.5+23+g8d2e276
+  Bump to Version 10.0.6
+
+ -- José Bollo jose.bollo@iot.bzh  Fri, 20 Jan 2023 10:14:10 +0100
+
+* Version 10.0.5
+  Bump to Version 10.0.5
+
+ -- José Bollo jose.bollo@iot.bzh  Thu, 12 Jan 2023 16:00:23 +0100
+
+  * init build
+
+ -- Romain Forlot <romain.forlot@iot.bzh>  Mon, 5 Oct 2018 10:50:38 +0100

@@ -1,0 +1,29 @@
+Priority: optional
+Maintainer: Corentin Le Gall <corentin.legall@iot.bzh>
+Source: spawn-binding
+Build-Depends:
+ debhelper (>= 5),
+ pkg-config,
+ dpkg-dev,
+ cmake,
+ liblua5.3-dev,
+ uthash-dev,
+ uuid-dev,
+ libcap-ng-dev,
+ libseccomp-dev,
+ afb-cmake-modules,
+ afb-binder,
+ afb-binding-dev,
+ libjson-c-dev,
+ libsystemd-dev,
+ afb-libhelpers-dev,
+ afb-libcontroller-dev,
+ libcurl4-gnutls-dev,
+Standards-Version: 3.8.2
+Homepage: http://git.ovh.iot/redpesk/redpesk-common/spawn-binding
+
+Package: spawn-binding-bin
+Section: libs
+Depends: afb-binder
+Architecture: any
+Description: Binding to serve an API connected to spawn hardware

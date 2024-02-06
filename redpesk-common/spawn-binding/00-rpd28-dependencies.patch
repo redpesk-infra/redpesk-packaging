@@ -1,0 +1,17 @@
+diff --git a/conf.d/cmake/config.cmake b/conf.d/cmake/config.cmake
+index 244ace7..7e83d04 100644
+--- a/conf.d/cmake/config.cmake
++++ b/conf.d/cmake/config.cmake
+@@ -75,9 +75,9 @@ set (PKG_REQUIRED_LIST
+ 	json-c
+ 	libcap-ng
+ 	libseccomp
+-	afb-binding
+-	afb-libhelpers
+-	afb-libcontroller
++	afb-daemon
++	afb-helpers
++	appcontroller
+ )
+ 
+ # Print a helper message when every thing is finished

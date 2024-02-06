@@ -1,0 +1,21 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+# Uncomment this to turn on verbose mode.
+
+export DH_VERBOSE=1
+export VERSION=$(shell grep -E "^Version" $(shell find .. -name BUILD -prune -type d -o -name *dsc -print | head -n1) | sed -r 's/^.*: (.*)-.*/\1/'| sed -r 's/^([0-9]+\.[0-9]+\.[0-9]).*/\1/')
+
+export AFM_DATADIR=/var/local/lib/afm/applications
+export DEST_DIR=/usr/src/packages/BUILD/debian/tmp
+%:
+	dh $@
+	
+override_dh_auto_configure:
+	sed -Ei 's/\$$\{CMAKE_INSTALL_BINDIR\}/\/usr\/bin/gm;' afm-test.cmake
+	sed -Ei 's/\$$\{CMAKE_INSTALL_PREFIX\}\/redpesk/\$$\{CMAKE_INSTALL_PREFIX\}/gm;' conf.d/cmake/config.cmake
+	dh_auto_configure -- -DVERSION=${VERSION} -DCMAKE_INSTALL_PREFIX=${AFM_DATADIR} -DCMAKE_INSTALL_LIBDIR:PATH=lib/${DEB_HOST_MULTIARCH}
+	
+override_dh_auto_install:
+	dh_auto_install --destdir=${DEST_DIR}
+
+override_dh_auto_test:

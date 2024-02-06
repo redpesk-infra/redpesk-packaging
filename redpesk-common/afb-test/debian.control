@@ -1,0 +1,35 @@
+Priority: optional
+Maintainer: romain.forlot <romain.forlot@iot.bzh>
+Source: afb-test
+Build-Depends:
+ debhelper (>= 5),
+ pkg-config,
+ cmake,
+ afb-libcontroller-dev,
+ afb-libhelpers-dev,
+ afb-cmake-modules,
+ afb-binding-dev,
+ lua5.3,
+ liblua5.3-dev,
+ libjson-c-dev,
+ libsystemd-dev,
+Standards-Version: 3.8.2
+Homepage: http://git.ovh.iot/redpesk/redpesk-core/afb-test
+
+Package: afb-test-bin
+Section: libs
+Architecture: any
+Depends: afb-binder, jq, lua5.3, liblua5.3-0
+Description: afb-test is a test framework made to test other binding.
+
+Package: afb-test-dev
+Section: libs
+Architecture: any
+Depends: afb-test-bin
+Description: afb-test-devel
+
+Package: afb-test-test
+Section: libs
+Architecture: any
+Depends: afb-test-bin
+Description: afb-test-test

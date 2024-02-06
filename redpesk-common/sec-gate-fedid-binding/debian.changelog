@@ -1,0 +1,5 @@
+sec-gate-fedid-binding (1.6.1-0) unstable; urgency=low
+
+  * Changing name according to the Redpesk naming
+
+ -- vlefebvre <valentin.lefebvre@iot.bzh>  Tue, 20 May 2021 10:50:38 +0100

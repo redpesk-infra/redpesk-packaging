@@ -1,0 +1,27 @@
+Priority: optional
+Maintainer: unknown <unknown@debian.org>
+Source: cloud-publication-binding
+Build-Depends: debhelper (>= 5),pkg-config,	
+ cmake,
+ afb-cmake-modules,
+ g++,
+ libsystemd-dev (>= 222),
+ afb-binding-dev,
+ libjson-c-dev,
+ liblua5.3-dev,
+ afb-libhelpers-dev,
+ afb-libcontroller-dev,
+Standards-Version: 3.8.2
+Homepage: http://git.ovh.iot/redpesk/redpesk-common/cloud-publication-binding.git
+
+Package: cloud-publication-binding-bin
+Section: libs
+Architecture: any
+Depends: redis-tsdb-bin, afb-binder
+Description: cloud publication binding
+
+Package: cloud-publication-binding-dev
+Section: libs
+Architecture: any
+Depends: cloud-publication-binding-bin
+Description: cloud publication binding dev 

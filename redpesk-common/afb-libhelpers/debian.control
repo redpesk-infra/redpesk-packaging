@@ -1,0 +1,64 @@
+Priority: optional
+Maintainer: romain.forlot <romain.forlot@iot.bzh>
+Source: afb-libhelpers
+Build-Depends:
+ debhelper (>= 5),
+ pkg-config,
+ cmake,
+ libjson-c-dev,
+ libsystemd-dev,
+ libcurl4-gnutls-dev,
+ librp-utils-dev,
+ afb-binding-dev,
+Standards-Version: 3.8.2
+Homepage: http://git.ovh.iot/redpesk/redpesk-common/afb-libhelpers
+
+Package: afb-libhelpers3-dev
+Section: libs
+Architecture: any
+Provides: afb-libhelpers-dev, afb-libhelpers-bin
+Depends: libjson-c-dev, afb-binding-dev, libsystemd-dev
+Description: libafb-helpers provides helpful functions to be used in a binding for the
+ Application Framework Binder (older version 3)
+
+Package: afb-libhelpers4
+Section: libs
+Architecture: any
+Description: libafb-helpers provides helpful functions to be used in a binding for the
+ Application Framework Binder (shared library, version 4)
+
+Package: afb-libhelpers4-headers
+Section: libs
+Architecture: any
+Description: libafb-helpers provides helpful functions to be used in a binding for the
+ Application Framework Binder (headers)
+
+Package: afb-libhelpers4-dev
+Section: libs
+Architecture: any
+Depends: afb-libhelpers4, afb-libhelpers4-headers, libjson-c-dev, afb-binding-dev
+Description: libafb-helpers provides helpful functions to be used in a binding for the
+ Application Framework Binder (development files for using shared library)
+
+Package: afb-libhelpers4-static
+Section: libs
+Architecture: any
+Depends: afb-libhelpers4-headers
+Description: libafb-helpers provides helpful functions to be used in a binding for the
+ Application Framework Binder (development files for using static library)
+
+Package: afb-libhelpers++4
+Section: libs
+Architecture: any
+Depends: afb-libhelpers4
+Description: libafb-helpers provides helpful functions to be used in a binding for the
+ Application Framework Binder (shared library for C++ helpers)
+
+Package: afb-libhelpers++4-dev
+Section: libs
+Architecture: any
+Depends: afb-libhelpers++4, afb-libhelpers4-dev
+Description: libafb-helpers provides helpful functions to be used in a binding for the
+ Application Framework Binder (developement files for C++ helpers)
+
+

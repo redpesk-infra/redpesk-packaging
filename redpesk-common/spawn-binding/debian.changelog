@@ -1,0 +1,5 @@
+spawn-binding (0.0.0-0) unstable; urgency=low
+
+  Fix bug and started documentation
+
+ -- IoT.bzh(iotpkg) <redpesk.list@iot.bzh> Tue, Jan 12 2021 09:50:38 +0100
