@@ -7,7 +7,7 @@ Release: 17%{?dist}
 Summary: Helpers library for AFB
 Group:   Development/Libraries/C and C++
 License: Apache-2.0
-URL: http://git.ovh.iot/redpesk/redpesk-common/libafb-helpers.git
+URL: https://github.com/redpesk-common/libafb-helpers
 Source: %{name}-%{version}.tar.gz
 BuildRequires: pkgconfig(afb-binding)
 BuildRequires: pkgconfig(json-c)

@@ -5,7 +5,7 @@ Architecture: any
 Version: 1.0-0
 Maintainer: ronan.lemartret <ronan.lemartret@iot.bzh>
 Standards-Version: 3.8.2
-Homepage: http://git.ovh.iot/redpesk/redpesk-addons/secure-storage-binding.git
+Homepage: https://github.com/redpesk-addons/secure-storage-binding
 Build-Depends: debhelper (>= 5),
  pkg-config,
  dpkg-dev,

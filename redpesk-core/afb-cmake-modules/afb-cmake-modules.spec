@@ -8,7 +8,7 @@ Release: 7%{?dist}
 License:        Apache-2.0
 Summary:        afb-cmake-modules
 Group:          Development/Libraries/C and C++
-Url:            http://git.ovh.iot/redpesk/redpesk-core/afb-cmake-modules.git
+Url:            https://github.com/redpesk-core/afb-cmake-modules
 Source:         %{name}-%{version}.tar.gz
 BuildRequires:  cmake
 BuildRequires:  gcc-c++

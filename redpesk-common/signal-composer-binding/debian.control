@@ -13,7 +13,7 @@ Build-Depends: debhelper (>= 5),pkg-config,
  afb-libcontroller-dev,
  uuid-dev,
 Standards-Version: 3.8.2
-Homepage: http://git.ovh.iot/redpesk/redpesk-common/signal-composer-binding.git
+Homepage: https://github.com/redpesk-common/signal-composer-binding
 
 Package: signal-composer-binding
 Section: libs

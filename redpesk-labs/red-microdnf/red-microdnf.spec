@@ -4,7 +4,7 @@ Version: 1.0.1
 Release: 5%{?dist}
 Summary:        red-microdnf: for of microdnf
 License:        LGPLv2.1+
-URL:			http://git.ovh.iot/redpesk/redpesk-labs/red-microdnf.git
+URL:			https://github.com/redpesk-labs/red-microdnf
 Source:         %{name}-%{version}.tar.gz
 BuildRequires:	red-pak-devel
 BuildRequires:	libdnf5-devel

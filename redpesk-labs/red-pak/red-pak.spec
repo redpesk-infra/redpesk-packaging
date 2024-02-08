@@ -4,7 +4,7 @@ Version: 2.1.0
 Release: 11%{?dist}
 Summary:        red-pak
 License:        ISC
-URL:			http://git.ovh.iot/redpesk/redpesk-labs/red-pak.git
+URL:			https://github.com/redpesk-labs/red-pak
 Source:         %{name}-%{version}.tar.gz
 BuildRequires:	redrpm-devel
 BuildRequires:  libyaml-devel

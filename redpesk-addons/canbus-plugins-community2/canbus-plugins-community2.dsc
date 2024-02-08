@@ -8,7 +8,7 @@ Architecture: any
 Version: 2.0.2
 Maintainer: unknown <unknown@debian.org>
 Standards-Version: 3.8.2
-Homepage: http://git.ovh.iot/redpesk/redpesk-common/community-can-low-level-plugins.git
+Homepage: https://github.com/redpesk-common/community-can-low-level-plugins
 Build-Depends: debhelper (>= 5),pkg-config,
  cmake (>= 3.10),
  g++,

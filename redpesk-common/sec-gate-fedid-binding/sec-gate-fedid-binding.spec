@@ -4,7 +4,7 @@ Version: 1.0.6
 Release: 12%{?dist}
 License:    GPLv3
 Summary:    Handle Federerated social-id and local user-id.
-URL:        http://git.ovh.iot/redpesk/redpesk-common/sec-gate-fedid-binding.git
+URL:        https://github.com/redpesk-common/sec-gate-fedid-binding
 Source:    %{name}-%{version}.tar.gz
 
 BuildRequires: afm-rpm-macros

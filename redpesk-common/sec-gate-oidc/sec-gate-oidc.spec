@@ -4,7 +4,7 @@ Version:    1.0.11
 Release:    1%{?dist}
 License:    GPLv3
 Summary:    secure gateway protecting Websockets API imported through --ws-client=xxx as well as HTML5 or REST page/api serve by afb-binder
-URL:        http://git.ovh.iot/redpesk/redpesk-common/sec-gate-oidc.git
+URL:        https://github.com/redpesk-common/sec-gate-oidc
 Source:     %{name}-%{version}.tar.gz
 
 Requires: sec-gate-fedid-binding-types-devel

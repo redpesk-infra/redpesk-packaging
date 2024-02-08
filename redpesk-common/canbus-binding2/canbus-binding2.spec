@@ -8,7 +8,7 @@ Release: 5%{?dist}
 Summary: Signal composer API connected to low level AGL services
 Group:   Development/Libraries/C and C++
 License: APL2.0
-URL: http://git.ovh.iot/redpesk/redpesk-common/canbus-binding.git
+URL: https://github.com/redpesk-common/canbus-binding
 Source: %{name}-%{version}.tar.gz
 
 Conflicts: %{_name}

@@ -5,7 +5,7 @@ Architecture: any
 Version: 2.0.0
 Maintainer: unknown <unknown@debian.org>
 Standards-Version: 3.8.2
-Homepage: http://git.ovh.iot/redpesk/redpesk-common/canbus-generator.git
+Homepage: https://github.com/redpesk-common/canbus-generator
 Build-Depends: debhelper (>= 5),pkg-config,	
  cmake,
  afb-cmake-modules,

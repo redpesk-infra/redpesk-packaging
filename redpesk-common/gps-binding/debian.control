@@ -16,7 +16,7 @@ Build-Depends: debhelper (>= 5),pkg-config,
  libgps-dev,
  liburcu-dev,
 Standards-Version: 3.8.2
-Homepage: http://git.ovh.iot/redpesk/redpesk-common/gps-binding.git
+Homepage: https://github.com/redpesk-common/gps-binding
 
 Package: gps-binding
 Section: libs

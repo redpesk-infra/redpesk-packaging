@@ -6,7 +6,7 @@ Release: 6%{?dist}
 Summary: Generate canbus-plugins source files.
 Group:          Development/Libraries/C and C++
 License: APL2.0
-URL: http://git.ovh.iot/redpesk/redpesk-common/canbus-generator.git
+URL: https://github.com/redpesk-common/canbus-generator
 Source: %{name}-%{version}.tar.gz
 
 BuildRequires:  afm-rpm-macros

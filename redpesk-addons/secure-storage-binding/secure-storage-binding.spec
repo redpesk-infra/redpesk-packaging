@@ -5,7 +5,7 @@ Release: 0%{?dist}
 Summary: Binding provide a database API with key/value semantics
 Group:   Development/Libraries/C and C++
 License:  Apache-2.0
-URL: http://git.ovh.iot/redpesk/redpesk-addons/secure-storage-binding.git
+URL: https://github.com/redpesk-addons/secure-storage-binding
 Source: %{name}-%{version}.tar.gz
 
 BuildRequires:  afm-rpm-macros

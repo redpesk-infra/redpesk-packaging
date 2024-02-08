@@ -5,7 +5,7 @@ Architecture: any
 Version: 1.0.1
 Maintainer: Marc-Antoine Riou <marc-antoine.riou@iot.bzh>
 Standards-Version: 3.8.2
-Homepage: http://git.ovh.iot/redpesk/redpesk-common/signal-composer-binding.git
+Homepage: https://github.com/redpesk-common/signal-composer-binding
 Build-Depends: debhelper (>= 5),pkg-config,
  cmake,
  afb-cmake-modules,

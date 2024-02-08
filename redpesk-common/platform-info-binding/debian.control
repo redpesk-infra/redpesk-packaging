@@ -12,7 +12,7 @@ Build-Depends: debhelper (>=5), pkg-config,
     afb-libhelpers-dev,
     platform-runtime-tools
 Standards-Version: 3.8.2
-Homepage: http://git.ovh.iot/redpesk/redpesk-common/platform-info-binding.git
+Homepage: https://github.com/redpesk-common/platform-info-binding
 
 Package:  platform-info-binding-bin
 Section: libs

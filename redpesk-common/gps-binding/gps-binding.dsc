@@ -5,7 +5,7 @@ Architecture: any
 Version: 1.1.2
 Maintainer: Aymeric Aillet <aymeric.aillet@iot.bzh>
 Standards-Version: 3.8.2
-Homepage: http://git.ovh.iot/redpesk/redpesk-common/gps-binding.git
+Homepage: https://github.com/redpesk-common/gps-binding
 Build-Depends: debhelper (>= 5),pkg-config,
  cmake,
  afb-cmake-modules,

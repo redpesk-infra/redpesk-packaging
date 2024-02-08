@@ -17,7 +17,7 @@ Build-Depends:
  afb-libcontroller-dev,
  libdb-dev,
 Standards-Version: 3.8.2
-Homepage: http://git.ovh.iot/redpesk/redpesk-addons/secure-storage-binding.git
+Homepage: https://github.com/redpesk-addons/secure-storage-binding
 
 Package: secure-storage-binding
 Section: libs

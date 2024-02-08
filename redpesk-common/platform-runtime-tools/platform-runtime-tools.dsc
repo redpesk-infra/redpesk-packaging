@@ -5,7 +5,7 @@ Architecture: any
 Version: 0.1.0
 Maintainer: Valentin Lefebvre <valentin.lefebvre@iot.bzh>
 Standards-Version: 0.1.0
-Homepage: http://git.ovh.iot/redpesk/redpesk-common/platform-runtime-tools.git
+Homepage: https://github.com/redpesk-common/platform-runtime-tools
 Build-Depends:
  cmake,
  gcc, g++,

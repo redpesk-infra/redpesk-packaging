@@ -5,7 +5,7 @@ Architecture: any
 Version: 1.0.10
 Maintainer: Valentin Lefebvre <valentin.lefebvre@iot.bzh>
 Standards-Version: 3.8.2
-Homepage: http://git.ovh.iot/redpesk/redpesk-common/sec-gate-oidc.git
+Homepage: https://github.com/redpesk-common/sec-gate-oidc
 Build-Depends: debhelper (>=5), 
     pkg-config,
     cmake,

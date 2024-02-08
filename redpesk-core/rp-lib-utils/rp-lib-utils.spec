@@ -5,7 +5,7 @@ Release: 15%{?dist}
 Summary: Library of utilities
 
 License: MIT
-URL: http://git.ovh.iot/redpesk/redpesk-core/rp-lib-utils.git
+URL: https://github.com/redpesk-core/rp-lib-utils
 Source: %{name}-%{version}.tar.gz
 
 BuildRequires: make

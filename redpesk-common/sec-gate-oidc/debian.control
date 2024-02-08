@@ -17,7 +17,7 @@ Build-Depends: debhelper (>=5),
     afb-libhelpers-dev,
     libafb-dev,
 Standards-Version: 3.8.2
-Homepage: http://git.ovh.iot/redpesk/redpesk-common/sec-gate-oidc.git
+Homepage: https://github.com/redpesk-common/sec-gate-oidc
 
 Package: sec-gate-oidc
 Section: libs

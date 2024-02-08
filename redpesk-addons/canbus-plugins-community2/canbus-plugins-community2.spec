@@ -9,7 +9,7 @@ Release: 12%{?dist}
 Summary: Plugins for canbus-binding
 Group:          Development/Libraries/C and C++
 License: APL2.0
-URL: http://git.ovh.iot/redpesk/redpesk-common/canbus-plugins-community.git
+URL: https://github.com/redpesk-common/canbus-plugins-community
 Source: %{name}-%{version}.tar.gz
 
 Conflicts: %{_name}

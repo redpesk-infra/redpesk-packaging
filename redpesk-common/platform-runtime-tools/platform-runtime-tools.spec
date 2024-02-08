@@ -29,7 +29,7 @@ Version: 0.2.3
 Release: 4%{?dist}
 License:    GPLv3
 Summary:    platform info API for catch useful information about version hardware / software
-URL:        http://git.ovh.iot/redpesk/redpesk-common/platform-runtime-tools.git
+URL:        https://github.com/redpesk-common/platform-runtime-tools
 Source0:    %{name}-%{version}.tar.gz
 Source1:    20-%{name}.preset
 

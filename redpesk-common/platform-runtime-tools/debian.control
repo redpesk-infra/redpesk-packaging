@@ -7,7 +7,7 @@ Build-Depends:
  gcc, g++,
  debhelper (>= 10)
 Standards-Version: 4.1.2
-Homepage: http://http://git.ovh.iot/redpesk/redpesk-common/platform-runtime-tools.git
+Homepage: http://https://github.com/redpesk-common/platform-runtime-tools
 
 Package: platform-runtime-tools
 Architecture: any

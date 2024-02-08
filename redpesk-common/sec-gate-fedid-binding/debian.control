@@ -13,7 +13,7 @@ Build-Depends: debhelper (>=5),
     afb-binding-dev,
     afb-libhelpers-dev,
 Standards-Version: 3.8.2
-Homepage: http://git.ovh.iot/redpesk/redpesk-common/sec-gate-fedid-binding.git
+Homepage: https://github.com/redpesk-common/sec-gate-fedid-binding
 
 Package: sec-gate-fedid-binding
 Section: libs

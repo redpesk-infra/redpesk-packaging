@@ -6,7 +6,7 @@ Version: 2.6.1
 Release: 47%{?dist}
 Summary:        sec-lsm-manager service (SMACK, SELinux)
 License:        Apache-2.0
-URL:            http://git.ovh.iot/redpesk/redpesk-core/sec-lsm-manager.git
+URL:            https://github.com/redpesk-core/sec-lsm-manager
 Source:         %{name}-%{version}.tar.gz
 BuildRequires:  m4
 BuildRequires:  cmake

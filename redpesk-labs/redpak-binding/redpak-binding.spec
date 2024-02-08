@@ -5,7 +5,7 @@ Release: 1%{?dist}
 Summary:        This service aims to manage Rednode on target.
 Group:          Development/Libraries/C and C++
 License:        APL2.0
-URL:            http://git.ovh.iot/redpesk/redpesk-labs/redpak-binding.git
+URL:            https://github.com/redpesk-labs/redpak-binding
 Source:         %{name}-%{version}.tar.gz
 
 BuildRequires:  afm-rpm-macros
