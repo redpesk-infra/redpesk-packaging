@@ -1,7 +1,6 @@
 Name: rp-lib-utils
-#Hexsha:        b1ece0dff9ec361d830a48187e22e612ed0ed2a4
+#Hexsha: b1ece0dff9ec361d830a48187e22e612ed0ed2a4
 Version: 0.0.8
-ExcludeArch: 
 Release: 16%{?dist}
 Summary: Library of utilities
 
