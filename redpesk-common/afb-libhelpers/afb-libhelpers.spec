@@ -1,9 +1,9 @@
 %define debug_package %{nil}
 
 Name: afb-libhelpers
-#Hexsha: 29d1ab5bbe938be64564f1b04b5d3fa2c3ecc18e
-Version: 10.0.5
-Release: 17%{?dist}
+#Hexsha: 93ec749e84d6ec48587d9756b74ed92c1c414e9f
+Version: 10.0.6
+Release: 18%{?dist}
 Summary: Helpers library for AFB
 Group:   Development/Libraries/C and C++
 License: Apache-2.0
