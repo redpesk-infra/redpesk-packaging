@@ -2,7 +2,7 @@ Format: 1.0
 Source: afb-libafb
 Binary: libafb5, libafbcli5
 Architecture: any
-Version: 5.0.11+1+g990674d
+Version: 5.0.11+3+g436cba2
 Maintainer: José Bollo <jose.bollo@iot.bzh>
 Standards-Version: 3.8.2
 Homepage: https://github.com/redpesk-core/afb-libafb
@@ -21,5 +21,5 @@ Build-Depends:
  gnutls-dev,
  afb-binding-dev (>= 4.1.2)
 Files:
- afb-libafb-5.0.11+1+g990674d.tar.gz
+ afb-libafb-5.0.11+3+g436cba2.tar.gz
 DEBTRANSFORM-RELEASE: 1

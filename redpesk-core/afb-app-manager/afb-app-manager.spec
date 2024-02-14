@@ -21,9 +21,9 @@
 %define _rp_group_id       100
 
 Name:           afb-app-manager
-#Hexsha:        77ec6695b4c427ae2e28c111f3fb34482481d211
-Version:        12.2.5
-Release: 47%{?dist}
+#Hexsha:        0beff00bfba2b00973acafe4d6802c2d6d2e66b6
+Version:        12.2.5+2+g0beff00
+Release: 48%{?dist}
 License:        GPLv3
 Summary:        Micro service application manager
 Group:          Development/Libraries/C and C++
@@ -180,7 +180,6 @@ fi
 %dir %{afm_icondir}
 %config %{_sysconfdir}/afm/afm-unit.conf
 %config %{_sysconfdir}/afm/certs
-%config %{_sysconfdir}/dbus-1/session.d/*
 %config %{_sysconfdir}/dbus-1/system.d/*
 %config %{_sysconfdir}/pam.d/*
 %config %{_presetdir}/%{basename:%{SOURCE1}}
