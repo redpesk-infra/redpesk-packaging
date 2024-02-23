@@ -1,9 +1,9 @@
 %define debug_package %{nil}
 
 Name:           sec-cynagora
-#Hexsha:        bdfeeb6d48d97fc9bcd4ec634e59665069d03e19
-Version:        2.2.3
-Release: 18%{?dist}
+#Hexsha:        5c6a8c4a23a87f4cd5ddb4278ec4b497846c16a8
+Version:        2.2.4
+Release: 19%{?dist}
 Summary:        Cynara service with client libraries
 
 License:        Apache-2.0
