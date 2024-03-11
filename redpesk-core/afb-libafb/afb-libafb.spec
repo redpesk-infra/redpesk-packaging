@@ -17,7 +17,11 @@ BuildRequires:  make
 BuildRequires:  cmake
 BuildRequires:  gcc-c++
 
+#If we need a specify version of libmicrohttpd to build this package
+#We need the same specify version to run this package
 BuildRequires:  pkgconfig(libmicrohttpd) >= 0.9.60
+Requires: libmicrohttpd >= 0.9.60
+
 BuildRequires:  pkgconfig(libsystemd) >= 222
 BuildRequires:  pkgconfig(json-c)
 BuildRequires:  pkgconfig(afb-binding) >= 4.1.2

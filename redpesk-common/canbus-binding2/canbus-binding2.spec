@@ -5,7 +5,7 @@ Name: canbus-binding2
 #Hexsha: b16677ba63b4daf5ce53577bb3713d7368ceb3bb
 Version: 2.0.3
 Release: 5%{?dist}
-Summary: Signal composer API connected to low level AGL services
+Summary: Redpesk binding to connect to CAN-bus
 Group:   Development/Libraries/C and C++
 License: APL2.0
 URL: https://github.com/redpesk-common/canbus-binding
