@@ -1,6 +1,6 @@
 %define debug_package %{nil}
 
-%global sover   4
+%global sover   -4
 
 Name: afb-libhelpers
 #Hexsha: 93ec749e84d6ec48587d9756b74ed92c1c414e9f
@@ -53,10 +53,10 @@ application framework binder. This package include the libraries with support
 for bindings using using the API version 3.
 
 #------------------------
-%package -n libafb-helpers4-%{sover}
+%package -n libafb-helpers4%{sover}
 Summary: Libraries for libafb-helpers version 4
 
-%description  -n libafb-helpers4-%{sover}
+%description  -n libafb-helpers4%{sover}
 Shared libraries for libafb-helpers4.
 
 The libraries libafb-libhelpers are intended to provide helper
@@ -75,7 +75,7 @@ functions for C developpers of afb-bindings.
 #------------------------
 %package -n afb-helpers4-devel
 Summary:   Development files for library for libafb-helpers version 4
-Requires:  libafb-helpers4-%{sover} = %{version}
+Requires:  libafb-helpers4%{sover} = %{version}
 Requires:  afb-helpers4-headers = %{version}
 Provides:  pkgconfig(afb-helpers4) = %{version}
 
@@ -98,11 +98,11 @@ The libraries libafb-libhelpers are intended to provide helper
 functions for C developpers of afb-bindings.
 
 #------------------------
-%package -n libafb-helpers++4-%{sover}
+%package -n libafb-helpers++4%{sover}
 Summary:   Libraries for libafb-helpers++ version 4
 Requires:  libafb-helpers4 >= %{version}
 
-%description  -n libafb-helpers++4-%{sover}
+%description  -n libafb-helpers++4%{sover}
 Shared libraries for afb-helpers++4.
 
 The libraries libafb-libhelpers are intended to provide helper
@@ -111,7 +111,7 @@ functions for C developpers of afb-bindings.
 #------------------------
 %package -n afb-helpers++4-devel
 Summary:   Development files for library for libafb-helpers++ version 4
-Requires:  libafb-helpers++4-%{sover} >= %{version}
+Requires:  libafb-helpers++4%{sover} >= %{version}
 Requires:  afb-helpers4-devel >= %{version}
 Provides:  pkgconfig(afb-helpers++4) = %{version}
 
@@ -136,16 +136,16 @@ functions for C developpers of afb-bindings.
 
 %clean
 
-%post -n libafb-helpers4-%{sover}
+%post -n libafb-helpers4%{sover}
 /sbin/ldconfig
 
-%postun -n libafb-helpers4-%{sover}
+%postun -n libafb-helpers4%{sover}
 /sbin/ldconfig
 
-%post -n libafb-helpers++4-%{sover}
+%post -n libafb-helpers++4%{sover}
 /sbin/ldconfig
 
-%postun -n libafb-helpers++4-%{sover}
+%postun -n libafb-helpers++4%{sover}
 /sbin/ldconfig
 
 %files
@@ -160,7 +160,7 @@ functions for C developpers of afb-bindings.
 %dir %{_includedir}/afb-helpers/
 %{_includedir}/afb-helpers/*
 
-%files -n libafb-helpers4-%{sover}
+%files -n libafb-helpers4%{sover}
 %{_libdir}/libafb-helpers4.so.*
 
 %files -n afb-helpers4-headers
@@ -175,7 +175,7 @@ functions for C developpers of afb-bindings.
 %{_libdir}/libafb-helpers4.a
 %{_libdir}/pkgconfig/afb-helpers4-static.pc
 
-%files -n libafb-helpers++4-%{sover}
+%files -n libafb-helpers++4%{sover}
 %{_libdir}/libafb-helpers++4.so.*
 
 %files -n afb-helpers++4-devel
