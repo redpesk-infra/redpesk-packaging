@@ -1,4 +1,4 @@
-modbus-binding (2.0.1+1+g1d43325) unstable; urgency=low
+modbus-binding (2.0.2) unstable; urgency=low
 
   * init build
 

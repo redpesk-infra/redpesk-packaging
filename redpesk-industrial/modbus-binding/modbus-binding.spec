@@ -1,7 +1,7 @@
 Name: modbus-binding
-#Hexsha: 1d4332517fd2721955cdfefac02514626b463d47
-Version: 2.0.1+1+g1d43325
-Release: 13%{?dist}
+#Hexsha: 86f76bda13cfdf7db128b9a8e323dfc74b5d9212
+Version: 2.0.2
+Release: 14%{?dist}
 Summary: Binding to serve an API connected to modbus hardware
 Group:   Development/Libraries/C and C++
 License:  Apache-2.0
