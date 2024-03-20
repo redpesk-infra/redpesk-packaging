@@ -17,11 +17,7 @@ BuildRequires:  make
 BuildRequires:  cmake
 BuildRequires:  gcc-c++
 
-#If we need a specify version of libmicrohttpd to build this package
-#We need the same specify version to run this package
 BuildRequires:  pkgconfig(libmicrohttpd) >= 0.9.60
-Requires: libmicrohttpd >= 0.9.60
-
 BuildRequires:  pkgconfig(libsystemd) >= 222
 BuildRequires:  pkgconfig(json-c)
 BuildRequires:  pkgconfig(afb-binding) >= 4.1.2
@@ -41,6 +37,10 @@ its derivates and its clients.
 %package -n libafb5
 Group:          Development/Libraries/C and C++
 Summary:        Application Framework Binder core library
+
+#If we need a specify version of libmicrohttpd to build this package
+#We need the same specify version to run this package
+Requires: libmicrohttpd >= 0.9.60
 
 %description -n libafb5
 Application Framework Binder core library

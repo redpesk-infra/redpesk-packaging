@@ -2,7 +2,7 @@ Format: 1.0
 Source: afb-test
 Binary: afb-test-bin, afb-test-dev
 Architecture: any
-Version: 10.1
+Version: 10.2
 Maintainer: romain.forlot <romain.forlot@iot.bzh>
 Standards-Version: 3.8.2
 Homepage: http://git.ovh.iot/redpesk/redpesk-core/afb-test
