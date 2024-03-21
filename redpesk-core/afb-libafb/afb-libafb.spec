@@ -40,7 +40,13 @@ Summary:        Application Framework Binder core library
 
 #If we need a specify version of libmicrohttpd to build this package
 #We need the same specify version to run this package
+
+%if 0%{?suse_version}
+Requires: libmicrohttpd12 >= 0.9.60
+%else
 Requires: libmicrohttpd >= 0.9.60
+%endif
+
 
 %description -n libafb5
 Application Framework Binder core library
