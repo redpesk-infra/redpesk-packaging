@@ -2,7 +2,7 @@ Format: 1.0
 Source: spawn-binding
 Binary: spawn-binding-bin
 Architecture: any
-Version: 1.0-0
+Version: 2.0.0+2+g2951152
 Maintainer: Corentin Le Gall <corentin.legall@iot.bzh>
 Standards-Version: 3.8.2
 Homepage: http://git.ovh.iot/redpesk/redpesk-common/spawn-binding
