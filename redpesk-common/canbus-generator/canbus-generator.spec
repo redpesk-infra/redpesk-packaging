@@ -1,8 +1,8 @@
 
 Name: canbus-generator
-#Hexsha: 416baadf684b823aba531d3dead02b55ca2e3139
-Version: 2.0.0
-Release: 6%{?dist}
+#Hexsha:        30a26ce03e3ff4957f8f5144a9bb666f31f6b4df
+Version: 2.0.0+1+g30a26ce
+Release: 7%{?dist}
 Summary: Generate canbus-plugins source files.
 Group:          Development/Libraries/C and C++
 License: APL2.0

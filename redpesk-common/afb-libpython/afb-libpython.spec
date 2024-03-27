@@ -1,7 +1,7 @@
 Name:           afb-libpython
-#Hexsha:        fb1a0c4cedb794ba1a02aa04a22b8256f6b465a5
-Version:        1.0.3
-Release:        4%{?dist}
+#Hexsha:        f4d63cc4e9a033342b85f3db78c3e7869cf28436
+Version:        1.0.3+2+gf4d63cc
+Release:        8%{?dist}
 License:        LGPLv3
 Summary:        Abstraction of afb-libafb for integration with non C/C++
 Group:          Development/Libraries/C and C++
@@ -11,7 +11,6 @@ Source:         %{name}-%{version}.tar.gz
 BuildRequires:  make
 BuildRequires:  cmake
 BuildRequires:  gcc-c++
-BuildRequires:  afb-cmake-modules
 BuildRequires:  pkgconfig(libafb) >= 5.0
 BuildRequires:  pkgconfig(librp-utils) >= 0.0.3
 BuildRequires:  pkgconfig(libafb-binder) >= 5.0
@@ -27,17 +26,11 @@ Exposes afb-libafb to the Python scripting language.
 %setup -q -n %{name}-%{version}
 
 %build
-mkdir -p build
-%if 0%{?almalinux_ver} == 8
-  cd build
-  %cmake ..
-%else
-  %cmake -B build
-%endif
-%make_build -C build
+%cmake
+%cmake_build
 
 %install
-%make_install -C build
+%cmake_install
 
 %post -p /sbin/ldconfig
 %postun -p /sbin/ldconfig

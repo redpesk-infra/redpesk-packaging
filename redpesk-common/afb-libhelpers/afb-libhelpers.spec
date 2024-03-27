@@ -3,9 +3,9 @@
 %global sover   -4
 
 Name: afb-libhelpers
-#Hexsha: 93ec749e84d6ec48587d9756b74ed92c1c414e9f
-Version: 10.0.6
-Release: 18%{?dist}
+#Hexsha: d5e594e88bdf5b7676b03a2d90c13c642e178d21
+Version: 10.0.6+2+gd5e594e
+Release: 19%{?dist}
 Summary: Helpers library for AFB
 Group:   Development/Libraries/C and C++
 License: Apache-2.0

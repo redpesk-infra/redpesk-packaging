@@ -2,7 +2,7 @@ Format: 1.0
 Source: afb-supervisor
 Binary: afb-supervisor
 Architecture: any
-Version: 4.2.0
+Version: 4.2.1
 Maintainer: José Bollo <jose.bollo@iot.bzh>
 Standards-Version: 3.8.2
 Homepage: https://github.com/redpesk-addons/afb-supervisor
@@ -14,5 +14,5 @@ Build-Depends:
  libjson-c-dev,
  libafb-dev (>= 5.0)
 Files:
- afb-supervisor-4.2.0.tar.gz
+ afb-supervisor-4.2.1.tar.gz
 DEBTRANSFORM-RELEASE: 1
