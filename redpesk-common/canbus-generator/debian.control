@@ -11,7 +11,7 @@ Build-Depends: debhelper (>= 5),pkg-config,
  liblua5.3-dev,
  afb-libhelpers-dev,
  afb-libcontroller-dev,
- canbus-binding-dev,
+ canbus-binding2-dev,
 Standards-Version: 3.8.2
 Homepage: http://git.ovh.iot/redpesk/redpesk-common/canbus-generator
 

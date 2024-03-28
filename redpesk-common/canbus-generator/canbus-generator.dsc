@@ -16,7 +16,7 @@ Build-Depends: debhelper (>= 5),pkg-config,
  liblua5.3-dev,
  afb-libhelpers-dev,
  afb-libcontroller-dev,
- canbus-binding-dev,
+ canbus-binding2-dev,
 DEBTRANSFORM-RELEASE: 1
 Files:
  canbus-generator_1.5.0.tar.gz

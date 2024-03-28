@@ -2,9 +2,9 @@ Name: canbus-binding2
 %global _name      canbus-binding
 %global _afmappdir %{_prefix}/redpesk
 
-#Hexsha: b16677ba63b4daf5ce53577bb3713d7368ceb3bb
-Version: 2.0.3
-Release: 5%{?dist}
+#Hexsha:        4d68c92f03b2683236fe7fef8cd78cca1daa4fcc
+Version: 2.0.3+5+g4d68c92f
+Release: 9%{?dist}
 Summary: Redpesk binding to connect to CAN-bus
 Group:   Development/Libraries/C and C++
 License: APL2.0

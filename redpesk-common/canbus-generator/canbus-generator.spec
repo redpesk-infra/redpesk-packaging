@@ -1,6 +1,6 @@
 
 Name: canbus-generator
-#Hexsha:        30a26ce03e3ff4957f8f5144a9bb666f31f6b4df
+#Hexsha: 30a26ce03e3ff4957f8f5144a9bb666f31f6b4df
 Version: 2.0.0+1+g30a26ce
 Release: 7%{?dist}
 Summary: Generate canbus-plugins source files.
@@ -12,7 +12,7 @@ Source: %{name}-%{version}.tar.gz
 BuildRequires:  afm-rpm-macros
 BuildRequires:  cmake
 BuildRequires:  gcc-c++
-BuildRequires:  pkgconfig(canbus-binding)
+BuildRequires:  pkgconfig(canbus-binding) >= 2
 BuildRequires:  pkgconfig(afb-binding)
 BuildRequires:  pkgconfig(afb-libcontroller)
 BuildRequires:  pkgconfig(afb-libhelpers)
