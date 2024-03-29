@@ -5,7 +5,7 @@ Build-Depends: debhelper (>= 5),pkg-config,
  cmake (>= 3.10),
  g++, 
  canbus-binding-dev (>= 2),
- canbus-generator-bin (>= 2)
+ canbus-generator (>= 2)
 Standards-Version: 3.8.2
 
 Package: canbus-plugins2-hvac

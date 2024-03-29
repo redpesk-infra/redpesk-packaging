@@ -36,14 +36,14 @@ Description: libafb-helpers provides helpful functions to be used in a binding f
 Package: afb-libhelpers4-dev
 Section: libs
 Architecture: any
-Depends: afb-libhelpers4, afb-libhelpers4-headers, libjson-c-dev, afb-binding-dev
+Depends: afb-libhelpers4, afb-libhelpers4-headers, libjson-c-dev, afb-binding-dev, librp-utils-dev
 Description: libafb-helpers provides helpful functions to be used in a binding for the
  Application Framework Binder (development files for using shared library)
 
 Package: afb-libhelpers4-static
 Section: libs
 Architecture: any
-Depends: afb-libhelpers4-headers
+Depends: afb-libhelpers4-headers, libjson-c-dev, afb-binding-dev, librp-utils-static
 Description: libafb-helpers provides helpful functions to be used in a binding for the
  Application Framework Binder (development files for using static library)
 

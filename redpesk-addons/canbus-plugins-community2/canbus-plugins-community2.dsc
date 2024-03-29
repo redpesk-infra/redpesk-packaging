@@ -14,7 +14,7 @@ Build-Depends: debhelper (>= 5),pkg-config,
  g++,
  afb-binding-dev,
  canbus-binding-dev (>= 2),
- canbus-generator-bin (>= 2)
+ canbus-generator (>= 2)
 DEBTRANSFORM-RELEASE: 1
 Files:
  canbus-plugins-community2-2.0.2.tar.gz
