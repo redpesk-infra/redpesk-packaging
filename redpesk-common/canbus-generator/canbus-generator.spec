@@ -1,8 +1,8 @@
 
 Name: canbus-generator
-#Hexsha: 30a26ce03e3ff4957f8f5144a9bb666f31f6b4df
-Version: 2.0.0+1+g30a26ce
-Release: 7%{?dist}
+#Hexsha: 1f63ecfb339487608fb1802d06d2535bb48a99b5
+Version: 2.0.0+2+g1f63ecf
+Release: 9%{?dist}
 Summary: Generate canbus-plugins source files.
 Group:          Development/Libraries/C and C++
 License: APL2.0
@@ -14,11 +14,8 @@ BuildRequires:  cmake
 BuildRequires:  gcc-c++
 BuildRequires:  pkgconfig(canbus-binding) >= 2
 BuildRequires:  pkgconfig(afb-binding)
-BuildRequires:  pkgconfig(afb-libcontroller)
-BuildRequires:  pkgconfig(afb-libhelpers)
+BuildRequires:  pkgconfig(afb-helpers4)
 BuildRequires:  pkgconfig(json-c)
-BuildRequires:  pkgconfig(lua) >= 5.3
-BuildRequires:  pkgconfig(libsystemd) >= 222
 
 %define _afmdatadir %_prefix
 

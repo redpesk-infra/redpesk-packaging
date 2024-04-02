@@ -1,22 +1,21 @@
 Format: 1.0
 Source: canbus-generator
-Binary: canbus-generator-bin
+Binary: canbus-generator
 Architecture: any
-Version: 2.0.0+1+g30a26ce
+Version: 2.0.0+2+g1f63ecf
 Maintainer: unknown <unknown@debian.org>
 Standards-Version: 3.8.2
 Homepage: https://github.com/redpesk-common/canbus-generator
-Build-Depends: debhelper (>= 5),pkg-config,	
+Build-Depends:
+ debhelper (>= 5),
+ dpkg-dev,
+ pkg-config,	
  cmake,
- afb-cmake-modules,
  g++, 
- libsystemd-dev (>= 222),
- afb-binding-dev,
  libjson-c-dev,
- liblua5.3-dev,
- afb-libhelpers-dev,
- afb-libcontroller-dev,
- canbus-binding2-dev,
-DEBTRANSFORM-RELEASE: 1
+ afb-binding-dev,
+ afb-libhelpers4-dev,
+ canbus-binding2-dev
 Files:
- canbus-generator_1.5.0.tar.gz
+ canbus-generator_2.0.0+1+g30a26ce.tar.gz
+DEBTRANSFORM-RELEASE: 1

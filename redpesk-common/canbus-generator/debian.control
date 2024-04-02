@@ -1,21 +1,20 @@
 Priority: optional
 Maintainer: unknown <unknown@debian.org>
 Source: canbus-generator
-Build-Depends: debhelper (>= 5),pkg-config,	
+Build-Depends:
+ debhelper (>= 5),
+ dpkg-dev,
+ pkg-config,	
  cmake,
- afb-cmake-modules,
  g++, 
- libsystemd-dev (>= 222),
- afb-binding-dev,
  libjson-c-dev,
- liblua5.3-dev,
- afb-libhelpers-dev,
- afb-libcontroller-dev,
- canbus-binding2-dev,
+ afb-binding-dev,
+ afb-libhelpers4-dev,
+ canbus-binding2-dev
 Standards-Version: 3.8.2
 Homepage: http://git.ovh.iot/redpesk/redpesk-common/canbus-generator
 
-Package: canbus-generator-bin
+Package: canbus-generator
 Section: libs
 Architecture: any
 Description: canbus-generator
