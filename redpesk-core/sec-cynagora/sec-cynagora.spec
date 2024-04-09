@@ -36,7 +36,11 @@ Provides:       pkgconfig(cynagora) = %{version}
 %autosetup -p 1
 
 %build
-%cmake -DSYSTEMD_UNIT_DIR=/usr/lib/systemd/system  -DWITH_SYSTEMD=ON  -DWITH_CYNARA_COMPAT=OFF
+%cmake \
+	-DSYSTEMD_UNIT_DIR=/usr/lib/systemd/system  \
+	-DWITH_SYSTEMD=ON \
+	-DWITH_CYNARA_COMPAT=OFF \
+	-DCMAKE_INSTALL_RUNSTATEDIR=%{_rundir}
 %cmake_build
 
 %install

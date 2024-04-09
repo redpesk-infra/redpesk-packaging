@@ -85,7 +85,13 @@ Provides:       %{name}-smack-redtest = %{version}
 %autosetup -p 1
 
 %build
-%cmake -DSYSTEMD_UNIT_DIR=/usr/lib/systemd/system  -DWITH_SYSTEMD=ON -DWITH_SMACK=ON -DWITH_SELINUX=ON .
+%cmake \
+	-DSYSTEMD_UNIT_DIR=/usr/lib/systemd/system \
+	-DCMAKE_INSTALL_RUNSTATEDIR=%{_rundir} \
+	-DWITH_SYSTEMD=ON \
+	-DWITH_SMACK=ON \
+	-DWITH_SELINUX=ON \
+	.
 %cmake_build
 
 %install
