@@ -2,9 +2,9 @@ Name:           afb-cmake-modules
 # WARNING {name} is not used for tar file name in source nor for setup
 #         Check hard coded values required to match git directory naming
 BuildArchitectures: noarch
-#Hexsha: 63451c5868b5dce02229bf9eb253b3f42197f565
-Version: 10.0.9
-Release: 7%{?dist}
+#Hexsha: 3aafa3fee42437581ab841149d9bdb009dce3104
+Version: 10.0.9+1+g3aafa3f
+Release: 8%{?dist}
 License:        Apache-2.0
 Summary:        afb-cmake-modules
 Group:          Development/Libraries/C and C++
