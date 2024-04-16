@@ -3,9 +3,9 @@
 #---------------------------------------------
 
 Name:           afb-libafb
-#Hexsha:        c55298fa9428383753b6767f91f370c831745e5e
-Version:        5.0.12
-Release: 	51%{?dist}
+#Hexsha:        f10f8eb7c3bbcb36a9179db3a5694c1a7d03c9f6
+Version:        5.0.13+1+gf10f8eb
+Release: 	52%{?dist}
 License:        GPL-3.0-only
 Summary:        Library of internals of application framework binder
 Group:          Development/Libraries/C and C++
