@@ -2,7 +2,7 @@ Format: 1.0
 Source: canbus-generator
 Binary: canbus-generator
 Architecture: any
-Version: 2.0.0+2+g1f63ecf
+Version: 2.0.1
 Maintainer: unknown <unknown@debian.org>
 Standards-Version: 3.8.2
 Homepage: https://github.com/redpesk-common/canbus-generator
