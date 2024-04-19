@@ -1,7 +1,7 @@
 Name: modbus-binding
-#Hexsha: 18ac440f57088f0be311e1e47a8777cd2cc28af4
-Version: 2.1.0
-Release: 19%{?dist}
+#Hexsha:        224ce6b9e343ec92adeebc432b510e7c4bd46f5f
+Version: 2.1.0+3+g224ce6b
+Release: 24%{?dist}
 Summary: Binding to serve an API connected to modbus hardware
 Group:   Development/Libraries/C and C++
 License:  Apache-2.0
@@ -46,8 +46,8 @@ This is the development package for %{_name}.
 
 %install
 %cmake_install
-rm -r %{buildroot}%{_afmappdir}/%{name}/lib/plugins/*
-rm -r %{buildroot}%{_afmappdir}/%{name}/etc/*
+rm -r %{buildroot}%{_afmappdir}/%{name}/lib/plugins
+rm -r %{buildroot}%{_afmappdir}/%{name}/etc
 
 %check
 
@@ -60,9 +60,8 @@ rm -r %{buildroot}%{_afmappdir}/%{name}/etc/*
 /sbin/ldconfig
 
 %files
-%dir %{_afmappdir}/%{name}
-%{_afmappdir}/%{name}/lib/modbus-binding.so
-%{_afmappdir}/%{name}/.rpconfig/manifest.yml
+%dir %{_afmappdir}
+%{_afmappdir}/%{name}
 
 %files devel
 %dir %{_libdir}/pkgconfig

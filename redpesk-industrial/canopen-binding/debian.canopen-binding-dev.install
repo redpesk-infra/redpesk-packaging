@@ -1,2 +1,2 @@
-/var/local/lib/afm/applications/include/*
-usr/lib/pkgconfig/*
+/usr/include/*
+/usr/lib/pkgconfig/*

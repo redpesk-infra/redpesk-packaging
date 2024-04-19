@@ -1,54 +1,61 @@
 
 Name: canopen-binding
-#Hexsha: 8cbacfae086cda26f401f47a978be41bce309188
-Version: 1.1.0
-Release: 18%{?dist}
+#Hexsha:        7faf5856621e1b01a43894acdad5fa7ce371c760
+Version: 2.0.0+2+g7faf585
+Release: 21%{?dist}
 Summary: canopen-binding is a binding that allows the control of a CANopen field network
 
 License: No license to be set
 URL: http://git.ovh.iot/redpesk/redpesk-industrial/canopen-binding
-Source0: %{name}-%{version}.tar.gz
+Source: %{name}-%{version}.tar.gz
 
-BuildRequires: afm-rpm-macros
 BuildRequires: cmake
 BuildRequires: gcc-c++
-BuildRequires: afb-cmake-modules
 BuildRequires: pkgconfig(json-c)
-BuildRequires: pkgconfig(libsystemd) >= 222
 BuildRequires: pkgconfig(afb-binding)
-BuildRequires: pkgconfig(afb-libcontroller)
-BuildRequires: pkgconfig(libmicrohttpd) >= 0.9.55
-BuildRequires: pkgconfig(afb-libhelpers)
+BuildRequires: pkgconfig(librp-utils-static)
+BuildRequires: pkgconfig(afb-helpers4-static)
 BuildRequires: liblely-devel
 BuildRequires: liblely-coapp2
-BuildRequires: pkgconfig(lua) >= 5.3
+
+Requires: afb-binder
+Requires: liblely-coapp2
+
+%global _afmappdir %{_prefix}/redpesk
 
 %description
 canopen-binding is a binding that allows the control of a CANopen field network from an Redpesk type system.
 It handle different formats natively (int, float, string...) but can also handle custom formatting using plugins.
 It is based on the opensource industrial c++ library Lely.
 
-%define wgtname %{name}
+%package devel
+Requires: %{name} = %{version}
+Provides: pkgconfig(%{name}) = %{version}
+Summary:  %{summary} (development package)
 
-Requires: afb-binder
-Requires: liblely-coapp2
+%description devel 
+%summary 
+This is the development package for plugins of %{name}.
 
 %prep
 %autosetup -p 1
 
-%files
-%afm_files
-
-%afm_package_test
-
-%afm_package_devel
-
 %build
-%afm_configure_cmake
-%afm_build_cmake
+%cmake . -DAFM_APP_DIR=%{_afmappdir}
+%cmake_build
 
 %install
-%afm_makeinstall
+%cmake_install
+
+%files
+%dir %{_afmappdir}
+%{_afmappdir}/%{name}
+%{_libdir}/libCANopenEncoder.so
+
+%files devel
+%dir %{_libdir}/pkgconfig
+%{_libdir}/pkgconfig/CANopen.pc
+%{_includedir}/CANopen
 
 %check
 

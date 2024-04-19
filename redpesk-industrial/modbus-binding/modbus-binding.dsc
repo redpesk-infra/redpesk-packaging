@@ -2,7 +2,7 @@ Format: 1.0
 Source: modbus-binding
 Binary: modbus-binding-bin, modbus-binding-dev
 Architecture: any
-Version: 2.1.0
+Version: 2.1.0+3+g224ce6b
 Maintainer: ronan.lemartret <ronan.lemartret@iot.bzh>
 Standards-Version: 3.8.2
 Homepage: https://github.com/redpesk-industrial/modbus-binding
@@ -18,4 +18,4 @@ Build-Depends: debhelper (>= 5),
  libmodbus-dev (>= 3.1.6),
 DEBTRANSFORM-RELEASE: 1
 Files:
- modbus-binding-2.1.0.tar.gz
+ modbus-binding-2.1.0+3+g224ce6b.tar.gz
