@@ -3,7 +3,7 @@
 #---------------------------------------------
 
 Name:           afb-binder
-#Hexsha:        8396974a5396ee656da2e45d94ad0fdc5069cd87
+#Hexsha: 8396974a5396ee656da2e45d94ad0fdc5069cd87
 Version: 5.1.5
 Release: 31%{?dist}
 License:        GPL-3.0-only
