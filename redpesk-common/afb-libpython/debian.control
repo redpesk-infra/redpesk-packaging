@@ -11,7 +11,6 @@ Build-Depends:
  libjson-c-dev,
  libafb-binder-dev (>= 5.0),
  libafb-dev (>= 5.0),
- librp-utils-dev (>= 0.0.3),
  afb-binding-dev (>= 4.1.0)
 Standards-Version: 3.8.2
 Homepage: https://github.com/redpesk-common/afb-libpython

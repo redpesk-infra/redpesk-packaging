@@ -2,7 +2,7 @@ Format: 1.0
 Source: afb-libpython
 Binary: libafb-python
 Architecture: any
-Version: 1.1.0
+Version: 2.0.0
 Maintainer: José Bollo <jose.bollo@iot.bzh>
 Standards-Version: 3.8.2
 Homepage: https://github.com/redpesk-common/afb-libpython
@@ -19,5 +19,5 @@ Build-Depends:
  librp-utils-dev (>= 0.0.3),
  afb-binding-dev (>= 4.1.0)
 Files:
- afb-libpython-1.1.0.tar.gz
+ afb-libpython-2.0.0.tar.gz
 DEBTRANSFORM-RELEASE: 1
