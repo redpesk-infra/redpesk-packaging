@@ -1,13 +1,12 @@
 Name: spawn-binding
-#Hexsha: 29511529389785226e0536db1ddc6aaeca7754d2
-Version: 2.0.0+2+g2951152
-Release: 8%{?dist}
-Summary: Binding for shell execution within a secured container with optional output formatting
+#Hexsha: 9b248c3e8a363d42ba2f6c4b98837beb6a122dd6
+Version: 2.0.0+4+g9b248c3
+Release: 9%{?dist}
+Summary: Shell execution within a secure container, optional output formatting
 Group:   Development/Libraries/C and C++
 License:  Apache-2.0
 URL: https://github.com/redpesk-common/spawn-binding
 Source: %{name}-%{version}.tar.gz
-
 %global _afmappdir %{_prefix}/redpesk
 
 BuildRequires:  cmake
@@ -28,12 +27,12 @@ Requires:       afb-binder
 
 %package devel
 Requires: %{name} = %{version}
-Provides: pkgconfig(%{_name}) = %{version}
-Summary:  %{summary} (development package)
+Provides: pkgconfig(%{name}) = %{version}
+Summary:  %{summary} (dev)
 
 %description devel
 %summary
-This is the development package for %{_name}.
+This is the development package for %{name}.
 
 %prep
 %autosetup -p 1
@@ -58,15 +57,18 @@ rm -r %{buildroot}%{_afmappdir}/%{name}/etc/*
 /sbin/ldconfig
 
 %files
+%dir %{_afmappdir}
 %dir %{_afmappdir}/%{name}
+%dir %{_afmappdir}/%{name}/lib
 %{_afmappdir}/%{name}/lib/spawn-binding.so
 %{_afmappdir}/%{name}/lib/libspawn-binding.so
+%dir %{_afmappdir}/%{name}/.rpconfig
 %{_afmappdir}/%{name}/.rpconfig/manifest.yml
 
 %files devel
-
 %dir %{_libdir}/pkgconfig
 %{_libdir}/pkgconfig/spawn.pc
+%dir %{_includedir}/%{name}
 %{_includedir}/%{name}/spawn-defaults.h
 %{_includedir}/%{name}/spawn-binding.h
 %{_includedir}/%{name}/spawn-sandbox.h
