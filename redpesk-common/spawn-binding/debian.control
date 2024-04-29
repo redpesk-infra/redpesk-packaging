@@ -6,19 +6,14 @@ Build-Depends:
  pkg-config,
  dpkg-dev,
  cmake,
- liblua5.3-dev,
  uthash-dev,
- uuid-dev,
  libcap-ng-dev,
  libseccomp-dev,
- afb-cmake-modules,
- afb-binder,
  afb-binding-dev,
  libjson-c-dev,
  libsystemd-dev,
- afb-libhelpers-dev,
- afb-libcontroller-dev,
- libcurl4-gnutls-dev,
+ afb-libhelpers4-static,
+ librp-utils-static,
 Standards-Version: 3.8.2
 Homepage: http://git.ovh.iot/redpesk/redpesk-common/spawn-binding
 
