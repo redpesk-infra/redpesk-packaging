@@ -1,5 +1,5 @@
 Name: spawn-binding
-#Hexsha: 9b248c3e8a363d42ba2f6c4b98837beb6a122dd6
+#Hexsha:        9b248c3e8a363d42ba2f6c4b98837beb6a122dd6
 Version: 2.0.0+4+g9b248c3
 Release: 9%{?dist}
 Summary: Shell execution within a secure container, optional output formatting
@@ -9,18 +9,19 @@ URL: https://github.com/redpesk-common/spawn-binding
 Source: %{name}-%{version}.tar.gz
 %global _afmappdir %{_prefix}/redpesk
 
-BuildRequires:  cmake
-BuildRequires:  gcc-c++
-BuildRequires:  pkgconfig(afb-binding)
-BuildRequires:  pkgconfig(afb-helpers4-static)
-BuildRequires:  pkgconfig(librp-utils-static)
-BuildRequires:  pkgconfig(libsystemd)
-BuildRequires:  pkgconfig(libseccomp)
-BuildRequires:  pkgconfig(json-c)
-BuildRequires:  pkgconfig(uuid)
-BuildRequires:  pkgconfig(libcap-ng)
-BuildRequires:  uthash-devel
-Requires:       afb-binder
+BuildRequires: cmake
+BuildRequires: gcc-c++
+BuildRequires: pkgconfig(afb-binding)
+BuildRequires: pkgconfig(afb-helpers4-static)
+BuildRequires: pkgconfig(librp-utils-static)
+BuildRequires: pkgconfig(libsystemd)
+BuildRequires: pkgconfig(libseccomp)
+BuildRequires: pkgconfig(json-c)
+BuildRequires: pkgconfig(uuid)
+BuildRequires: pkgconfig(libcap-ng)
+BuildRequires: uthash-devel
+Requires:      afb-binder
+Requires:      bubblewrap
 
 %description
 %{name} Binding for shell execution within a secured container with optional output formatting
@@ -84,7 +85,10 @@ rm -r %{buildroot}%{_afmappdir}/%{name}/etc/*
 
 %%changelog
 
-* Fri Mar 22 2024 Iot.bzh(iotpkg) <redpesk.list@iot.bzh> 2.0.0+1
+* Tue Apr 30 2024 IoT.bzh(iotpkg) <redpesk.list@iot.bzh> 2.0.0+4+g9b248c3
+- Update dependencies
+
+* Fri Mar 22 2024 IoT.bzh(iotpkg) <redpesk.list@iot.bzh> 2.0.0+1
 - Refactor without afmmacro and afb-cmake-module
 
 * Mon Jul 05 2021 IoT.bzh(iotpkg) <redpesk.list@iot.bzh> 0.0.0+20210705+8+ge237b62

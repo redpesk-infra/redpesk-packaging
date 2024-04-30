@@ -1,3 +1,9 @@
+spawn-binding (2.0.0+4+g9b248c3-2) unstable; urgency=low
+
+  Add runtime dependency bubblewrap
+
+ -- Iot.bzh(iotpkg) <redpesk.list@iot.bzh> Tue, Apr 30 2024 16:21:12 +0200
+
 spawn-binding (2.0.0+4+g9b248c3-1) unstable; urgency=low
 
   Fix Debian packaging

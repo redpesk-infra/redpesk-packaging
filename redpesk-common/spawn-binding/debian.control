@@ -19,6 +19,12 @@ Homepage: http://git.ovh.iot/redpesk/redpesk-common/spawn-binding
 
 Package: spawn-binding-bin
 Section: libs
-Depends: afb-binder
+Depends: afb-binder, bubblewrap
 Architecture: any
-Description: Binding to serve an API connected to spawn hardware
+Description: Shell execution within a secure container, optional output formatting
+
+Package: spawn-binding-dev
+Section: libs
+Architecture: any
+Depends: spawn-binding-bin
+Description: Shell execution within a secure container, optional output formatting dev

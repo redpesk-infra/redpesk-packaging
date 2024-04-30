@@ -1,6 +1,6 @@
 Format: 1.0
 Source: spawn-binding
-Binary: spawn-binding-bin
+Binary: spawn-binding-bin, spawn-binding-dev
 Architecture: any
 Version: 2.0.0+4+g9b248c3
 Maintainer: Corentin Le Gall <corentin.legall@iot.bzh>
