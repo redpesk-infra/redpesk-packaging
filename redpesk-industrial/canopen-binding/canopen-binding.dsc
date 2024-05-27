@@ -16,8 +16,7 @@ Build-Depends:
  libjson-c-dev,
  afb-libhelpers4-static,
  librp-utils-static,
- liblely-coapp2,
- liblely-dev
+ liblely-coapp-dev
 Package-List:
  canopen-binding-bin deb libs optional arch=any
  canopen-binding-dev deb libdevel optional arch=any

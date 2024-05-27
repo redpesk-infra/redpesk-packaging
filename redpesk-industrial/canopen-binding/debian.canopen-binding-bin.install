@@ -1,2 +1,2 @@
 /usr/redpesk/canopen-binding/*
-/usr/lib*/CANopenEncoder.so
+/usr/lib/x86_64-linux-gnu/libCANopenEncoder.so

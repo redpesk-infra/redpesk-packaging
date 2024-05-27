@@ -11,8 +11,7 @@ Build-Depends:
  libjson-c-dev,
  afb-libhelpers4-static,
  librp-utils-static,
- liblely-coapp2,
- liblely-dev
+ liblely-coapp-dev
 Standards-Version: 4.4.1
 Section: libs
 Homepage: https://git.ovh.iot/redpesk/redpesk-industrial/canopen-binding

@@ -136,6 +136,9 @@ mkdir -p /usr/lib/systemd/system-preset/
 %dir %{_sysconfdir}/platform-info
 
 %files -n dracut-%{name}
+%dir %{dracutlibdir}
+%dir %{dracutlibdir}/modules.d
+%dir %{dracutlibdir}/modules.d/50platformtools
 %{dracutlibdir}/modules.d/50platformtools/module-setup.sh
 
 %check

@@ -1,6 +1,6 @@
 
 Name:	       	afb-jscli
-#Hexsha: 	8d11e69a2400be7f45b29110d5a87bbceefe481d
+#Hexsha: abb5436de7a401d08986e5caf42e572db8e6cb3c
 Version: 	0.3.0
 Release:        2%{?dist}
 Summary:        Interpreter of javascript file, based on quickjs, to interfer with bindings api
@@ -23,19 +23,10 @@ BuildRequires:	pkgconfig(libafbcli) >= 4
 %build
 # erase the default options for openSUSE because it sets -Wl,--no-undefined
 %cmake -DCMAKE_SHARED_LINKER_FLAGS= .
-%if 0%{?fedora} >= 33
 %cmake_build
-%else
-%__make %{?_smp_mflags}
-%endif
 
 %install
-[ -d build ] && cd build
-%if 0%{?fedora} >= 33
 %cmake_install
-%else
-%make_install
-%endif
 
 %files
 %{_bindir}/%{name}
