@@ -26,7 +26,7 @@
 Name:       platform-runtime-tools
 #Hexsha: 8612491b2a22c8325ac8dc264406fd3b0e1e1ad7
 Version: 0.2.3
-Release: 4%{?dist}
+Release: 5%{?dist}
 License:    GPLv3
 Summary:    platform info API for catch useful information about version hardware / software
 URL:        https://github.com/redpesk-common/platform-runtime-tools

@@ -31,8 +31,16 @@ BuildRequires: pkgconfig(libsystemd) >= 222
 BuildRequires: pkgconfig(afb-binding)
 BuildRequires: pkgconfig(afb-helpers)
 BuildRequires: pkgconfig(liburcu)
-BuildRequires: gpsd gpsd-clients gpsd-devel
-Requires: gpsd gpsd-clients gpsd-devel
+BuildRequires: gpsd-devel
+Requires: gpsd-devel
+
+%if 0%{?almalinux} == 9
+BuildRequires: gpsd-minimal-clients gpsd-minimal
+Requires: gpsd-minimal-clients gpsd-minimal
+%else
+BuildRequires: gpsd-clients gpsd
+Requires: gpsd-clients gpsd
+%endif
 
 %if 0%{?fedora}
 BuildRequires: userspace-rcu-devel
