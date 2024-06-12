@@ -1,8 +1,8 @@
 
 Name: canopen-binding
-#Hexsha:        4368cc5a7d874b03c3a53bf0a305d2fbfbebc4b4
-Version: 2.0.2
-Release: 27%{?dist}
+#Hexsha: ccdc88d1180d2f153fc31dc28231aeb78cacbf99
+Version: 2.0.3
+Release: 28%{?dist}
 Summary: canopen-binding is a binding that allows the control of a CANopen field network
 
 License: No license to be set
@@ -56,6 +56,7 @@ This is the development package for plugins of %{name}.
 %dir %{_libdir}/pkgconfig
 %{_libdir}/pkgconfig/CANopen.pc
 %{_includedir}/CANopen
+%{_bindir}/dcf2afb.py
 
 %check
 
