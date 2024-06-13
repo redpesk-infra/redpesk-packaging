@@ -8,7 +8,7 @@ Build-Depends:
  cmake,
  gcc,
  libjson-c-dev,
- libafb-dev (>= 5.2.0),
+ libafb-dev (>= 5.0.1),
  librp-utils-dev (>= 0.0.4)
 Standards-Version: 3.8.2
 Homepage: https://github.com/redpesk-core/afb-binder

@@ -3,9 +3,9 @@
 #---------------------------------------------
 
 Name:           afb-binder
-#Hexsha: a98e159b6e6cdb1b7b1141957c6fbb89d7b6c1cb
-Version: 5.1.5+3+ga98e159
-Release: 33%{?dist}
+#Hexsha: e00c001394e0aca611acfd69cb6ec943990de9e6
+Version: 5.1.5+1+ge00c001
+Release: 32%{?dist}
 License:        GPL-3.0-only
 Summary:        Application framework binder
 Url:            https://github.com/redpesk-core/afb-binder
@@ -15,7 +15,7 @@ BuildRequires:  make
 BuildRequires:  cmake
 BuildRequires:  gcc-c++
 BuildRequires:  pkgconfig(json-c)
-BuildRequires:  pkgconfig(libafb) >= 5.2.0
+BuildRequires:  pkgconfig(libafb) >= 5.0.1
 BuildRequires:  pkgconfig(librp-utils) >= 0.0.4
 
 %description
@@ -34,7 +34,7 @@ Application Framework Binder library
 Group:          Development/Libraries/C and C++
 Requires:       libafb-binder5 = %{version}
 Requires:       pkgconfig(json-c)
-Requires:       pkgconfig(libafb) >= 5.2.0
+Requires:       pkgconfig(libafb) >= 5.0.1
 Provides:       pkgconfig(libafb-binder) = %{version}
 Summary:        Application Framework Binder library - Developement files
 

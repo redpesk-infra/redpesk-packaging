@@ -2,7 +2,7 @@ Format: 1.0
 Source: afb-binder
 Binary: afb-binder
 Architecture: any
-Version: 5.1.5+3+ga98e159
+Version: 5.1.5+1+ge00c001
 Maintainer: José Bollo <jose.bollo@iot.bzh>
 Standards-Version: 3.8.2
 Homepage: https://github.com/redpesk-core/afb-binder
@@ -12,8 +12,8 @@ Build-Depends:
  pkg-config,
  cmake,
  libjson-c-dev,
- libafb-dev (>= 5.2.0),
+ libafb-dev (>= 5.0.1),
  librp-utils-dev (>= 0.0.4)
 Files:
- afb-binder-5.1.5+3+ga98e159.tar.gz
+ afb-binder-5.1.5+1+ge00c001.tar.gz
 DEBTRANSFORM-RELEASE: 1
