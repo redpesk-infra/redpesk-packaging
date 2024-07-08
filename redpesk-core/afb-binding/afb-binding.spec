@@ -5,7 +5,7 @@ Name:           afb-binding
 #Hexsha:        0bbde7c8e537bea9879f8a6ad65d8cf689ed03b2
 Version:        4.1.9
 Release:        25%{?dist}
-License:        LGPLv3
+License:        LGPL-3.0
 Summary:        Binding headers for Application Framework Binder
 Group:          Development/Libraries/C and C++
 Url:            https://github.com/redpesk-core/afb-binding
@@ -20,7 +20,7 @@ Development files for creating application framework bindings
 
 #---------------------------------------------
 %package devel
-Summary:        afb-binding headers
+Summary:        Afb-binding headers
 Provides:       pkgconfig(afb-binding)
 
 %description devel
@@ -29,7 +29,7 @@ Development files for creating application framework binding
 #---------------------------------------------
 %package tutorial
 Requires:       %{name}-devel = %{version}
-Summary:        afb-binding examples and tutorial
+Summary:        Afb-binding examples and tutorial
 
 %description tutorial
 Provides examples for creation application framework binding
@@ -37,7 +37,7 @@ Provides examples for creation application framework binding
 #---------------------------------------------
 %package doc
 Requires:       %{name}-devel = %{version}
-Summary:        documentation files
+Summary:        Documentation files
 
 %description doc
 Some documentation on how to write application framework bindings
@@ -67,18 +67,24 @@ Some documentation on how to write application framework bindings
 %dir %{_includedir}/afb
 %{_includedir}/afb/*
 %{_libdir}/pkgconfig/*.pc
+%dir %{_datadir}/%{name}
+%dir %{_datadir}/%{name}/tutorials
+%dir %{_datadir}/%{name}/tutorials/v3
+%dir %{_datadir}/%{name}/tutorials/v4
+%{_datadir}/%{name}/tutorials/v3/*
+%{_datadir}/%{name}/tutorials/v4/*
 
 #---------------------------------------------
 %files doc
 %defattr(-,root,root)
-%dir %{_datadir}/%{name}
+%dir %{_datadir}/%{name}/docs
 %{_datadir}/%{name}/docs
 
 #---------------------------------------------
 %files tutorial
 %defattr(-,root,root)
-%dir %{_datadir}/%{name}
-%{_datadir}/%{name}/tutorials
+%{_datadir}/%{name}/tutorials/Makefile
+%{_datadir}/%{name}/tutorials/sample.txt
 
 #---------------------------------------------
 %changelog

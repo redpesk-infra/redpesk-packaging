@@ -27,8 +27,8 @@ Name:       platform-runtime-tools
 #Hexsha: 8612491b2a22c8325ac8dc264406fd3b0e1e1ad7
 Version: 0.2.3
 Release: 5%{?dist}
-License:    GPLv3
-Summary:    platform info API for catch useful information about version hardware / software
+License:    GPL-3.0-only
+Summary:    Platform info API for catch useful information about hardware/software
 URL:        https://github.com/redpesk-common/platform-runtime-tools
 Source0:    %{name}-%{version}.tar.gz
 Source1:    20-%{name}.preset
@@ -51,13 +51,14 @@ Cmake project using script file and executable to save hard / soft informations 
 It also add services for systemd to run anytime and get informations in generated file.
 
 %package -n dracut-%{name}
-Summary:    %{name} files for intallation using dracut (to make initramfs and redpesk recovery).
+Summary:    Files %{name} for intallation using dracut
 Provides:   %{name} = %{version}-%{release}
 Requires:   platform-runtime-tools
 Source10:   %{name}-module-setup.sh
 
 %description -n dracut-%{name}
-Add support of %{name} into redpesk recovery (generated using dracut).
+Add support of %{name} into redpesk recovery
+(generated using dracut, to make initramfs and redpesk recovery)
 
 %prep
 %setup -q
