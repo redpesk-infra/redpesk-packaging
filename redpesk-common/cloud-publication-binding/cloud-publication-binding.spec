@@ -5,7 +5,7 @@ Version: 2.0.2+20210713+2+g2e3f916
 Release: 1%{?dist}
 Summary: Cloud Publication Binding
 Group: Development/Libraries/C and C++
-License: APL2.0
+License: GPL-3.0-only
 URL: https://github.com/redpesk-common/cloud-publication-binding
 Source: %{name}-%{version}.tar.gz
 

@@ -2,8 +2,8 @@ Name:       sec-gate-fedid-binding
 #Hexsha: 2c9a061931441acee2f8d30e1d3934e2e50b9103
 Version: 1.0.6
 Release: 12%{?dist}
-License:    GPLv3
-Summary:    Handle Federerated social-id and local user-id.
+License:    GPL-3.0-only
+Summary:    Handle Federerated social-id and local user-id
 URL:        https://github.com/redpesk-common/sec-gate-fedid-binding
 Source:    %{name}-%{version}.tar.gz
 

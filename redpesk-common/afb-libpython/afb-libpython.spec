@@ -2,7 +2,7 @@ Name:           afb-libpython
 #Hexsha:        7c6e8c9407e8857608cfcd96fe276a9e03d18edc
 Version:        2.1.1
 Release:        14%{?dist}
-License:        LGPLv3
+License:        LGPL-3.0-only
 Summary:        Abstraction of afb-libafb for integration with non C/C++
 Group:          Development/Libraries/C and C++
 Url:            https://git.ovh.iot/redpesk/redpesk-common/afb-libpython

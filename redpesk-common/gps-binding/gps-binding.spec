@@ -17,8 +17,8 @@ Name:    gps-binding
 #Hexsha: e10f2abb1f50c3364f840f12454c95d7f9de7995
 Version: 1.1.2
 Release: 13%{?dist}
-License: GPLv3
-Summary: gps api for redpesk
+License: GPL-3.0-only
+Summary: Gps api for redpesk
 URL:     https://git.ovh.iot/redpesk/redpesk-common/gps-binding
 Source: %{name}-%{version}.tar.gz
 

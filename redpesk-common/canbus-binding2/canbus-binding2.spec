@@ -7,7 +7,7 @@ Version: 2.0.3+5+g4d68c92f
 Release: 9%{?dist}
 Summary: Redpesk binding to connect to CAN-bus
 Group:   Development/Libraries/C and C++
-License: APL2.0
+License: Apache-2.0
 URL: https://github.com/redpesk-common/canbus-binding
 Source: %{name}-%{version}.tar.gz
 
@@ -34,7 +34,7 @@ Canbus level binding 2
 %package devel
 Requires: %{name} = %{version}
 Provides: pkgconfig(%{_name}) = %{version}
-Summary:  %{summary} (development package)
+Summary:  Devel canbus-binding2 (development package)
 
 %description devel 
 %summary 
@@ -42,7 +42,7 @@ This is the development package for %{_name} 2.
 
 
 %package plugin-template
-Summary: %{name} plugin-template
+Summary: Template %{name} plugin-template
 Requires: %{name} = %{version}
 
 %description plugin-template

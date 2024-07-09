@@ -3,9 +3,9 @@ Name: canbus-generator
 #Hexsha: 1b194fc305f312086ba70e5714114fd090047853
 Version: 2.0.1
 Release: 10%{?dist}
-Summary: Generate canbus-plugins source files.
+Summary: Generate canbus-plugins source files
 Group:          Development/Libraries/C and C++
-License: APL2.0
+License:  Apache-2.0
 URL: https://github.com/redpesk-common/canbus-generator
 Source: %{name}-%{version}.tar.gz
 

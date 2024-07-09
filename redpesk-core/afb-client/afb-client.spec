@@ -6,7 +6,7 @@ Name:           afb-client
 #Hexsha:        1b46e9f008f1da5148c90b1976666cdf55b87a11
 Version:        4.0.2
 Release:        11%{?dist}
-License:        GPLv3
+License:        GPL-3.0-only
 Summary:        Application framework binder
 Group:          Development/Libraries/C and C++
 Url:            https://git.ovh.iot/redpesk/redpesk-core/afb-client

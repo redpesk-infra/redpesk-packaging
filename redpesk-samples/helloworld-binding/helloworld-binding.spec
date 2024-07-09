@@ -18,8 +18,8 @@ Name:    helloworld-binding
 #Hexsha: 3e17e7a444ada20ea766ee902ede234fc768edae
 Version: 1.1.1
 Release: 4%{?dist}
-License: APL2.0
-Summary: helloworld service set to be used in redpesk
+License: MIT
+Summary: Helloworld service set to be used in redpesk
 URL:     https://github.com/redpesk-samples/helloworld-binding
 Source:  %{name}-%{version}.tar.gz
 

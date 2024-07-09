@@ -18,8 +18,8 @@ Name:       platform-info-binding
 #Hexsha: e3b75c78732cae2df9451a6190b949dbca5d735a
 Version: 8.1.0
 Release: 6%{?dist}
-License:    GPLv3
-Summary:    platform info API for catch useful information about version hardware / software
+License:    GPL-3.0-only
+Summary:    Platform info API for catch useful information
 URL:        https://github.com/redpesk-common/platform-info-binding
 Source0:    %{name}-%{version}.tar.gz
 
