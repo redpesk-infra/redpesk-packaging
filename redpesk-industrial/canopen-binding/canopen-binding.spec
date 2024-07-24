@@ -1,8 +1,8 @@
 
 Name: canopen-binding
-#Hexsha: 523b08c0b27c805eaf0146573fa85f351c95d81d
-Version: 2.0.3+4+g523b08c
-Release: 30%{?dist}
+#Hexsha: 1f5a80bd23c9303f9d352ec7fdfb33b7f6192cee
+Version: 2.1.0
+Release: 31%{?dist}
 Summary: canopen-binding is a binding that allows the control of a CANopen field network
 
 License: No license to be set
@@ -54,7 +54,9 @@ This is the development package for plugins of %{name}.
 
 %files devel
 %dir %{_libdir}/pkgconfig
+%{_libdir}/libCANopenXchg.a
 %{_libdir}/pkgconfig/CANopen.pc
+%{_libdir}/pkgconfig/CANopenXchg.pc
 %{_includedir}/CANopen
 %{_bindir}/dcf2afb.py
 
@@ -63,6 +65,10 @@ This is the development package for plugins of %{name}.
 %clean
 
 %changelog
+
+* Wed Jul 24 2024 José Bollo jose.bollo@iot.bzh 2.1.0
+- Add CANopenXchg items
+
 * Fri Jul 23 2021 IoT.bzh(iotpkg) <redpesk.list@iot.bzh> 1.1.0+20210711+8+g0a73850
 - Upgrade version from source commit sha: 0a73850cac38d7bc29103db39857d615eb8bb3a1
 - Commit message:

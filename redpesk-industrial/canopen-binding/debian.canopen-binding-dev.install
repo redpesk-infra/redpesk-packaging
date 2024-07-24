@@ -1,3 +1,4 @@
 /usr/include/*
+/usr/lib/x86_64-linux-gnu/libCANopenXchg.a
 /usr/lib/x86_64-linux-gnu/pkgconfig/*
 /usr/bin/dcf2afb.py
