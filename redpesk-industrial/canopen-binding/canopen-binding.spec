@@ -1,11 +1,11 @@
 
 Name: canopen-binding
-#Hexsha: 1f5a80bd23c9303f9d352ec7fdfb33b7f6192cee
-Version: 2.1.0
-Release: 31%{?dist}
+#Hexsha:        292f8fbf279dfc003f865a2946b2274a85b29920
+Version: 2.1.0+2+g292f8fb
+Release: 33%{?dist}
 Summary: canopen-binding is a binding that allows the control of a CANopen field network
 
-License: No license to be set
+License: GPL-3.0-only
 URL: http://git.ovh.iot/redpesk/redpesk-industrial/canopen-binding
 Source: %{name}-%{version}.tar.gz
 
