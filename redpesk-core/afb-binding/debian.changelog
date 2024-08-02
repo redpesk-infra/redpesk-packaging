@@ -1,4 +1,4 @@
-afb-binding (4.1.9) stretch buster; urgency=medium
+afb-binding (4.1.10) stretch buster; urgency=medium
 
 * Version 4.1.1
   - Fix reference to afb_api_new_api
