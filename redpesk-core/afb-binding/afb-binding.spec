@@ -2,9 +2,9 @@
 # spec file for package afb-binding
 #---------------------------------------------
 Name:           afb-binding
-#Hexsha:        99cccef4504c299315c02b6e100136e00cf8c865
-Version:        4.1.10
-Release:        26%{?dist}
+#Hexsha:         cc31c8ce215674c2693c218c593c25d73ce90938
+Version:        4.1.11
+Release:        27%{?dist}
 License:        LGPL-3.0
 Summary:        Binding headers for Application Framework Binder
 Group:          Development/Libraries/C and C++
