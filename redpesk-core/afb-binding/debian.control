@@ -1,0 +1,25 @@
+Source: afb-binding
+Maintainer: José Bollo <jose.bollo@iot.bzh>
+Section: libs
+Priority: optional
+Build-Depends:
+ debhelper (>= 5),
+ dpkg-dev,
+ cmake
+Standards-Version: 3.8.2
+Homepage: http://github.com/redpesk-core/afb-binding
+
+Package: afb-binding-dev
+Section: libs
+Architecture: any
+Description: Development files for creating afb bindings
+
+Package: afb-binding-doc
+Section: libs
+Architecture: any
+Description: Development files for creating afb bindings - documentation
+
+Package: afb-binding-tuto
+Section: libs
+Architecture: any
+Description: Development files for creating afb bindings - tutorial

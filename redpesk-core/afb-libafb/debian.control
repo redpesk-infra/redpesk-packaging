@@ -1,0 +1,73 @@
+Priority: medium
+Maintainer: José Bollo <jose.bollo@iot.bzh>
+Source: afb-libafb
+Build-Depends:
+ debhelper (>= 5),
+ dpkg-dev,
+ pkg-config,	
+ cmake,
+ gcc,
+ libmicrohttpd-dev (>= 0.9.60),
+ libsystemd-dev (>= 222),
+ libssl-dev,
+ libgcrypt20-dev,
+ libjson-c-dev,
+ librp-utils-dev (>= 0.0.4),
+ libmagic-dev,
+ gnutls-dev,
+ afb-binding-dev (>= 4.1.2)
+Standards-Version: 3.8.2
+Homepage: https://github.com/redpesk-core/afb-libafb
+
+Package: libafb5
+Section: libs
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: core AFB library
+
+Package: libafb-headers
+Section: libs
+Architecture: any
+Description: core AFB library - development files, headers
+
+Package: libafb-dev
+Section: libs
+Architecture: any
+Depends: libafb-headers, libafb5, afb-binding-dev, libsystemd-dev, libssl-dev,
+ librp-utils-dev, libgcrypt20-dev, libjson-c-dev, libmagic-dev, libmicrohttpd-dev,
+ gnutls-dev
+Description: core AFB library - development files for shared library
+
+Package: libafb-static
+Section: libs
+Architecture: any
+Depends: libafb-headers, afb-binding-dev, libsystemd-dev, libssl-dev,
+ librp-utils-dev, libgcrypt20-dev, libjson-c-dev, libmagic-dev, libmicrohttpd-dev,
+ gnutls-dev
+Description: core AFB library - development files for static library
+
+Package: libafbcli5
+Section: libs
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: AFB client library
+
+Package: libafbcli-headers
+Section: libs
+Architecture: any
+Description: AFB client library - headers for development
+
+Package: libafbcli-dev
+Section: libs
+Architecture: any
+Depends: libafbcli5, libafbcli-headers, libsystemd-dev, libjson-c-dev,
+ librp-utils-dev
+Description: AFB client library - development files using shared library
+
+Package: libafbcli-static
+Section: libs
+Architecture: any
+Depends: libafbcli5, libafbcli-headers, libsystemd-dev, libjson-c-dev,
+ librp-utils-dev
+Description: AFB client library - development files using static library
+

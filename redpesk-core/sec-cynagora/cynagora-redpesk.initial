@@ -1,0 +1,36 @@
+#--------------------------------------------------------------------
+# initial database for cynagora
+# format: space/tab separated fields
+# fields: CLIENT SESSION USER PERMISSION ACTION EXPIRATION
+#--------------------------------------------------------------------
+
+* * *      * -:- forever   # explicit default rule: ask default agent named "-" with value "-"
+* * @ADMIN * yes forever   # users of group @ADMIN can do anything
+* * @NONE  * no  forever   # users of group @NONE can do nothing
+
+#--------------------------------------------------------------------
+# User "0" and clients "System" and "unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023"
+# are in the group "@ADMIN"
+#--------------------------------------------------------------------
+
+*      * 0 * @:%c;%s;@ADMIN;%p forever
+System * * * @:%c;%s;@ADMIN;%p forever
+unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 * * * @:%c;%s;@ADMIN;%p forever
+
+#--------------------------------------------------------------------
+# Allow user_t use afm api
+#--------------------------------------------------------------------
+
+user_u:user_r:user_t:s0 * * urn:AGL:token:valid yes forever
+user_u:user_r:user_t:s0 * * urn:AGL:permission:afm:system:widget yes forever
+user_u:user_r:user_t:s0 * * urn:AGL:permission:afm:system:runner yes forever
+
+#--------------------------------------------------------------------
+# Allow guest_t use limited afm api
+#--------------------------------------------------------------------
+
+guest_u:guest_r:guest_t:s0 * * urn:AGL:token:valid yes forever
+guest_u:guest_r:guest_t:s0 * * urn:AGL:permission:afm:system:widget:detail yes forever
+guest_u:guest_r:guest_t:s0 * * urn:AGL:permission:afm:system:widget:start yes forever
+guest_u:guest_r:guest_t:s0 * * urn:AGL:permission:afm:system:runner:state yes forever
+guest_u:guest_r:guest_t:s0 * * urn:AGL:permission:afm:system:runner:kill yes forever

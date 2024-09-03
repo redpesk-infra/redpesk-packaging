@@ -1,0 +1,40 @@
+Priority: medium
+Maintainer: José Bollo <jose.bollo@iot.bzh>
+Source: rp-lib-utils
+Build-Depends:
+ debhelper (>= 5),
+ dpkg-dev,
+ pkg-config,	
+ cmake,
+ gcc,
+ libjson-c-dev,
+ libyaml-dev,
+ libsystemd-dev (>= 222),
+ libcurl4-gnutls-dev
+Standards-Version: 3.8.2
+Homepage: https://github.com/redpesk-core/rp-lib-utils
+
+Package: librp-utils0
+Section: libs
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: C utilities for redpesk
+
+Package: librp-utils-headers
+Section: libs
+Architecture: any
+Description: C utilities for redpesk - Headers for development
+
+Package: librp-utils-dev
+Section: libs
+Architecture: any
+Depends: librp-utils0, librp-utils-headers, libjson-c-dev, libyaml-dev, libsystemd-dev, libcurl4-gnutls-dev
+Description: C utilities for redpesk - Development files
+
+Package: librp-utils-static
+Section: libs
+Architecture: any
+Depends: librp-utils-headers, libjson-c-dev, libyaml-dev, libsystemd-dev, libcurl4-gnutls-dev
+Description: C utilities for redpesk - Static library
+
+

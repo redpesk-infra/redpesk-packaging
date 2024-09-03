@@ -1,0 +1,3 @@
+/usr/lib/*/libcanbus.so
+/usr/lib/*/pkgconfig/*
+/usr/include/*

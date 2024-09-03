@@ -1,0 +1,31 @@
+Priority: optional
+Maintainer: Ronan Le Martret <ronan.lemartret@iot.bzh>
+Source: secure-storage-binding
+Build-Depends:
+ debhelper (>= 5),
+ pkg-config,
+ dpkg-dev,
+ cmake,
+ afb-cmake-modules,
+ afb-binder,
+ afb-binding-dev,
+ lua5.3,
+ liblua5.3-dev,
+ libjson-c-dev,
+ libsystemd-dev,
+ afb-libhelpers-dev,
+ afb-libcontroller-dev,
+ libdb-dev,
+Standards-Version: 3.8.2
+Homepage: https://github.com/redpesk-addons/secure-storage-binding
+
+Package: secure-storage-binding
+Section: libs
+Architecture: any
+Description: Binding provide a database API with key/value semantics
+
+Package: secure-storage-binding-test
+Section: libs
+Architecture: any
+Description: Binding provide a database API with key/value semantics
+

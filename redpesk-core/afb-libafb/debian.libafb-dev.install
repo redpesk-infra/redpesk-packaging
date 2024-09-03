@@ -1,0 +1,3 @@
+usr/lib/*/libafb.so
+usr/lib/*/pkgconfig/libafb.pc
+

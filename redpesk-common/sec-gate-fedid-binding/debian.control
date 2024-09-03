@@ -1,0 +1,27 @@
+Priority: optional
+Maintainer: Valentin Lefebvre <valentin.lefebvre@iot.bzh>
+Source: sec-gate-fedid-binding
+Build-Depends: debhelper (>=5), 
+    pkg-config,
+    cmake,
+    g++,
+    linux-libc-dev,
+    libsqlite3-dev,
+    afb-cmake-modules,
+    libjson-c-dev,
+    libsystemd-dev (>= 222),
+    afb-binding-dev,
+    afb-libhelpers-dev,
+Standards-Version: 3.8.2
+Homepage: https://github.com/redpesk-common/sec-gate-fedid-binding
+
+Package: sec-gate-fedid-binding
+Section: libs
+Architecture: any
+Description: Handle Federated social-id and local user-id.
+
+Package: sec-gate-fedid-binding-types-dev
+Section: dev
+Architecture: any
+Depends: sec-gate-fedid-binding
+Description: sec-gate-fedid-binding-types-dev is the binding to help developing bindings using federation id

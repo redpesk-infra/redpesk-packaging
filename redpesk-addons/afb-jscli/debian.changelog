@@ -1,0 +1,8 @@
+afb-jscli (0.3.0) stretch buster; urgency=medium
+
+* Version 0.3.0
+  - Update copyrights
+  - Update to newer version of libafb
+
+ -- Jose Bollo jose.bollo@iot.bzh  Wed, 20 Apr 2022 15:32:44 +0200
+

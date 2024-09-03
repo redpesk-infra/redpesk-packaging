@@ -1,0 +1,19 @@
+diff --git a/conf.d/controller/lua.d/aft.lua b/conf.d/controller/lua.d/aft.lua
+index 91b9086..77da99f 100644
+--- a/conf.d/controller/lua.d/aft.lua
++++ b/conf.d/controller/lua.d/aft.lua
+@@ -364,10 +364,10 @@ end
+ 
+ function _AFT.assertVerbSkipped(api, verb, args, cb, msg)
+ 	if(msg) then
+-		lu.skip("Test ("..api..", "..verb..", "..args..", "..cb..") is skipped because "..msg)
+-	else
+-		lu.skip("Test ("..api..", "..verb..", "..args..", "..cb..") is skipped")
+-	end
++                lu.skip("Test ("..tostring(api)..", "..tostring(verb)..", "..tostring(args)..", "..tostring(cb)..") is skipped because "..msg)
++        else
++                lu.skip("Test ("..tostring(api)..", "..tostring(verb)..", "..tostring(args)..", "..tostring(cb)..") is skipped")
++        end
+ end
+ 
+ function _AFT.assertVerbError(api, verb, args, cb)

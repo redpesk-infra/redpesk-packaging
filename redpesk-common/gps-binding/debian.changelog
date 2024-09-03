@@ -1,0 +1,5 @@
+gps-binding (1.0.0) unstable; urgency=low
+
+  * Init build
+
+-- Aymeric Aillet <aymeric.aillet@iot.bzh>  Tue, 15 Dec 2020 16:02:25 +0100

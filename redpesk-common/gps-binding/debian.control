@@ -1,0 +1,31 @@
+Priority: optional
+Maintainer: Aymeric Aillet <aymeric.aillet@iot.bzh>
+Source: gps-binding
+Build-Depends: debhelper (>= 5),pkg-config,
+ cmake,
+ afb-cmake-modules,
+ g++,
+ libsystemd-dev (>= 222),
+ afb-binding-dev,
+ libjson-c-dev,
+ liblua5.3-dev,
+ afb-libhelpers-dev,
+ afb-libcontroller-dev,
+ gpsd,
+ gpsd-clients,
+ libgps-dev,
+ liburcu-dev,
+Standards-Version: 3.8.2
+Homepage: https://github.com/redpesk-common/gps-binding
+
+Package: gps-binding
+Section: libs
+Architecture: any
+Depends: gpsd, gpsd-clients, gpsd-devel, gpsd-libs, afb-binder
+Description: gps binding
+
+Package: gps-binding-test
+Section: libs
+Architecture: any
+Depends: gps-binding-bin
+Description: gps binding test

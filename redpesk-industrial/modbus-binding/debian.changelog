@@ -1,0 +1,5 @@
+modbus-binding (2.1.0+3+g224ce6b) unstable; urgency=low
+
+  * init build
+
+ -- Ronan Le Martret <ronan.lemartret@iot.bzh>  Thu, 25 Oct 2019 10:50:38 +0100

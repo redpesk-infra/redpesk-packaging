@@ -1,0 +1,8 @@
+afb-libpython (2.1.1) stretch buster; urgency=medium
+
+* Version 1.0.0
+
+  - initial packaging
+
+ -- José Bollo jose.bollo@iot.bzh  Wed, 11 Jan 2023 13:42:07 +0100
+

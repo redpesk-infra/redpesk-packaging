@@ -1,0 +1,15 @@
+Priority: optional
+Maintainer: Romain Forlot <romain.forlot@iot.bzh>
+Source: afb-cmake-modules
+Build-Depends:
+ debhelper (>= 5),
+ cmake,
+Standards-Version: 3.8.2
+Homepage: https://git.ovh.iot/redpesk/redpesk-core/afb-cmake-modules
+
+Package: afb-cmake-modules
+Section: devel
+Architecture: all
+Depends: afb-idl, zip
+Description: afb-cmake-modules is a CMake module made to ease application
+ framework binding.

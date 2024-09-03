@@ -1,0 +1,33 @@
+Priority: optional
+Maintainer: unknown <unknown@debian.org>
+Source: canbus-plugins-community
+Build-Depends: debhelper (>= 5),pkg-config,
+ cmake (>= 3.10),
+ g++, 
+ canbus-binding-dev (>= 2),
+ canbus-generator (>= 2)
+Standards-Version: 3.8.2
+
+Package: canbus-plugins2-hvac
+Section: libs
+Architecture: any
+Depends: canbus-binding2-bin
+Description: Plugin for the canbus-binding
+
+Package: canbus-plugins2-vcar
+Section: libs
+Architecture: any
+Depends: canbus-binding2-bin
+Description: Plugin for the canbus-binding
+
+Package: canbus-plugins2-obd2
+Section: libs
+Architecture: any
+Depends: canbus-binding2-bin
+Description: Plugin for the canbus-binding
+
+Package: canbus-plugins2-engine
+Section: libs
+Architecture: any
+Depends: canbus-binding2-bin
+Description: Plugin for the canbus-binding

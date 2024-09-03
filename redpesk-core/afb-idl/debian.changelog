@@ -1,0 +1,24 @@
+afb-idl (0.4.1-1) stretch buster; urgency=medium
+
+* Version 0.2.0
+  - [CI] Create MAINTAINERS file
+  - Add API generation from flatbuffer
+  - Add CMakeList.txt generation
+  - Add type params to rpc-type.json generation
+  - Add afb-fbgen script
+  - Rename bfbs to flatbuffers
+  - Add afb-fbgen CMakeList.txt
+  - Clean up obsolete files
+  - Add sample directory with custom template example
+  - Improve afb-fbgen script
+  - Conditional compilation of afb-fbgen
+  - Improve generation of binaries
+  - Prepare Version 0.2
+  - Fix fb-template typo
+  - Add jfbsextr for extracting relevant data
+  - Use jfbsextr in afb-fbgen script
+  - jfbsextr: Add options
+  - flatbuffers: Rework templating
+
+ -- José Bollo jose.bollo@iot.bzh  Fri, 19 Nov 2021 16:05:33 +0100
+

@@ -1,0 +1,20 @@
+Priority: optional
+Maintainer: Valentin Lefebvre <valentin.lefebvre@iot.bzh>
+Source: platform-info-binding
+Build-Depends: debhelper (>=5), pkg-config,
+    cmake, 
+    g++,
+    afb-cmake-modules,
+    rp-libmicrohttpd-dev | libmicrohttpd-dev,
+    libsystemd-dev (>= 222),
+    afb-binding-dev,
+    libjson-c-dev,
+    afb-libhelpers-dev,
+    platform-runtime-tools
+Standards-Version: 3.8.2
+Homepage: https://github.com/redpesk-common/platform-info-binding
+
+Package:  platform-info-binding-bin
+Section: libs
+Architecture: any
+Description: Service which list data system information

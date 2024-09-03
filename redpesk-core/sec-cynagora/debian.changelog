@@ -1,0 +1,16 @@
+sec-cynagora (2.1.3-1) stretch buster; urgency=medium
+
+* Version 2.2.1
+  - Fix mixing synchronous and asynchronous communication
+  - Version 2.2.1
+
+ -- Jose Bollo jose.bollo@iot.bzh  Wed, 16 Jun 2021 10:39:46 +0200
+
+* Version 2.2.0
+  - Version 2.2.0
+
+ -- José Bollo jose.bollo@iot.bzh  Wed, 09 Jun 2021 08:16:14 +0200
+
+* Add default database directory in files
+
+ -- Arthur Guyader arthur.guyader@iot.bzh  Thu, 22 Apr 2021 14:45:29 +0200

@@ -1,0 +1,10 @@
+canopen-binding (1.0.1-1) unstable; urgency=medium
+
+* Version 2.1.0
+  * Add CANopenXchg items
+
+ -- José Bollo jose.bollo@iot.bzh  Wed, 24 Jul 2024 11:35:12 +0200
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- unknown <corentin@unknown>  Wed, 16 Dec 2020 15:31:32 +0100

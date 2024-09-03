@@ -1,0 +1,15 @@
+afb-client (4.0.1) stretch buster; urgency=medium
+
+* Version 4.0.1
+
+
+ -- José Bollo jose.bollo@iot.bzh  Tue, 13 Apr 2021 16:08:10 +0200
+
+* Version 4.0.0
+  - Adapt to cmake 3.10
+  - Version 4.0.0beta6
+  - mkbuild: Allow build every where
+  - Version 4.0.0
+
+ -- José Bollo jose.bollo@iot.bzh  Fri, 09 Apr 2021 17:25:06 +0200
+

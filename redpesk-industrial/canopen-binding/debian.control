@@ -1,0 +1,32 @@
+Source: canopen-binding
+Priority: optional
+Maintainer: unknown <corentin@unknown>
+Build-Depends:
+ debhelper-compat (= 12),
+ debhelper (>= 5),
+ pkg-config,	
+ cmake,
+ g++, 
+ afb-binding-dev,
+ libjson-c-dev,
+ afb-libhelpers4-static,
+ librp-utils-static,
+ liblely-coapp-dev
+Standards-Version: 4.4.1
+Section: libs
+Homepage: https://git.ovh.iot/redpesk/redpesk-industrial/canopen-binding
+
+Package: canopen-binding-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: canopen-binding-bin (= ${binary:Version}), ${misc:Depends}
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>
+
+Package: canopen-binding-bin
+Architecture: any
+Multi-Arch: same
+Depends: ${shlibs:Depends}, ${misc:Depends}, afb-binder
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>

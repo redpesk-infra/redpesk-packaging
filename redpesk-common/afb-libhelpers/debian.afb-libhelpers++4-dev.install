@@ -1,0 +1,4 @@
+/usr/lib/*/libafb-helpers++4.so
+/usr/lib/*/pkgconfig/afb-helpers++4.pc
+/usr/include/afb-helpers4/*.hpp
+/usr/include/afb-helpers4/afb-data-utils
