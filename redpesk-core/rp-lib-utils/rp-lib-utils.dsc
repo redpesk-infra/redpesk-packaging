@@ -2,7 +2,7 @@ Format: 1.0
 Source: rp-lib-utils
 Binary: librp-utils0, librp-utils
 Architecture: any
-Version: 0.1.3+4+g842bccb
+Version: 0.1.4
 Maintainer: José Bollo <jose.bollo@iot.bzh>
 Standards-Version: 3.8.2
 Homepage: https://github.com/redpesk-core/rp-lib-utils
@@ -16,5 +16,5 @@ Build-Depends:
  libsystemd-dev,
  libcurl4-gnutls-dev
 Files:
-rp-lib-utils-0.1.3+4+g842bccb.tar.gz
+rp-lib-utils-0.1.4.tar.gz
 DEBTRANSFORM-RELEASE: 1

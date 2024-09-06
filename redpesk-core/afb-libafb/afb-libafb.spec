@@ -3,9 +3,9 @@
 #---------------------------------------------
 
 Name:           afb-libafb
-#Hexsha:        a652c074462ab55a00164bd7cd419ce493ba758e
-Version:        5.1.0+107+ga652c07
-Release: 	56%{?dist}
+#Hexsha:        1a2a2db710385f3180332461938539b8b5e9a132
+Version:        5.2.0
+Release: 	57%{?dist}
 License:        GPL-3.0-only
 Summary:        Library of internals of application framework binder
 Group:          Development/Libraries/C and C++
@@ -34,7 +34,7 @@ Library of internals for the application framework binder,
 its derivates and its clients.
 
 #---------------------------------------------
-%package -n libafb5
+%package -n libafb6
 Group:          Development/Libraries/C and C++
 Summary:        Application Framework Binder core library
 
@@ -48,7 +48,7 @@ Requires: libmicrohttpd >= 0.9.60
 %endif
 
 
-%description -n libafb5
+%description -n libafb6
 Application Framework Binder core library
 
 #---------------------------------------------
@@ -62,7 +62,7 @@ Header files for application Framework Binder core library
 #---------------------------------------------
 %package -n libafb-devel
 Group:          Development/Libraries/C and C++
-Requires:       libafb5 = %{version}
+Requires:       libafb6 = %{version}
 Requires:       libafb-headers = %{version}
 Requires:       pkgconfig(json-c)
 Requires:       pkgconfig(afb-binding)
@@ -84,11 +84,11 @@ Summary:        Development files for application Framework Binder core static l
 Development files for application Framework Binder core static library
 
 #---------------------------------------------
-%package -n libafbcli5
+%package -n libafbcli6
 Group:          Development/Libraries/C and C++
 Summary:        Application Framework Binder client library
 
-%description -n libafbcli5
+%description -n libafbcli6
 Application Framework Binder client library
 
 #---------------------------------------------
@@ -102,7 +102,7 @@ Header files for application Framework Binder client library
 #---------------------------------------------
 %package -n libafbcli-devel
 Group:          Development/Libraries/C and C++
-Requires:       libafbcli5 = %{version}
+Requires:       libafbcli6 = %{version}
 Requires:       libafbcli-headers = %{version}
 Requires:       pkgconfig(json-c)
 Requires:       pkgconfig(libsystemd) >= 222
@@ -142,13 +142,13 @@ CFLAGS="${CFLAGS:-%optflags} -ffat-lto-objects"
 %cmake_install
 
 #---------------------------------------------
-%post -n libafb5
+%post -n libafb6
 /sbin/ldconfig
 
-%postun -n libafb5
+%postun -n libafb6
 /sbin/ldconfig
 
-%files -n libafb5
+%files -n libafb6
 %defattr(-,root,root)
 %{_libdir}/libafb.so.*
 
@@ -170,13 +170,13 @@ CFLAGS="${CFLAGS:-%optflags} -ffat-lto-objects"
 %{_libdir}/libafb.a
 
 #---------------------------------------------
-%post -n libafbcli5
+%post -n libafbcli6
 /sbin/ldconfig
 
-%postun -n libafbcli5
+%postun -n libafbcli6
 /sbin/ldconfig
 
-%files -n libafbcli5
+%files -n libafbcli6
 %defattr(-,root,root)
 %{_libdir}/libafbcli.so.*
 
@@ -199,6 +199,9 @@ CFLAGS="${CFLAGS:-%optflags} -ffat-lto-objects"
 
 #---------------------------------------------
 %changelog
+
+* Fri Sep 6 2024 José Bollo jose.bollo@iot.bzh 5.2.0
+- adapt for libafb6 and libafbcli6
 
 * Tue Jan 5 2023 José Bollo jose.bollo@iot.bzh 5.0.0
 - refactor packaging
