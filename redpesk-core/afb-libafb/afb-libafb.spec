@@ -3,7 +3,7 @@
 #---------------------------------------------
 
 Name:           afb-libafb
-#Hexsha:            8a69b166a54aff95fbff738bde852bc4a9f30004
+#Hexsha:        8a69b166a54aff95fbff738bde852bc4a9f30004
 Version:        5.3.0
 Release: 	59%{?dist}
 License:        GPL-3.0-only

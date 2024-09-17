@@ -1,5 +1,5 @@
 Name:       sec-gate-oidc
-#Hexsha:    2f38acc4aaa03f232184512fb4e5d6143b7120eb
+#Hexsha:    8b0a98e5d5b0018b9de660a2436de79c164b2aec
 Version:    1.0.11
 Release:    1%{?dist}
 License:    GPLv3

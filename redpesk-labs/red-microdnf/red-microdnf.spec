@@ -1,6 +1,6 @@
 Name:           red-microdnf
-#Hexsha: 9f704e5a7d62af1441dbd31f2dc2ecfbcd87a536
-Version: 1.0.2
+#Hexsha: 1ae99d73cbf7320b3fd9df504bb50467b5fd534e
+Version: 1.0.2+20240827+1+g1ae99d7
 Release: 6%{?dist}
 Summary:        red-microdnf: for of microdnf
 License:        LGPLv2.1+
