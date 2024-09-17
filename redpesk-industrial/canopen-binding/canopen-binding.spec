@@ -1,6 +1,6 @@
 
 Name: canopen-binding
-#Hexsha:        292f8fbf279dfc003f865a2946b2274a85b29920
+#Hexsha: 292f8fbf279dfc003f865a2946b2274a85b29920
 Version: 2.1.0+2+g292f8fb
 Release: 33%{?dist}
 Summary: canopen-binding is a binding that allows the control of a CANopen field network

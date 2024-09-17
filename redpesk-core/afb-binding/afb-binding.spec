@@ -2,7 +2,7 @@
 # spec file for package afb-binding
 #---------------------------------------------
 Name:           afb-binding
-#Hexsha:         cc31c8ce215674c2693c218c593c25d73ce90938
+#Hexsha:        cc31c8ce215674c2693c218c593c25d73ce90938
 Version:        4.1.11
 Release:        27%{?dist}
 License:        LGPL-3.0
