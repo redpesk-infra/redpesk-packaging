@@ -3,9 +3,9 @@
 #---------------------------------------------
 
 Name:           afb-client
-#Hexsha:        37a1192f57340ad27755c927ee01beddb4f0648f
-Version:        4.1.0+1+g37a1192
-Release:        13%{?dist}
+#Hexsha:        0f89d9bdb88b075e132fae982878cdb53c18620b
+Version:        4.2.0
+Release:        14%{?dist}
 License:        GPL-3.0-only
 Summary:        Application framework binder
 Group:          Development/Libraries/C and C++
