@@ -2,7 +2,7 @@ Format: 1.0
 Source: afb-client
 Binary: afb-client
 Architecture: any
-Version: 4.2.0
+Version: 4.2.1
 Maintainer: José Bollo <jose.bollo@iot.bzh>
 Standards-Version: 3.8.2
 Homepage: https://github.com/redpesk-core/afb-client
@@ -15,5 +15,5 @@ Build-Depends:
  libafbcli-dev,
  libreadline-dev
 Files:
- afb-client-4.0.1.tar.gz
+ afb-client-4.0.2.tar.gz
 DEBTRANSFORM-RELEASE: 1
