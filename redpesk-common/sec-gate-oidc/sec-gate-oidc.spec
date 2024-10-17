@@ -1,7 +1,7 @@
 Name:       sec-gate-oidc
 #Hexsha:    8b0a98e5d5b0018b9de660a2436de79c164b2aec
 Version:    1.0.11
-Release:    1%{?dist}
+Release:    2%{?dist}
 License:    GPLv3
 Summary:    secure gateway protecting Websockets API imported through --ws-client=xxx as well as HTML5 or REST page/api serve by afb-binder
 URL:        https://github.com/redpesk-common/sec-gate-oidc
