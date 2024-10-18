@@ -1,7 +1,7 @@
 Name: rp-lib-utils
-#Hexsha: ad0e30968a5da07fd8b5d5ca4c13850c7ddf2f85
-Version: 0.1.4
-Release: 25%{?dist}
+#Hexsha: 3ce9592d1dbf2e900c22216914ee0a888a8c076d
+Version: 0.1.5
+Release: 26%{?dist}
 Summary: Library of utilities
 
 License: MIT
