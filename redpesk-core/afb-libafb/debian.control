@@ -12,7 +12,9 @@ Build-Depends:
  libssl-dev,
  libgcrypt20-dev,
  libjson-c-dev,
- librp-utils-dev (>= 0.0.4),
+ librp-utils-core-dev,
+ librp-utils-file-dev,
+ librp-utils-json-c-dev,
  libmagic-dev,
  gnutls-dev,
  afb-binding-dev (>= 4.1.2)
@@ -34,7 +36,8 @@ Package: libafb-dev
 Section: libs
 Architecture: any
 Depends: libafb-headers, libafb6, afb-binding-dev, libsystemd-dev, libssl-dev,
- librp-utils-dev, libgcrypt20-dev, libjson-c-dev, libmagic-dev, libmicrohttpd-dev,
+ librp-utils-core-dev, librp-utils-file-dev, librp-utils-json-c-dev,
+ libgcrypt20-dev, libjson-c-dev, libmagic-dev, libmicrohttpd-dev,
  gnutls-dev
 Description: core AFB library - development files for shared library
 
@@ -42,7 +45,8 @@ Package: libafb-static
 Section: libs
 Architecture: any
 Depends: libafb-headers, afb-binding-dev, libsystemd-dev, libssl-dev,
- librp-utils-dev, libgcrypt20-dev, libjson-c-dev, libmagic-dev, libmicrohttpd-dev,
+ librp-utils-core-dev, librp-utils-file-dev, librp-utils-json-c-dev,
+ libgcrypt20-dev, libjson-c-dev, libmagic-dev, libmicrohttpd-dev,
  gnutls-dev
 Description: core AFB library - development files for static library
 
@@ -61,13 +65,13 @@ Package: libafbcli-dev
 Section: libs
 Architecture: any
 Depends: libafbcli6, libafbcli-headers, libsystemd-dev, libjson-c-dev,
- librp-utils-dev
+ librp-utils-core-dev, librp-utils-file-dev, librp-utils-json-c-dev
 Description: AFB client library - development files using shared library
 
 Package: libafbcli-static
 Section: libs
 Architecture: any
 Depends: libafbcli6, libafbcli-headers, libsystemd-dev, libjson-c-dev,
- librp-utils-dev
+ librp-utils-core-dev, librp-utils-file-dev, librp-utils-json-c-dev
 Description: AFB client library - development files using static library
 

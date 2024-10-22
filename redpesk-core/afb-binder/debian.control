@@ -9,7 +9,9 @@ Build-Depends:
  gcc,
  libjson-c-dev,
  libafb-dev (>= 5.0.1),
- librp-utils-dev (>= 0.0.4)
+ librp-utils-file-dev,
+ librp-utils-json-c-dev,
+ librp-utils-yaml-dev
 Standards-Version: 3.8.2
 Homepage: https://github.com/redpesk-core/afb-binder
 
@@ -28,6 +30,8 @@ Description: libafb-binder
 Package: libafb-binder-dev
 Section: libs
 Architecture: any
-Depends: libafb-binder5, libafb-dev, libjson-c-dev
+Depends: libafb-binder5, libafb-dev, libjson-c-dev,
+ librp-utils-file-dev, librp-utils-json-c-dev,
+ librp-utils-yaml-dev
 Description: libafb-binder - development files
 
