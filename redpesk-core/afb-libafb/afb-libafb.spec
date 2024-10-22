@@ -3,9 +3,9 @@
 #---------------------------------------------
 
 Name:           afb-libafb
-#Hexsha:        47ccd81fc258cd93f7a988f4b50b5dc3e6236461
-Version:        5.3.4
-Release: 	65%{?dist}
+#Hexsha:               3dd914e40b45f7a2f68fe6fa309f8cf9dfca83e8
+Version:        5.3.5
+Release: 	66%{?dist}
 License:        GPL-3.0-only
 Summary:        Library of internals of application framework binder
 Group:          Development/Libraries/C and C++
@@ -21,7 +21,9 @@ BuildRequires:  pkgconfig(libmicrohttpd) >= 0.9.60
 BuildRequires:  pkgconfig(libsystemd) >= 222
 BuildRequires:  pkgconfig(json-c)
 BuildRequires:  pkgconfig(afb-binding) >= 4.1.2
-BuildRequires:  pkgconfig(librp-utils) >= 0.0.4
+BuildRequires:  pkgconfig(librp-utils-core)
+BuildRequires:  pkgconfig(librp-utils-file)
+BuildRequires:  pkgconfig(librp-utils-json-c)
 BuildRequires:  pkgconfig(gnutls)
 BuildRequires:  file-devel
 %if 0%{?redpesk_ver}

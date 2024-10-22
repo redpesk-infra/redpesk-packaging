@@ -14,27 +14,179 @@ Build-Depends:
 Standards-Version: 3.8.2
 Homepage: https://github.com/redpesk-core/rp-lib-utils
 
+
+#=======================================================================
 Package: librp-utils0
 Section: libs
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: C utilities for redpesk
 
-Package: librp-utils-headers
-Section: libs
-Architecture: any
-Description: C utilities for redpesk - Headers for development
-
 Package: librp-utils-dev
 Section: libs
 Architecture: any
-Depends: librp-utils0, librp-utils-headers, libjson-c-dev, libyaml-dev, libsystemd-dev, libcurl4-gnutls-dev
+Depends: librp-utils0, rp-lib-utils-core-headers, rp-lib-utils-file-headers, rp-lib-utils-socket-headers,
+         rp-lib-utils-json-c-headers, rp-lib-utils-yaml-headers, rp-lib-utils-curl-headers,
+         libjson-c-dev, libyaml-dev, libsystemd-dev, libcurl4-gnutls-dev
 Description: C utilities for redpesk - Development files
 
 Package: librp-utils-static
 Section: libs
 Architecture: any
-Depends: librp-utils-headers, libjson-c-dev, libyaml-dev, libsystemd-dev, libcurl4-gnutls-dev
+Depends: libjson-c-dev, libyaml-dev, libsystemd-dev, libcurl4-gnutls-dev,
+         rp-lib-utils-core-headers, rp-lib-utils-file-headers, rp-lib-utils-socket-headers,
+         rp-lib-utils-json-c-headers, rp-lib-utils-yaml-headers, rp-lib-utils-curl-headers
 Description: C utilities for redpesk - Static library
+
+
+#=======================================================================
+Package: librp-utils-core0
+Section: libs
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: C utilities for redpesk
+
+Package: rp-lib-utils-core-headers
+Section: libs
+Architecture: any
+Description: C utilities for redpesk - Headers for development
+
+Package: librp-utils-core-dev
+Section: libs
+Architecture: any
+Depends: librp-utils-core0, rp-lib-utils-core-headers, libsystemd-dev
+Description: C utilities for redpesk - Development files
+
+Package: librp-utils-core-static
+Section: libs
+Architecture: any
+Depends: rp-lib-utils-core-headers, libsystemd-dev
+Description: C utilities for redpesk - Static library
+
+
+#=======================================================================
+Package: librp-utils-file0
+Section: libs
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: C utilities for redpesk
+
+Package: rp-lib-utils-file-headers
+Section: libs
+Architecture: any
+Description: C utilities for redpesk - Headers for development
+
+Package: librp-utils-file-dev
+Section: libs
+Architecture: any
+Depends: librp-utils-file0, rp-lib-utils-file-headers, librp-utils-core-dev
+Description: C utilities for redpesk - Development files
+
+Package: librp-utils-file-static
+Section: libs
+Architecture: any
+Depends: rp-lib-utils-file-headers, librp-utils-core-static
+Description: C utilities for redpesk - Static library
+
+
+#=======================================================================
+Package: librp-utils-socket0
+Section: libs
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: C utilities for redpesk
+
+Package: rp-lib-utils-socket-headers
+Section: libs
+Architecture: any
+Description: C utilities for redpesk - Headers for development
+
+Package: librp-utils-socket-dev
+Section: libs
+Architecture: any
+Depends: librp-utils-socket0, rp-lib-utils-socket-headers, librp-utils-core-dev
+Description: C utilities for redpesk - Development files
+
+Package: librp-utils-socket-static
+Section: libs
+Architecture: any
+Depends: rp-lib-utils-socket-headers, librp-utils-core-static
+Description: C utilities for redpesk - Static library
+
+
+#=======================================================================
+Package: librp-utils-json-c0
+Section: libs
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: C utilities for redpesk
+
+Package: rp-lib-utils-json-c-headers
+Section: libs
+Architecture: any
+Description: C utilities for redpesk - Headers for development
+
+Package: librp-utils-json-c-dev
+Section: libs
+Architecture: any
+Depends: librp-utils-json-c0, rp-lib-utils-json-c-headers, librp-utils-core-dev, libjson-c-dev
+Description: C utilities for redpesk - Development files
+
+Package: librp-utils-json-c-static
+Section: libs
+Architecture: any
+Depends: rp-lib-utils-json-c-headers, librp-utils-core-static, libjson-c-dev
+Description: C utilities for redpesk - Static library
+
+
+#=======================================================================
+Package: librp-utils-yaml0
+Section: libs
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: C utilities for redpesk
+
+Package: rp-lib-utils-yaml-headers
+Section: libs
+Architecture: any
+Description: C utilities for redpesk - Headers for development
+
+Package: librp-utils-yaml-dev
+Section: libs
+Architecture: any
+Depends: librp-utils-yaml0, rp-lib-utils-yaml-headers, libjson-c-dev, libyaml-dev
+Description: C utilities for redpesk - Development files
+
+Package: librp-utils-yaml-static
+Section: libs
+Architecture: any
+Depends: rp-lib-utils-yaml-headers, libjson-c-dev, libyaml-dev
+Description: C utilities for redpesk - Static library
+
+
+#=======================================================================
+Package: librp-utils-curl0
+Section: libs
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: C utilities for redpesk
+
+Package: rp-lib-utils-curl-headers
+Section: libs
+Architecture: any
+Description: C utilities for redpesk - Headers for development
+
+Package: librp-utils-curl-dev
+Section: libs
+Architecture: any
+Depends: librp-utils-curl0, rp-lib-utils-curl-headers, librp-utils-core-dev, libcurl4-gnutls-dev
+Description: C utilities for redpesk - Development files
+
+Package: librp-utils-curl-static
+Section: libs
+Architecture: any
+Depends: rp-lib-utils-curl-headers, librp-utils-core-static, libcurl4-gnutls-dev
+Description: C utilities for redpesk - Static library
+
 
 
