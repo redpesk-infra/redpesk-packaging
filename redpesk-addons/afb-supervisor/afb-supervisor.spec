@@ -3,9 +3,9 @@
 #---------------------------------------------
 
 Name:           afb-supervisor
-#Hexsha: a5ebcd320b312012e48d93b990b069e48c05b086
-Version: 4.2.1
-Release: 7%{?dist}
+#Hexsha: 9f7a7f6997460ec4867f7946df80ce2b3eeebfe1
+Version: 4.2.2
+Release: 10%{?dist}
 License:        GPL-3.0-only
 Summary:        Supervisor of application framework binder
 Url:            https://git.ovh.iot/redpesk/redpesk-addons/afb-supervisor
@@ -39,9 +39,7 @@ Provides the supervisor daemon and service for afb-binder
 #---------------------------------------------
 %files
 %defattr(-,root,root)
-%dir %{_bindir}
 %{_bindir}/afb-supervisor
-%dir %{_unitdir}
 %{_unitdir}/afb-supervisor.service
 %{_unitdir}/afm-api-supervisor.service
 %{_unitdir}/afm-api-supervisor.socket
