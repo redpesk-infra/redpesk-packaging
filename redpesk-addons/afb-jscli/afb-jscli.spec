@@ -2,7 +2,7 @@
 Name:	       	afb-jscli
 #Hexsha: 	abb5436de7a401d08986e5caf42e572db8e6cb3c
 Version: 	0.3.0
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Interpreter of javascript file, based on quickjs, to interfer with bindings api
 Group:          Development/Libraries/Javascript/C and C++
 License:        MIT
