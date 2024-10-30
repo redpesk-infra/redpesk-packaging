@@ -2,9 +2,9 @@
 # spec file for package app-afb-test
 #
 Name:           afb-test
-#Hexsha: f700ded33faa6f5fafa81295e9e613ecfb0db332
-Version: 10.2
-Release:        30%{?dist}
+#Hexsha: 6f614a879ab1a52cc17574613c05b19cf088f970
+Version: 10.2.0+20241030+1+g6f614a8
+Release:        31%{?dist}
 License:        Apache-2.0
 Summary:        afb-test
 Group:          Development/Libraries/C and C++
