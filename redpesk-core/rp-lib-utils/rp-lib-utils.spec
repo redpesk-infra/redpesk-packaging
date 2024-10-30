@@ -1,7 +1,7 @@
 Name: rp-lib-utils
-#Hexsha:    5feeba9a5ff7600487ab3476a315a39efc6f2235
-Version: 0.2.0
-Release: 28%{?dist}
+#Hexsha: d9617a1ae209a1a814748cce7100e037cb3d7745
+Version: 0.2.1
+Release: 29%{?dist}
 Summary: Library of utilities
 
 License: MIT
@@ -29,16 +29,20 @@ Development files for static library of utilities
 %defattr(-,root,root)
 %{_libdir}/librp-utils.so.*
 
+%post -n librp-utils0 -p /sbin/ldconfig
+
+%postun -n librp-utils0 -p /sbin/ldconfig
+
 %package -n librp-utils-devel
 Summary: Library of utilities, headers and library
 Provides: pkgconfig(librp-utils)
 Requires: librp-utils0
-Requires: librp-utils-core-headers
-Requires: librp-utils-file-headers
-Requires: librp-utils-socket-headers
-Requires: librp-utils-json-c-headers
-Requires: librp-utils-yaml-headers
-Requires: librp-utils-curl-headers
+Requires: rp-lib-utils-core-headers
+Requires: rp-lib-utils-file-headers
+Requires: rp-lib-utils-socket-headers
+Requires: rp-lib-utils-json-c-headers
+Requires: rp-lib-utils-yaml-headers
+Requires: rp-lib-utils-curl-headers
 
 %description -n librp-utils-devel
 Development files for library of utilities
@@ -52,12 +56,12 @@ Development files for library of utilities
 %package -n librp-utils-static
 Summary: Library of utilities, static library
 Provides: pkgconfig(librp-utils-static)
-Requires: librp-utils-core-headers
-Requires: librp-utils-file-headers
-Requires: librp-utils-socket-headers
-Requires: librp-utils-json-c-headers
-Requires: librp-utils-yaml-headers
-Requires: librp-utils-curl-headers
+Requires: rp-lib-utils-core-headers
+Requires: rp-lib-utils-file-headers
+Requires: rp-lib-utils-socket-headers
+Requires: rp-lib-utils-json-c-headers
+Requires: rp-lib-utils-yaml-headers
+Requires: rp-lib-utils-curl-headers
 
 %description -n librp-utils-static
 Development files for static library of utilities
@@ -78,11 +82,15 @@ Development files for static library of utilities
 %defattr(-,root,root)
 %{_libdir}/librp-utils-core.so.*
 
+%post -n librp-utils-core0 -p /sbin/ldconfig
+
+%postun -n librp-utils-core0 -p /sbin/ldconfig
+
 %package -n librp-utils-core-devel
 Summary: Library of utilities, headers and library
 Provides: pkgconfig(librp-utils-core)
 Requires: librp-utils-core0
-Requires: librp-utils-core-headers
+Requires: rp-lib-utils-core-headers
 
 %description -n librp-utils-core-devel
 Development files for library of utilities
@@ -96,7 +104,7 @@ Development files for library of utilities
 %package -n librp-utils-core-static
 Summary: Library of utilities, static library
 Provides: pkgconfig(librp-utils-core-static)
-Requires: librp-utils-headers
+Requires: rp-lib-utils-core-headers
 
 %description -n librp-utils-core-static
 Development files for static library of utilities
@@ -106,13 +114,13 @@ Development files for static library of utilities
 %{_libdir}/librp-utils-core.a
 %{_libdir}/pkgconfig/librp-utils-core-static.pc
 
-%package -n librp-utils-core-headers
+%package -n rp-lib-utils-core-headers
 Summary: Headers of library of utilities
 
-%description -n librp-utils-core-headers
+%description -n rp-lib-utils-core-headers
 Headers of library of utilities
 
-%files -n librp-utils-core-headers
+%files -n rp-lib-utils-core-headers
 %defattr(-,root,root)
 %dir %{_includedir}/rp-utils
 %{_includedir}/rp-utils/rp-escape.h
@@ -136,11 +144,15 @@ Development files for static library of utilities
 %defattr(-,root,root)
 %{_libdir}/librp-utils-file.so.*
 
+%post -n librp-utils-file0 -p /sbin/ldconfig
+
+%postun -n librp-utils-file0 -p /sbin/ldconfig
+
 %package -n librp-utils-file-devel
 Summary: Library of utilities, headers and library
 Provides: pkgconfig(librp-utils-file)
 Requires: librp-utils-file0
-Requires: librp-utils-file-headers
+Requires: rp-lib-utils-file-headers
 
 %description -n librp-utils-file-devel
 Development files for library of utilities
@@ -154,7 +166,7 @@ Development files for library of utilities
 %package -n librp-utils-file-static
 Summary: Library of utilities, static library
 Provides: pkgconfig(librp-utils-file-static)
-Requires: librp-utils-headers
+Requires: rp-lib-utils-file-headers
 
 %description -n librp-utils-file-static
 Development files for static library of utilities
@@ -164,13 +176,13 @@ Development files for static library of utilities
 %{_libdir}/librp-utils-file.a
 %{_libdir}/pkgconfig/librp-utils-file-static.pc
 
-%package -n librp-utils-file-headers
+%package -n rp-lib-utils-file-headers
 Summary: Headers of library of utilities
 
-%description -n librp-utils-file-headers
+%description -n rp-lib-utils-file-headers
 Headers of library of utilities
 
-%files -n librp-utils-file-headers
+%files -n rp-lib-utils-file-headers
 %defattr(-,root,root)
 %dir %{_includedir}/rp-utils
 %{_includedir}/rp-utils/rp-file.h
@@ -188,11 +200,15 @@ Development files for static library of utilities
 %defattr(-,root,root)
 %{_libdir}/librp-utils-socket.so.*
 
+%post -n librp-utils-socket0 -p /sbin/ldconfig
+
+%postun -n librp-utils-socket0 -p /sbin/ldconfig
+
 %package -n librp-utils-socket-devel
 Summary: Library of utilities, headers and library
 Provides: pkgconfig(librp-utils-socket)
 Requires: librp-utils-socket0
-Requires: librp-utils-socket-headers
+Requires: rp-lib-utils-socket-headers
 
 %description -n librp-utils-socket-devel
 Development files for library of utilities
@@ -206,7 +222,7 @@ Development files for library of utilities
 %package -n librp-utils-socket-static
 Summary: Library of utilities, static library
 Provides: pkgconfig(librp-utils-socket-static)
-Requires: librp-utils-headers
+Requires: rp-lib-utils-socket-headers
 
 %description -n librp-utils-socket-static
 Development files for static library of utilities
@@ -216,13 +232,13 @@ Development files for static library of utilities
 %{_libdir}/librp-utils-socket.a
 %{_libdir}/pkgconfig/librp-utils-socket-static.pc
 
-%package -n librp-utils-socket-headers
+%package -n rp-lib-utils-socket-headers
 Summary: Headers of library of utilities
 
-%description -n librp-utils-socket-headers
+%description -n rp-lib-utils-socket-headers
 Headers of library of utilities
 
-%files -n librp-utils-socket-headers
+%files -n rp-lib-utils-socket-headers
 %defattr(-,root,root)
 %dir %{_includedir}/rp-utils
 %{_includedir}/rp-utils/rp-socket.h
@@ -239,11 +255,15 @@ Development files for static library of utilities
 %defattr(-,root,root)
 %{_libdir}/librp-utils-json-c.so.*
 
+%post -n librp-utils-json-c0 -p /sbin/ldconfig
+
+%postun -n librp-utils-json-c0 -p /sbin/ldconfig
+
 %package -n librp-utils-json-c-devel
 Summary: Library of utilities, headers and library
 Provides: pkgconfig(librp-utils-json-c)
 Requires: librp-utils-json-c0
-Requires: librp-utils-json-c-headers
+Requires: rp-lib-utils-json-c-headers
 
 %description -n librp-utils-json-c-devel
 Development files for library of utilities
@@ -257,7 +277,7 @@ Development files for library of utilities
 %package -n librp-utils-json-c-static
 Summary: Library of utilities, static library
 Provides: pkgconfig(librp-utils-json-c-static)
-Requires: librp-utils-headers
+Requires: rp-lib-utils-json-c-headers
 
 %description -n librp-utils-json-c-static
 Development files for static library of utilities
@@ -267,13 +287,13 @@ Development files for static library of utilities
 %{_libdir}/librp-utils-json-c.a
 %{_libdir}/pkgconfig/librp-utils-json-c-static.pc
 
-%package -n librp-utils-json-c-headers
+%package -n rp-lib-utils-json-c-headers
 Summary: Headers of library of utilities
 
-%description -n librp-utils-json-c-headers
+%description -n rp-lib-utils-json-c-headers
 Headers of library of utilities
 
-%files -n librp-utils-json-c-headers
+%files -n rp-lib-utils-json-c-headers
 %defattr(-,root,root)
 %dir %{_includedir}/rp-utils
 %{_includedir}/rp-utils/rp-jconf.h
@@ -292,11 +312,15 @@ Development files for static library of utilities
 %defattr(-,root,root)
 %{_libdir}/librp-utils-yaml.so.*
 
+%post -n librp-utils-yaml0 -p /sbin/ldconfig
+
+%postun -n librp-utils-yaml0 -p /sbin/ldconfig
+
 %package -n librp-utils-yaml-devel
 Summary: Library of utilities, headers and library
 Provides: pkgconfig(librp-utils-yaml)
 Requires: librp-utils-yaml0
-Requires: librp-utils-yaml-headers
+Requires: rp-lib-utils-yaml-headers
 
 %description -n librp-utils-yaml-devel
 Development files for library of utilities
@@ -310,7 +334,7 @@ Development files for library of utilities
 %package -n librp-utils-yaml-static
 Summary: Library of utilities, static library
 Provides: pkgconfig(librp-utils-yaml-static)
-Requires: librp-utils-headers
+Requires: rp-lib-utils-yaml-headers
 
 %description -n librp-utils-yaml-static
 Development files for static library of utilities
@@ -320,13 +344,13 @@ Development files for static library of utilities
 %{_libdir}/librp-utils-yaml.a
 %{_libdir}/pkgconfig/librp-utils-yaml-static.pc
 
-%package -n librp-utils-yaml-headers
+%package -n rp-lib-utils-yaml-headers
 Summary: Headers of library of utilities
 
-%description -n librp-utils-yaml-headers
+%description -n rp-lib-utils-yaml-headers
 Headers of library of utilities
 
-%files -n librp-utils-yaml-headers
+%files -n rp-lib-utils-yaml-headers
 %defattr(-,root,root)
 %dir %{_includedir}/rp-utils
 %{_includedir}/rp-utils/rp-yaml.h
@@ -342,11 +366,15 @@ Development files for static library of utilities
 %defattr(-,root,root)
 %{_libdir}/librp-utils-curl.so.*
 
+%post -n librp-utils-curl0 -p /sbin/ldconfig
+
+%postun -n librp-utils-curl0 -p /sbin/ldconfig
+
 %package -n librp-utils-curl-devel
 Summary: Library of utilities, headers and library
 Provides: pkgconfig(librp-utils-curl)
 Requires: librp-utils-curl0
-Requires: librp-utils-curl-headers
+Requires: rp-lib-utils-curl-headers
 
 %description -n librp-utils-curl-devel
 Development files for library of utilities
@@ -360,7 +388,7 @@ Development files for library of utilities
 %package -n librp-utils-curl-static
 Summary: Library of utilities, static library
 Provides: pkgconfig(librp-utils-curl-static)
-Requires: librp-utils-headers
+Requires: rp-lib-utils-curl-headers
 
 %description -n librp-utils-curl-static
 Development files for static library of utilities
@@ -370,13 +398,13 @@ Development files for static library of utilities
 %{_libdir}/librp-utils-curl.a
 %{_libdir}/pkgconfig/librp-utils-curl-static.pc
 
-%package -n librp-utils-curl-headers
+%package -n rp-lib-utils-curl-headers
 Summary: Headers of library of utilities
 
-%description -n librp-utils-curl-headers
+%description -n rp-lib-utils-curl-headers
 Headers of library of utilities
 
-%files -n librp-utils-curl-headers
+%files -n rp-lib-utils-curl-headers
 %defattr(-,root,root)
 %dir %{_includedir}/rp-utils
 %{_includedir}/rp-utils/rp-curl.h
