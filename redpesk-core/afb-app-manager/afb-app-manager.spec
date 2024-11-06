@@ -21,9 +21,9 @@
 %define _rp_group_id       100
 
 Name:           afb-app-manager
-#Hexsha:        33b0927a59ac66a59623d93428f2992e31857f59
-Version:        12.2.7+5+g33b0927
-Release: 55%{?dist}
+#Hexsha:        469ec6a875300ebc985d65aa037b9a5ca35e5798
+Version:        12.3.0
+Release: 56%{?dist}
 License:        GPLv3
 Summary:        Micro service application manager
 Group:          Development/Libraries/C and C++
