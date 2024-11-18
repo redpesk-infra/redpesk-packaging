@@ -1,7 +1,7 @@
 Name:           red-microdnf
 #Hexsha: 1ae99d73cbf7320b3fd9df504bb50467b5fd534e
 Version: 1.0.2+20240827+1+g1ae99d7
-Release: 6%{?dist}
+Release: 7%{?dist}
 Summary:        red-microdnf: for of microdnf
 License:        LGPLv2.1+
 URL:			https://github.com/redpesk-labs/red-microdnf
@@ -68,7 +68,7 @@ Requires:		red-pak
 - Commit message:
 - 	main: add manager command
 
-- 	Signed-off-by: Clément Bénier <clement.benier@iot.bzh>
+- 	Signed-off-by: ClÃ©ment BÃ©nier <clement.benier@iot.bzh>
 
 
 * Tue Jul 27 2021 IoT.bzh(iotpkg) <redpesk.list@iot.bzh> 0.0.0+20210727+170836+0+gf7250d9
@@ -76,7 +76,7 @@ Requires:		red-pak
 - Commit message:
 - 	CMakeLists: sources files
 -
-- 	Signed-off-by: Clément Bénier <clement.benier@iot.bzh>
+- 	Signed-off-by: ClÃ©ment BÃ©nier <clement.benier@iot.bzh>
 
 
 * Tue Jul 27 2021 IoT.bzh(iotpkg) <redpesk.list@iot.bzh> 0.0.0+20210727+165330+0+g350ec8d
@@ -84,7 +84,7 @@ Requires:		red-pak
 - Commit message:
 - 	CMakeLists: libdnf librairies
 -
-- 	Signed-off-by: Clément Bénier <clement.benier@iot.bzh>
+- 	Signed-off-by: ClÃ©ment BÃ©nier <clement.benier@iot.bzh>
 
 
 * Tue Jul 27 2021 IoT.bzh(iotpkg) <redpesk.list@iot.bzh> 0.0.0+20210727+151313+0+g72e8830
@@ -92,7 +92,7 @@ Requires:		red-pak
 - Commit message:
 - 	manager: no redpath
 -
-- 	Signed-off-by: Clément Bénier <clement.benier@iot.bzh>
+- 	Signed-off-by: ClÃ©ment BÃ©nier <clement.benier@iot.bzh>
 
 
 * Tue Jul 27 2021 IoT.bzh(iotpkg) <redpesk.list@iot.bzh> 0.0.0+20210727+150229+0+g15c5b6c
@@ -100,7 +100,7 @@ Requires:		red-pak
 - Commit message:
 - 	CMakeLists: libs+add_definition
 -
-- 	Signed-off-by: Clément Bénier <clement.benier@iot.bzh>
+- 	Signed-off-by: ClÃ©ment BÃ©nier <clement.benier@iot.bzh>
 
 
 * Tue Jul 27 2021 IoT.bzh(iotpkg) <redpesk.list@iot.bzh> 0.0.0+20210727+122101+0+g7f851c2
@@ -108,7 +108,7 @@ Requires:		red-pak
 - Commit message:
 - 	CMakeLists: cxx17
 -
-- 	Signed-off-by: Clément Bénier <clement.benier@iot.bzh>
+- 	Signed-off-by: ClÃ©ment BÃ©nier <clement.benier@iot.bzh>
 
 
 * Tue Jul 27 2021 IoT.bzh(iotpkg) <redpesk.list@iot.bzh> 0.0.0+20210727+121246+0+g04edc28
@@ -116,7 +116,7 @@ Requires:		red-pak
 - Commit message:
 - 	CMakeLists: include_directories
 -
-- 	Signed-off-by: Clément Bénier <clement.benier@iot.bzh>
+- 	Signed-off-by: ClÃ©ment BÃ©nier <clement.benier@iot.bzh>
 
 
 * Tue Jul 27 2021 IoT.bzh(iotpkg) <redpesk.list@iot.bzh> 0.0.0+20210727+113657+0+g9bdc2e7
@@ -124,7 +124,7 @@ Requires:		red-pak
 - Commit message:
 - 	CMakeLists: include_directories
 -
-- 	Signed-off-by: Clément Bénier <clement.benier@iot.bzh>
+- 	Signed-off-by: ClÃ©ment BÃ©nier <clement.benier@iot.bzh>
 
 
 * Tue Jul 27 2021 IoT.bzh(iotpkg) <redpesk.list@iot.bzh> 0.0.0+20210727+105008+0+g052d10f
@@ -132,7 +132,7 @@ Requires:		red-pak
 - Commit message:
 - 	CMakeLists: cmake_minimum_required + project()
 -
-- 	Signed-off-by: Clément Bénier <clement.benier@iot.bzh>
+- 	Signed-off-by: ClÃ©ment BÃ©nier <clement.benier@iot.bzh>
 
 
 * Tue Jul 27 2021 IoT.bzh(iotpkg) <redpesk.list@iot.bzh> 0.0.0+20210727+101940+0+ge643f8a
@@ -140,7 +140,7 @@ Requires:		red-pak
 - Commit message:
 - 	CMakeLists: find_package(PkgConfig REQUIRED)
 -
-- 	Signed-off-by: Clément Bénier <clement.benier@iot.bzh>
+- 	Signed-off-by: ClÃ©ment BÃ©nier <clement.benier@iot.bzh>
 
 
 * Mon Jul 26 2021 IoT.bzh(iotpkg) <redpesk.list@iot.bzh> 0.0.0+20210726+113747+0+g996d8c4
@@ -148,7 +148,7 @@ Requires:		red-pak
 - Commit message:
 - 	rebase patch
 -
-- 	Signed-off-by: Clément Bénier <clement.benier@iot.bzh>
+- 	Signed-off-by: ClÃ©ment BÃ©nier <clement.benier@iot.bzh>
 
 
 * Mon Jul 26 2021 IoT.bzh(iotpkg) <redpesk.list@iot.bzh> 0.0.0+20210726+113747+0+g996d8c4
@@ -156,6 +156,6 @@ Requires:		red-pak
 - Commit message:
 - 	rebase patch
 -
-- 	Signed-off-by: Clément Bénier <clement.benier@iot.bzh>
+- 	Signed-off-by: ClÃ©ment BÃ©nier <clement.benier@iot.bzh>
 
 
