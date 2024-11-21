@@ -1,9 +1,9 @@
 %define debug_package %{nil}
 
 Name:           sec-cynagora
-#Hexsha:        414826bd4d5b2ce9e9d6d2ae80675a4b36bd909d
-Version:        2.2.5
-Release: 21%{?dist}
+#Hexsha:        d9821e286e08f51e1b024bd8b2b2e770317805ce
+Version:        2.2.6
+Release: 22%{?dist}
 Summary:        Cynara service with client libraries
 
 License:        Apache-2.0
@@ -73,11 +73,11 @@ ldconfig
 
 %changelog
 
-* Wed Jun 16 2021 Jose Bollo jose.bollo@iot.bzh 2.2.1
+* Wed Jun 16 2021 José Bollo jose.bollo@iot.bzh 2.2.1
 - Fix mixing synchronous and asynchronous communication
 - Version 2.2.1
 
-* Wed Jun 09 2021 JosÃÂ© Bollo jose.bollo@iot.bzh 2.2.0
+* Wed Jun 09 2021 José Bollo jose.bollo@iot.bzh 2.2.0
 - Version 2.2.0
 * Tue May 18 2021 IoT.bzh(iotpkg) <redpesk.list@iot.bzh> 2.1.4
 - Upgrade version from source commit sha: 49c34f906778837ebd7ecc8cac7e98615a57c5d8
@@ -86,12 +86,12 @@ ldconfig
 -
 - 	Change-Id: If36316365fa9d015b29c9e5d93e23ea112240db6
 
-* Thu Apr 08 2021 JosÃÂ© Bollo jose.bollo@iot.bzh 2.1.3
+* Thu Apr 08 2021 José Bollo jose.bollo@iot.bzh 2.1.3
 - [CMake] Add libcap dependency.
 - Create default database directory
 - Version 2.1.3
 
-* Tue Apr 06 2021 JosÃÂ© Bollo jose.bollo@iot.bzh 2.1.2
+* Tue Apr 06 2021 José Bollo jose.bollo@iot.bzh 2.1.2
 - set queries to NULL in cynagora_create
 - cynagora.h: Fix comment
 - main-cynagora-admin: Emit a diagnostic status
