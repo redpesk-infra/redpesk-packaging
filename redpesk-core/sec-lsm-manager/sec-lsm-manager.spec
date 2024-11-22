@@ -3,7 +3,7 @@
 Name:           sec-lsm-manager
 #Hexsha: d8e176e8edcc3cebe5d995f538dcb287eb3ff890
 Version: 2.6.1
-Release: 47%{?dist}
+Release: 48%{?dist}
 Summary:        sec-lsm-manager service (SMACK, SELinux)
 License:        Apache-2.0
 URL:            https://github.com/redpesk-core/sec-lsm-manager
@@ -150,13 +150,13 @@ getent passwd %{secname} >/dev/null || useradd --system --home %{_localstatedir}
 
 %changelog
 
-* Thu Nov 02 2023 José Bollo jose.bollo@iot.bzh 2.4.1
+* Thu Nov 02 2023 JosÃ© Bollo jose.bollo@iot.bzh 2.4.1
 - extract sec-lsm-manager-cmd in seperate package
 
-* Fri Jun 09 2023 José Bollo jose.bollo@iot.bzh 2.3.0
+* Fri Jun 09 2023 JosÃ© Bollo jose.bollo@iot.bzh 2.3.0
 - replace smack-rules by sec-smack-rules
 
-* Thu Jul 01 2021 José Bollo jose.bollo@iot.bzh 2.2.1
+* Thu Jul 01 2021 JosÃ© Bollo jose.bollo@iot.bzh 2.2.1
 - Version 2.2.1
 
 * Tue Jun 29 2021 IoT.bzh(iotpkg) <redpesk.list@iot.bzh> 2.2.0+20210629+1+g59705ce
