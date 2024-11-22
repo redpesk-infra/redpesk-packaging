@@ -5,7 +5,7 @@
 Name:           afb-libafb
 #Hexsha:        e464fe47b548bfa71986946ea60f5398d2103ca1
 Version:        5.3.6
-Release: 	67%{?dist}
+Release: 	69%{?dist}
 License:        GPL-3.0-only
 Summary:        Library of internals of application framework binder
 Group:          Development/Libraries/C and C++
@@ -202,14 +202,14 @@ CFLAGS="${CFLAGS:-%optflags} -ffat-lto-objects"
 #---------------------------------------------
 %changelog
 
-* Fri Sep 6 2024 José Bollo jose.bollo@iot.bzh 5.2.0
+* Fri Sep 6 2024 JosÃÂ© Bollo jose.bollo@iot.bzh 5.2.0
 - adapt for libafb6 and libafbcli6
 
-* Tue Jan 5 2023 José Bollo jose.bollo@iot.bzh 5.0.0
+* Tue Jan 5 2023 JosÃÂ© Bollo jose.bollo@iot.bzh 5.0.0
 - refactor packaging
 - switch to v5.0
 
-* Thu Dec 16 2021 José Bollo jose.bollo@iot.bzh 4.0.4+23+g6580d62
+* Thu Dec 16 2021 JosÃÂ© Bollo jose.bollo@iot.bzh 4.0.4+23+g6580d62
 - core/apiset: Add function afb_apiset_subset_find
 - json-locator: Don't use deprecated functions
 - Prepare version 4.1.0
@@ -234,7 +234,7 @@ CFLAGS="${CFLAGS:-%optflags} -ffat-lto-objects"
 - afb-sched: Remove management of event loop
 - afb-sched: Improve exit status of afb_sched_start
 
-* Fri Nov 19 2021 José Bollo jose.bollo@iot.bzh 4.0.4
+* Fri Nov 19 2021 JosÃÂ© Bollo jose.bollo@iot.bzh 4.0.4
 - [CI] Create MAINTAINERS file
 - json-locator: Fixes
 - json-locator: More fixes
@@ -279,7 +279,7 @@ CFLAGS="${CFLAGS:-%optflags} -ffat-lto-objects"
 - afb-sched: REWORK SCHEDULING
 - Version 4.0.4
 
-* Thu Jul 01 2021 José Bollo jose.bollo@iot.bzh 4.0.3
+* Thu Jul 01 2021 JosÃÂ© Bollo jose.bollo@iot.bzh 4.0.3
 - Improve versions for pkgconfig
 - afb-api-v4: add functions for event handling
 - Improve comments
@@ -320,9 +320,9 @@ CFLAGS="${CFLAGS:-%optflags} -ffat-lto-objects"
 - test-afb-data: Fix uninitialized variable
 - afb-extend: Allow interface V4 in extensions
 - Version 4.0.2
-* Tue Apr 13 2021 José Bollo jose.bollo@iot.bzh 4.0.1
+* Tue Apr 13 2021 JosÃÂ© Bollo jose.bollo@iot.bzh 4.0.1
 
-* Fri Apr 09 2021 José Bollo jose.bollo@iot.bzh 4.0.0
+* Fri Apr 09 2021 JosÃÂ© Bollo jose.bollo@iot.bzh 4.0.0
 - afb-v4: Fix of various glitches
 - Improve includes of afb-v4.h and afb-extension.h
 - x-dynlib: Add source file for dynamic libraries
@@ -339,7 +339,7 @@ CFLAGS="${CFLAGS:-%optflags} -ffat-lto-objects"
 - mkbuild: Allow build every where
 - Version 4.0.0
 
-* Thu Mar 25 2021 José Bollo jose.bollo@iot.bzh 4.0.0.beta14
+* Thu Mar 25 2021 JosÃÂ© Bollo jose.bollo@iot.bzh 4.0.0.beta14
 - afb-data: Improve naming
 - Update README.md
 - Check headers for making it "stand-alone"
@@ -363,7 +363,7 @@ CFLAGS="${CFLAGS:-%optflags} -ffat-lto-objects"
 - tls: Fix starvation on read
 - Version 4.0.0.beta14
 
-* Mon Mar 15 2021 José Bollo jose.bollo@iot.bzh 4.0.0.beta12
+* Mon Mar 15 2021 JosÃÂ© Bollo jose.bollo@iot.bzh 4.0.0.beta12
 - Minor fixes revealed by code analysis
 - Replace usleep with nanosleep
 - afb-hsrv: Allows NULL for basepath
@@ -373,30 +373,30 @@ CFLAGS="${CFLAGS:-%optflags} -ffat-lto-objects"
 - Version 4.0.0.beta12
 - Add high level headers
 
-* Tue Jan 26 2021 José Bollo <jose.bollo@iot.bzh> 4.0.0beta7
+* Tue Jan 26 2021 JosÃÂ© Bollo <jose.bollo@iot.bzh> 4.0.0beta7
 - Use gnuTLS
 - Fix redirect of aliases
 
-* Thu Jan 7 2021 José Bollo <jose.bollo@iot.bzh> 4.0.0beta6
+* Thu Jan 7 2021 JosÃÂ© Bollo <jose.bollo@iot.bzh> 4.0.0beta6
 - Raise disconnected event on request
 - Allow json in info strings of verbs and apis
 - Fix HTTP lacking of Preferred-Language
 - Update copyright notices
 
-* Thu Dec 17 2020 José Bollo <jose.bollo@iot.bzh> 4.0.0beta5
+* Thu Dec 17 2020 JosÃÂ© Bollo <jose.bollo@iot.bzh> 4.0.0beta5
 - Fix deadlock
 
-* Mon Dec 14 2020 José Bollo <jose.bollo@iot.bzh> 4.0.0beta4
+* Mon Dec 14 2020 JosÃÂ© Bollo <jose.bollo@iot.bzh> 4.0.0beta4
 - Direct processing of HTTP events
 - Fix use of cmake
 
-* Fri Dec 11 2020 José Bollo <jose.bollo@iot.bzh> 4.0.0beta3
+* Fri Dec 11 2020 JosÃÂ© Bollo <jose.bollo@iot.bzh> 4.0.0beta3
 - Add delaying of jobs API v3
 - Fix name of monitoring events
 - Ensure null length of NULL stringz
 - Avoid SEGV if NULL string
 
-* Thu Dec 10 2020 José Bollo <jose.bollo@iot.bzh> 4.0.0beta3
+* Thu Dec 10 2020 JosÃÂ© Bollo <jose.bollo@iot.bzh> 4.0.0beta3
 - listing of apis
 - getting LOA
 - remove depend of pc files
