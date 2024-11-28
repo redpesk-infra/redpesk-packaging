@@ -1,7 +1,7 @@
 Name:           red-pak
-#Hexsha: f90f71179a42a9197216c4125c09367e715aa083
-Version: 2.3.0
-Release: 16%{?dist}
+#Hexsha: c0808a895034229da406755ff75c1fb93ed17b8c
+Version: 2.3.1
+Release: 17%{?dist}
 Summary:        red-pak
 License:        ISC
 URL:			https://github.com/redpesk-labs/red-pak
