@@ -1,10 +1,10 @@
 Name:           red-pak
-#Hexsha: c0808a895034229da406755ff75c1fb93ed17b8c
-Version: 2.3.1
-Release: 17%{?dist}
+#Hexsha:        c0808a895034229da406755ff75c1fb93ed17b8c
+Version:        2.3.1
+Release:        18%{?dist}
 Summary:        red-pak
 License:        ISC
-URL:			https://github.com/redpesk-labs/red-pak
+URL:            https://github.com/redpesk-labs/red-pak
 Source:         %{name}-%{version}.tar.gz
 BuildRequires:	redrpm-devel
 BuildRequires:  libyaml-devel
@@ -20,36 +20,44 @@ BuildRequires:  userspace-rcu-devel
 BuildRequires:  check-devel
 
 Requires: redpak-core = %{version}
-Requires: red-microdnf
+Requires: redpak-dnf = %{version}
 
 %description
 %{summary}.
 
 %package -n redpak-core
-Summary:        libraires and binaries for red-pak
-Requires:		libdnf5
-Requires:		redrpm
-Requires:		libcyaml
-Requires:       userspace-rcu
+Summary:  libraries and binaries for red-pak
+Requires: libcyaml
+Requires: userspace-rcu
 
 %description -n redpak-core
 %{summary}.
 
 %package devel
-Summary:        Development libraries and header files for %{name}
-Requires:       redpak-core = %{version}
-Provides:       pkgconfig(%{name}) = %{version}
-Requires:		libcyaml-devel
-Requires:		libdnf5-devel
-Requires:		libdnf5-cli-devel
-Requires:       userspace-rcu-devel
+Summary:  Development libraries and header files for %{name}
+Requires: redpak-core = %{version}
+Provides: pkgconfig(%{name}) = %{version}
+Requires: libcyaml-devel
+Requires: libdnf5-devel
+Requires: libdnf5-cli-devel
+Requires: userspace-rcu-devel
 
 %description devel
 %{summary}.
 
+%package -n redpak-dnf
+Summary:  redpak integration with red-microdnf
+Requires: redpak-core = %{version}
+Requires: libdnf5
+Requires: redrpm
+Requires: red-microdnf
+
+%description -n redpak-dnf
+%{summary}.
+
 %package -n python3-redconf
 Summary:  redconf python binding
-Requires:       %{name} = %{version}
+Requires: %{name} = %{version}
 
 %description -n python3-redconf
 %{summary}.
@@ -75,14 +83,7 @@ CFLAGS="$CFLAGS -DCONFIG_RCU_HAVE_CLOCK_GETTIME"
 %{_sysconfdir}/bash_completion.d/red*
 %{_sysconfdir}/redpak/templates.d/*
 %{_bindir}/redwrap
-%{_bindir}/redwrap-dnf
 %{_bindir}/redconf
-%{_libdir}/libred*.so*
-%{_libdir}/rpm-plugins/redpak.so
-
-
-%files -n python3-redconf
-%{python3_sitearch}/*.so
 
 %files devel
 %defattr(-,root,root)
@@ -90,7 +91,21 @@ CFLAGS="$CFLAGS -DCONFIG_RCU_HAVE_CLOCK_GETTIME"
 %{_includedir}/*.hpp
 %{_libdir}/pkgconfig/*.pc
 
+%files -n redpak-dnf
+%defattr(-,root,root)
+%{_bindir}/redwrap-dnf
+%{_libdir}/libred*.so*
+%{_libdir}/rpm-plugins/redpak.so
+
+%files -n python3-redconf
+%defattr(-,root,root)
+%{python3_sitearch}/*.so
+
 %changelog
+
+* Mon Dec 02 2024 José Bollo <jose.bollo@iot.bzh> 2.3.1
+- Split redpak-core in redpak-core and redpak-dnf
+
 * Tue Dec 21 2021 IoT.bzh(iotpkg) <redpesk.list@iot.bzh> 1.0.0
 - Upgrade version from source commit sha: bd11881f50ae627a0641448ae0b307a9a9e2877e
 - Commit message:
