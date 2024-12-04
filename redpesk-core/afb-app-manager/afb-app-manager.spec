@@ -23,7 +23,7 @@
 Name:           afb-app-manager
 #Hexsha:        da8dc7a5865e2e0132a9bc4199400b2c6be57c8c
 Version:        12.3.1
-Release: 57%{?dist}
+Release: 58%{?dist}
 License:        GPLv3
 Summary:        Micro service application manager
 Group:          Development/Libraries/C and C++
@@ -124,7 +124,7 @@ ln -sf %{_unitdir}/afm-user-session@.service %{buildroot}%{afm_units_root}/syste
 
 %pre
 getent group %{afm_name} > /dev/null || groupadd --system %{afm_name} ||:
-getent passwd %{afm_name} > /dev/null || useradd --system --gid %{afm_name} --home-dir / %{afm_name} || :
+getent passwd %{afm_name} > /dev/null || useradd --system --gid %{afm_name} --home-dir / --shell /bin/nologin %{afm_name} || :
 getent group display > /dev/null || groupadd --system display ||:
 getent passwd display > /dev/null || useradd --gid display --groups video,input --home-dir /run/platform/display --shell /bin/false --comment "Display daemon" --key PASS_MAX_DAYS=-1 display || :
 
@@ -211,6 +211,9 @@ fi
 %{_rpmmacrodir}/macros.afm-main
 
 %changelog
+
+* Wed Dec 04 2024 José Bollo jose.bollo@iot.bzh 12.3.1
+- Set user afm as not login user
 
 * Wed Nov 15 2023 José Bollo jose.bollo@iot.bzh 12.2.0
 - Remove patching of pam because legacy, needed before arz-1.1
