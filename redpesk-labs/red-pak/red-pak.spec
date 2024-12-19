@@ -1,5 +1,5 @@
 Name:           red-pak
-#Hexsha:       e87445ea1a4faa9cb6d2d51dad56a18ef9b7bba8
+#Hexsha:        e87445ea1a4faa9cb6d2d51dad56a18ef9b7bba8
 Version:        2.4.1
 Release:        22%{?dist}
 Summary:        red-pak
