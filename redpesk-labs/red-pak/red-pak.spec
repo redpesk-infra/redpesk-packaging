@@ -1,6 +1,6 @@
 Name:           red-pak
-#Hexsha:          699bb47b3571b40a6cb19337d3f1b031535d84f8
-Version:        2.4.3
+#Hexsha:        699bb47b3571b40a6cb19337d3f1b031535d84f8
+Version:        2.4.4
 Release:        25%{?dist}
 Summary:        red-pak
 License:        ISC
