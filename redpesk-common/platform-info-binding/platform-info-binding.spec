@@ -15,8 +15,8 @@
 ###########################################################################
 
 Name:       platform-info-binding
-#Hexsha: 6a616a45b4d5ff49eaa6cfdb506c328a53b85c66
-Version: 8.1.0+20240722+5+g6a616a4
+#Hexsha: 17318d061f725f64718c100d7073e5b77b4af865
+Version: 8.1.0+20241022+6+g17318d0
 Release: 6%{?dist}
 License:    GPL-3.0-only
 Summary:    Platform info API for catch useful information
