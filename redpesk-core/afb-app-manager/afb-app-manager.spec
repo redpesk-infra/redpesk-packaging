@@ -20,6 +20,12 @@
 %define _rp_group_name     users
 %define _rp_group_id       100
 
+%if 0%{rhel} >= 10
+%define with_openssl 1
+%else
+%define with_openssl 0
+%endif
+
 Name:           afb-app-manager
 #Hexsha:        da8dc7a5865e2e0132a9bc4199400b2c6be57c8c
 Version:        12.3.1
@@ -35,9 +41,14 @@ BuildRequires:  cmake
 BuildRequires:  pkgconfig(libsystemd) >= 222
 BuildRequires:  pkgconfig(libxml-2.0)
 BuildRequires:  pkgconfig(xmlsec1)
+BuildRequires:  pkgconfig(gnutls)
+%if %{with_openssl}
+BuildRequires:  pkgconfig(xmlsec1-openssl)
+%else
 BuildRequires:  pkgconfig(xmlsec1-gnutls)
 # pkgconfig(xmlsec1-gnutls) do not require xmlsec1-gnutls!
 BuildRequires:  xmlsec1-gnutls
+%endif
 BuildRequires:  pkgconfig(json-c)
 BuildRequires:  pkgconfig(libzip)
 BuildRequires:  pkgconfig(afb-binding) >= 4
@@ -103,6 +114,7 @@ Summary:  redpesk rpm plugin
    -DALLOW_NO_SIGNATURE=ON \
    -Drpm_plugin_dir=%{__plugindir} \
    -Drpm_macros_dir=%{_rpmmacrodir} \
+   -DWITH_OPENSSL=%{with_openssl} \
    .
 %cmake_build
 
