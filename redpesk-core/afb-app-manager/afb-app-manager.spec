@@ -27,9 +27,9 @@
 %endif
 
 Name:           afb-app-manager
-#Hexsha:        da8dc7a5865e2e0132a9bc4199400b2c6be57c8c
-Version:        12.3.1
-Release: 58%{?dist}
+#Hexsha:        ad552e9bc650b485ef43254bd22065884628f1d6
+Version:        12.3.2
+Release: 59%{?dist}
 License:        GPLv3
 Summary:        Micro service application manager
 Group:          Development/Libraries/C and C++
@@ -52,7 +52,10 @@ BuildRequires:  xmlsec1-gnutls
 BuildRequires:  pkgconfig(json-c)
 BuildRequires:  pkgconfig(libzip)
 BuildRequires:  pkgconfig(afb-binding) >= 4
-BuildRequires:  pkgconfig(librp-utils-static)
+BuildRequires:  pkgconfig(librp-utils-socket-static) >= 0.2
+BuildRequires:  pkgconfig(librp-utils-file-static) >= 0.2
+BuildRequires:  pkgconfig(librp-utils-json-c-static) >= 0.2
+BuildRequires:  pkgconfig(librp-utils-yaml-static) >= 0.2
 BuildRequires:  m4
 BuildRequires:  gcc-c++
 BuildRequires:  libtool-ltdl-devel
