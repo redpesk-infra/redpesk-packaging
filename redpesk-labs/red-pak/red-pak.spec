@@ -1,7 +1,7 @@
 Name:           red-pak
 #Hexsha:        2fc0134f3e02d2904cb451e517277582cd8dd5f9
 Version:        2.4.6
-Release:        27%{?dist}
+Release:        28%{?dist}
 Summary:        red-pak
 License:        ISC
 URL:            https://github.com/redpesk-labs/red-pak
@@ -29,6 +29,7 @@ Requires: redpak-dnf = %{version}
 Summary:  libraries and binaries for red-pak
 Requires: libcyaml
 Requires: userspace-rcu
+Requires: /usr/bin/bwrap
 
 %description -n redpak-core
 %{summary}.
