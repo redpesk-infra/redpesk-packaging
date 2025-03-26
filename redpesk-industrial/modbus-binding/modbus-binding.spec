@@ -1,5 +1,5 @@
 Name: modbus-binding
-#Hexsha:  42a393c0967b09078e70dfcb6322e02c2dc4f581
+#Hexsha: 42a393c0967b09078e70dfcb6322e02c2dc4f581
 Version: 2.1.1
 Release: 25%{?dist}
 Summary: Binding to serve an API connected to modbus hardware
