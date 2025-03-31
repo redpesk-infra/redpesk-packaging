@@ -2,7 +2,7 @@ Format: 1.0
 Source: sec-gate-oidc
 Binary: sec-gate-oidc, sec-gate-oidc-dev
 Architecture: any
-Version: 1.0.10
+Version: 1.1.0
 Maintainer: Valentin Lefebvre <valentin.lefebvre@iot.bzh>
 Standards-Version: 3.8.2
 Homepage: https://github.com/redpesk-common/sec-gate-oidc
