@@ -1,7 +1,7 @@
 Name:           redpak-binding
-#Hexsha:        c8dd4244fdb5a6588d890797f34dc444f6ded9fe
-Version:        1.0.0+20220804+5+gc8dd424
-Release: 1%{?dist}
+#Hexsha:         b8f7fa4f6788cffa9ad5d6e95eb9b0468307b121
+Version:        1.0.0+12+gb8f7fa4
+Release: 2%{?dist}
 Summary:        This service aims to manage Rednode on target.
 Group:          Development/Libraries/C and C++
 License:        APL2.0
