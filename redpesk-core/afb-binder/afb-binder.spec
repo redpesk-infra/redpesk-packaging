@@ -3,9 +3,9 @@
 #---------------------------------------------
 
 Name:           afb-binder
-#Hexsha: fb57e3e3653b250643d25494d222bb7871bc010e
-Version: 5.1.8
-Release: 36%{?dist}
+#Hexsha: ef8180ca9a634799dfd9939928d4834b1bd86a86
+Version: 5.1.9
+Release: 37%{?dist}
 License:        GPL-3.0-only
 Summary:        Application framework binder
 Url:            https://github.com/redpesk-core/afb-binder
