@@ -12,7 +12,7 @@ Build-Depends:
  libssl-dev,
  libgcrypt20-dev,
  libjson-c-dev,
- librp-utils-core-dev,
+ librp-utils-core-dev (>= 0.2.3),
  librp-utils-file-dev,
  librp-utils-json-c-dev,
  libmagic-dev,

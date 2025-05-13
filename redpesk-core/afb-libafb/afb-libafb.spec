@@ -3,9 +3,9 @@
 #---------------------------------------------
 
 Name:           afb-libafb
-#Hexsha:        335b75100fb6dd9bb68e22dbd868e03d571e02da
-Version:        5.4.0
-Release: 	74%{?dist}
+#Hexsha:        eddb8b6ba2db05841da7efe73a41e9c5b110100f
+Version:        5.4.2
+Release:        77%{?dist}
 License:        GPL-3.0-only
 Summary:        Library of internals of application framework binder
 Group:          Development/Libraries/C and C++
@@ -21,7 +21,7 @@ BuildRequires:  pkgconfig(libmicrohttpd) >= 0.9.60
 BuildRequires:  pkgconfig(libsystemd) >= 222
 BuildRequires:  pkgconfig(json-c)
 BuildRequires:  pkgconfig(afb-binding) >= 4.1.2
-BuildRequires:  pkgconfig(librp-utils-core)
+BuildRequires:  pkgconfig(librp-utils-core) >= 0.2.3
 BuildRequires:  pkgconfig(librp-utils-file)
 BuildRequires:  pkgconfig(librp-utils-json-c)
 BuildRequires:  pkgconfig(gnutls)
@@ -205,7 +205,7 @@ CFLAGS="${CFLAGS:-%optflags} -ffat-lto-objects"
 * Fri Sep 6 2024 JosÃÂ© Bollo jose.bollo@iot.bzh 5.2.0
 - adapt for libafb6 and libafbcli6
 
-* Tue Jan 5 2023 JosÃÂ© Bollo jose.bollo@iot.bzh 5.0.0
+* Thu Jan 5 2023 JosÃÂ© Bollo jose.bollo@iot.bzh 5.0.0
 - refactor packaging
 - switch to v5.0
 
