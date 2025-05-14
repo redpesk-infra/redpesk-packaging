@@ -3,7 +3,7 @@
 #---------------------------------------------
 
 Name:           afb-binder
-#Hexsha: fe01594a1221e0c5ffa9e4125bc473430c55c34c
+#Hexsha:    fe01594a1221e0c5ffa9e4125bc473430c55c34c
 Version: 5.1.10
 Release: 38%{?dist}
 License:        GPL-3.0-only
@@ -64,6 +64,7 @@ Application Framework Binder library - Developement files
 %{_bindir}/afb-binder
 %dir %{_datarootdir}/afb-binder
 %{_datarootdir}/afb-binder/*
+%{_datarootdir}/bash-completion/completions/afb-binder-prompt
 
 #---------------------------------------------
 %post -n libafb-binder5
@@ -85,6 +86,9 @@ Application Framework Binder library - Developement files
 
 #---------------------------------------------
 %changelog
+
+* Thu May 14 2025 José Bollo jose.bollo@iot.bzh 5.1.10
+- Package of auto completion with the binary
 
 * Tue Jan 10 2023 José Bollo jose.bollo@iot.bzh 5.0.0
 - Version 5.0.0
