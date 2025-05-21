@@ -1,6 +1,6 @@
 Name: dbus-binding
-#Hexsha: 0dadd55926a41dcc5dec12b7d7d497eab313442a
-Version: 0.0.0+20240215+164934+0+g0dadd55
+#Hexsha: 6afc35ca0f0560dfd65b787852e89c57643df4dd
+Version: 0.0.0+20250106+104427+0+g6afc35c
 Release: 1%{?dist}
 Summary: Binding to serve an API connected to dbus
 Group:   Development/Libraries/C and C++
