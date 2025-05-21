@@ -1,6 +1,6 @@
 %define         debug_package %{nil}
 Name: 	        signal-composer-binding
-#Hexsha: 92eed99ad927ce6e46bcdee336830d71ee8df41f
+#Hexsha: 2960d9665503f102fc6e9bee16ac92de7c41794e
 Version: 1.0.1
 Release: 5%{?dist}
 Summary:        Signal composer API connected to low level AGL services
