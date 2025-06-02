@@ -29,7 +29,7 @@
 Name:           afb-app-manager
 #Hexsha:        25d5940c2a9a6cc86ec1934f8d8e03b708837f46
 Version:        12.3.3
-Release: 60%{?dist}
+Release:        61%{?dist}
 License:        GPLv3
 Summary:        Micro service application manager
 Group:          Development/Libraries/C and C++
@@ -103,17 +103,16 @@ Summary:  redpesk rpm plugin
 %build
 %cmake \
    -DCMAKE_INSTALL_SYSCONFDIR:PATH=/etc \
-   -DUSE_LIBZIP=1 \
-   -DUSE_SIMULATION=0 \
-   -DUSE_SDK=0 \
-   -DWITH_TOOLS=ON \
+   -DUSE_LIBZIP=YES \
+   -DSIMULATE_SECMGR=NO \
+   -DONLY_SDK=NO \
+   -DWITH_TOOLS=YES \
    -Dafm_name=%{afm_name} \
    -Dafm_confdir=%{afm_confdir} \
    -Dafm_datadir=%{afm_datadir} \
    -Dafm_units_root=%{afm_units_root} \
-   -DUNITDIR_USER=/usr/lib/systemd/user \
    -DUNITDIR_SYSTEM=/usr/lib/systemd/system \
-   -DAGL_DEVEL=1 \
+   -DREDPESK_DEVEL=NO \
    -DALLOW_NO_SIGNATURE=ON \
    -Drpm_plugin_dir=%{__plugindir} \
    -Drpm_macros_dir=%{_rpmmacrodir} \
