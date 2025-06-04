@@ -1,9 +1,9 @@
 %define secname sec-lsm-manager
 
 Name:           sec-lsm-manager
-#Hexsha: d8e176e8edcc3cebe5d995f538dcb287eb3ff890
-Version: 2.6.1
-Release: 48%{?dist}
+#Hexsha: b0be8a6b4296135acd3f1ae406e5958f3d01e41d
+Version: 2.6.2
+Release: 49%{?dist}
 Summary:        sec-lsm-manager service (SMACK, SELinux)
 License:        Apache-2.0
 URL:            https://github.com/redpesk-core/sec-lsm-manager
