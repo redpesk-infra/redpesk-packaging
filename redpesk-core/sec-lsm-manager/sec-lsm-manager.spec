@@ -3,7 +3,7 @@
 Name:           sec-lsm-manager
 #Hexsha: b0be8a6b4296135acd3f1ae406e5958f3d01e41d
 Version: 2.6.2
-Release: 49%{?dist}
+Release: 50%{?dist}
 Summary:        sec-lsm-manager service (SMACK, SELinux)
 License:        Apache-2.0
 URL:            https://github.com/redpesk-core/sec-lsm-manager
@@ -27,7 +27,6 @@ Requires:       (%{name}-smack = %{version} or %{name}-selinux = %{version})
 %package tool
 Summary:        Tiny tool for %{name}
 Requires:       %{name} = %{version}
-Provides:       pkgconfig(%{name}) = %{version}
 
 %description tool
 %{summary}.
