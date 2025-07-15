@@ -1,9 +1,9 @@
 Name:           red-pak
-#Hexsha:        9b7f5076a6f83562d206adebd42116a93b3e6a55
-Version:        2.4.7
-Release:        29%{?dist}
+#Hexsha:        7a6fe1d99141738df2b3436ba087dcfb6a6ddcf4
+Version:        2.4.7+1+g7a6fe1d
+Release:        30%{?dist}
 Summary:        red-pak
-License:        ISC
+License:        Apache-2.0
 URL:            https://github.com/redpesk-labs/red-pak
 Source:         %{name}-%{version}.tar.gz
 BuildRequires:	redrpm-devel
@@ -37,6 +37,7 @@ Requires: /usr/bin/bwrap
 %package devel
 Summary:  Development libraries and header files for %{name}
 Requires: redpak-core = %{version}
+Requires: redpak-dnf = %{version}
 Provides: pkgconfig(%{name}) = %{version}
 Requires: libcyaml-devel
 Requires: libdnf5-devel
@@ -85,6 +86,8 @@ CFLAGS="$CFLAGS -DCONFIG_RCU_HAVE_CLOCK_GETTIME"
 %{_sysconfdir}/redpak/templates.d/*
 %{_bindir}/redwrap
 %{_bindir}/redconf
+%{_libdir}/libredconf*.so*
+%{_libdir}/libredwrap*.so*
 
 %files devel
 %defattr(-,root,root)
@@ -95,7 +98,7 @@ CFLAGS="$CFLAGS -DCONFIG_RCU_HAVE_CLOCK_GETTIME"
 %files -n redpak-dnf
 %defattr(-,root,root)
 %{_bindir}/redwrap-dnf
-%{_libdir}/libred*.so*
+%{_libdir}/libredlib*.so*
 %{_libdir}/rpm-plugins/redpak.so
 
 %files -n python3-redconf
@@ -103,6 +106,10 @@ CFLAGS="$CFLAGS -DCONFIG_RCU_HAVE_CLOCK_GETTIME"
 %{python3_sitearch}/*.so
 
 %changelog
+
+* Tue Jul 15 2025 José Bollo <jose.bollo@iot.bzh> 2.4.7
+- Split libraries in redpak-core and redpak-dnf
+- Fix licensing
 
 * Mon Dec 02 2024 José Bollo <jose.bollo@iot.bzh> 2.3.1
 - Split redpak-core in redpak-core and redpak-dnf
