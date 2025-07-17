@@ -27,9 +27,9 @@
 %endif
 
 Name:           afb-app-manager
-#Hexsha:        b2b158a685f6f3eb26c757c7a1050922b788cf0a
-Version:        12.4.1
-Release:        63%{?dist}
+#Hexsha:        bf2a5c1d0016cd5a4b5d8b5e49ecedeb5bf35fff
+Version:        12.4.1+4+gbf2a5c1
+Release:        64%{?dist}
 License:        GPLv3
 Summary:        Micro service application manager
 Group:          Development/Libraries/C and C++
