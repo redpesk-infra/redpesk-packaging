@@ -1,5 +1,5 @@
 Name: secure-storage-binding
-#Hexsha: 27b63fc096cf761e87dc5c266a7ee4d3239b5312
+#Hexsha: 039fd44e1f528bcc9520fcf3dc9e1ef27e17c6cc
 Version: 1.0.1
 Release: 0%{?dist}
 Summary: Binding provide a database API with key/value semantics
