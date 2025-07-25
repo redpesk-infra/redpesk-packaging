@@ -4,7 +4,7 @@ Name: canbus-binding2
 
 #Hexsha: 53af232093b017429f459249f0caee24ff761bfd
 Version: 2.0.4
-Release: 10%{?dist}
+Release: 11%{?dist}
 
 Summary: Redpesk binding to connect to CAN-bus
 Group:   Development/Libraries/C and C++
@@ -93,10 +93,10 @@ A template to make plugins for the %{name}.
 
 %changelog
 
-* Wed Sep 06 2023 JosÃ© Bollo jose.bollo@iot.bzh 2.0.0
+* Wed Sep 06 2023 JosÃÂ© Bollo jose.bollo@iot.bzh 2.0.0
 - new 2.0.0 packaging
 
-* Mon Jan 23 2023 JosÃ© Bollo jose.bollo@iot.bzh 1.1.1
+* Mon Jan 23 2023 JosÃÂ© Bollo jose.bollo@iot.bzh 1.1.1
 - Change the packaging of the development
 - Bump version 1.1.1
 * Mon Jun 07 2021 IoT.bzh(iotpkg) <redpesk.list@iot.bzh> 1.0.0
