@@ -1,0 +1,16 @@
+canbus-binding2 (8.0.1) unstable; urgency=low
+
+* Version 2.0.0
+  - Nex version
+
+ -- José Bollo jose.bollo@iot.bzh  Wed, 6 Sep 2023 14:38:26 +0200
+
+* Version 1.1.1
+  - Change the packaging of the development
+  - Bump version 1.1.1
+
+ -- José Bollo jose.bollo@iot.bzh  Mon, 23 Jan 2023 16:44:26 +0100
+
+  * init build
+
+ -- Corentin LE GALL <corentin.legall@iot.bzh>  Mon, 2 Nov 2020 14:50:30 +0100
