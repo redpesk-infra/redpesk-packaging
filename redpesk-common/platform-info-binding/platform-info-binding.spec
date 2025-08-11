@@ -15,9 +15,9 @@
 ###########################################################################
 
 Name:    platform-info-binding
-#Hexsha: 8fdb97d350bdd1365cf1cb60af390bd00f2a8ac1
-Version: 9.0.2+8+g8fdb97d
-Release: 14%{?dist}
+#Hexsha: 94d4112237dc2cb8fd10226ff06d55f6def1f8fa
+Version: 9.0.2+9+g94d4112
+Release: 16%{?dist}
 License: GPL-3.0-only
 Summary: Platform info API for catch useful information
 URL:     https://github.com/redpesk-common/platform-info-binding
