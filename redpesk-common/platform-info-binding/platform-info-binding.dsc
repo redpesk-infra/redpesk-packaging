@@ -2,7 +2,7 @@ Format: 1.0
 Source: platform-info-binding
 Binary: platform-info-binding-bin
 Architecture: any
-Version: 9.0.2+8+g8fdb97d
+Version: 9.0.2+9+g94d4112
 Maintainer: Valentin Lefebvre <valentin.lefebvre@iot.bzh>
 Standards-Version: 3.8.2
 Homepage: https://github.com/redpesk-common/platform-info-binding
