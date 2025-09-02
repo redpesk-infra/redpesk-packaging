@@ -1,5 +1,5 @@
 Name:    helloworld-binding
-#Hexsha: 794a85e725837f05239f19a0b8624097cfeba965
+#Hexsha: 5a4e86a82905946d1513622a8c97558ad22298ad
 Version: 2.0.0
 Release: 1%{?dist}
 License: Apache-2.0
