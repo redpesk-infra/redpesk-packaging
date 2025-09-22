@@ -1,11 +1,12 @@
 Name:           red-pak
-#Hexsha:        7a6fe1d99141738df2b3436ba087dcfb6a6ddcf4
-Version:        2.4.7+1+g7a6fe1d
-Release:        30%{?dist}
+#Hexsha:        ba4722be676391813bc77d112666a521592e9c10
+Version:        2.4.7+4+gba4722b
+Release:        31%{?dist}
 Summary:        red-pak
 License:        Apache-2.0
 URL:            https://github.com/redpesk-labs/red-pak
 Source:         %{name}-%{version}.tar.gz
+
 BuildRequires:	redrpm-devel
 BuildRequires:  libyaml-devel
 BuildRequires:	libcyaml-devel
@@ -15,8 +16,7 @@ BuildRequires:  cmake
 BuildRequires:  make
 BuildRequires:  python3-devel
 BuildRequires:  pkgconfig(uuid)
-BuildRequires:  libassuan-devel
-BuildRequires:  userspace-rcu-devel
+#BuildRequires:  libassuan-devel
 BuildRequires:  check-devel
 
 Requires: redpak-core = %{version}
