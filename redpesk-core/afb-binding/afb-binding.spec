@@ -3,8 +3,8 @@
 #---------------------------------------------
 Name:           afb-binding
 #Hexsha:        cc31c8ce215674c2693c218c593c25d73ce90938
-Version:        4.1.11
-Release:        27%{?dist}
+Version:        4.2.0
+Release:        28%{?dist}
 License:        LGPL-3.0
 Summary:        Binding headers for Application Framework Binder
 Group:          Development/Libraries/C and C++

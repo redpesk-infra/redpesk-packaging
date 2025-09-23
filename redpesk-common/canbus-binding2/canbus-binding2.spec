@@ -17,7 +17,6 @@ Recommends: afb-app-manager
 Requires: afb-binder
 
 BuildRequires:  cmake
-BuildRequires:  afb-cmake-modules
 BuildRequires:  gcc-c++
 BuildRequires:  kernel-headers
 BuildRequires:  afb-idl

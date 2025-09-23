@@ -3,7 +3,6 @@ Maintainer: Aymeric Aillet <aymeric.aillet@iot.bzh>
 Source: gps-binding
 Build-Depends: debhelper (>= 5),pkg-config,
  cmake,
- afb-cmake-modules,
  g++,
  libsystemd-dev (>= 222),
  afb-binding-dev,

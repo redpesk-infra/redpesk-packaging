@@ -1,15 +1,14 @@
 %define debug_package %{nil}
 
 Name:           sec-cynagora
-#Hexsha:           e5ef24c1a7eca0d51cb209984e6f0bf98ea9ac1d
-Version:        2.3.1
-Release: 25%{?dist}
+#Hexsha:        ada42aab4cccbaae796cc6afd2dea9dc1e99ea4b
+Version:        2.4.0
+Release:        31%{?dist}
 Summary:        Cynara service with client libraries
 
 License:        Apache-2.0
 URL:            https://github.com/redpesk-core/sec-cynagora
 Source:         %{name}-%{version}.tar.gz
-Source2:        cynagora-redpesk.initial
 
 BuildRequires:  cmake
 BuildRequires:  gcc-c++
@@ -41,12 +40,12 @@ Provides:       pkgconfig(cynagora) = %{version}
 	-DSYSTEMD_UNIT_DIR=/usr/lib/systemd/system  \
 	-DWITH_SYSTEMD=ON \
 	-DWITH_CYNARA_COMPAT=OFF \
+	-DADD_AGL_RULES=ON \
 	-DCMAKE_INSTALL_RUNSTATEDIR=%{_rundir}
 %cmake_build
 
 %install
 %cmake_install
-cp %{SOURCE2} %{buildroot}/%{_sysconfdir}/security/cynagora.initial
 
 %pre
 getent group cynagora >/dev/null || groupadd -r cynagora ||:
@@ -58,7 +57,8 @@ ldconfig
 
 %files
 %defattr(-,root,root)
-%config %{_sysconfdir}/security/cynagora.initial
+%config %{_sysconfdir}/security/cynagora.conf
+%config %{_sysconfdir}/security/cynagora.d
 %{_unitdir}
 %{_unitdir}/sockets.target.wants
 %{_libdir}/libcynagora*.so.*
