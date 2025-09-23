@@ -17,7 +17,7 @@ Build-Depends:
  librp-utils-json-c-dev,
  libmagic-dev,
  gnutls-dev,
- afb-binding-dev (>= 4.1.2)
+ afb-binding-dev (>= 4.2.0)
 Standards-Version: 3.8.2
 Homepage: https://github.com/redpesk-core/afb-libafb
 

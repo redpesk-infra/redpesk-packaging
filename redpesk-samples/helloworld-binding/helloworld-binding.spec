@@ -1,6 +1,6 @@
 Name:    helloworld-binding
-#Hexsha: 5a4e86a82905946d1513622a8c97558ad22298ad
-Version: 2.0.0
+#Hexsha: c065b33254cb3d83e99f3fe34e56a2f43a073a5d
+Version: 2.0.1
 Release: 1%{?dist}
 License: Apache-2.0
 Summary: helloworld service set to be used in redpesk

@@ -8,7 +8,6 @@ Standards-Version: 3.8.2
 Homepage: https://github.com/redpesk-common/gps-binding
 Build-Depends: debhelper (>= 5),pkg-config,
  cmake,
- afb-cmake-modules,
  g++,
  libsystemd-dev (>= 222),
  afb-binding-dev,
