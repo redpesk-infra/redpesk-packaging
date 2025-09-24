@@ -25,23 +25,39 @@
 %else
 %define with_openssl 0
 %endif
+%define keep_legacies 0
 
 Name:           afb-app-manager
-#Hexsha:        ac020040651c9e0d97bb1c2e3a7c993312ad89d9
-Version:        12.4.2+1+gac02004
-Release:        67%{?dist}
+#Hexsha:        8bb60ef2c229d6ac7bd3d9e21d7fe37ae880ea32
+Version:        12.4.2+12+g8bb60ef
+Release:        68%{?dist}
 License:        GPLv3
 Summary:        Micro service application manager
 Group:          Development/Libraries/C and C++
 URL:            https://github.com/redpesk-core/afb-app-manager
 Source0:        %{name}-%{version}.tar.gz
 Source1: 50-afm.preset
+
+BuildRequires:  gcc-c++
 BuildRequires:  make
 BuildRequires:  cmake
+
 BuildRequires:  pkgconfig(libsystemd) >= 222
-BuildRequires:  pkgconfig(libxml-2.0)
-BuildRequires:  pkgconfig(xmlsec1)
 BuildRequires:  pkgconfig(gnutls)
+BuildRequires:  pkgconfig(json-c)
+BuildRequires:  pkgconfig(afb-binding) >= 4
+BuildRequires:  pkgconfig(librp-utils-socket-static) >= 0.2
+BuildRequires:  pkgconfig(librp-utils-file-static) >= 0.2
+BuildRequires:  pkgconfig(librp-utils-json-c-static) >= 0.2
+BuildRequires:  pkgconfig(librp-utils-yaml-static) >= 0.2
+BuildRequires:  m4
+BuildRequires:  pkgconfig(sec-lsm-manager)
+BuildRequires:  rpm-plugins-devel
+
+%if %{keep_legacies}
+BuildRequires:  pkgconfig(libxml-2.0)
+BuildRequires:  pkgconfig(libzip)
+BuildRequires:  pkgconfig(xmlsec1)
 %if %{with_openssl}
 BuildRequires:  pkgconfig(xmlsec1-openssl)
 %else
@@ -49,29 +65,25 @@ BuildRequires:  pkgconfig(xmlsec1-gnutls)
 # pkgconfig(xmlsec1-gnutls) do not require xmlsec1-gnutls!
 BuildRequires:  xmlsec1-gnutls
 %endif
-BuildRequires:  pkgconfig(json-c)
-BuildRequires:  pkgconfig(libzip)
-BuildRequires:  pkgconfig(afb-binding) >= 4
-BuildRequires:  pkgconfig(librp-utils-socket-static) >= 0.2
-BuildRequires:  pkgconfig(librp-utils-file-static) >= 0.2
-BuildRequires:  pkgconfig(librp-utils-json-c-static) >= 0.2
-BuildRequires:  pkgconfig(librp-utils-yaml-static) >= 0.2
-BuildRequires:  m4
-BuildRequires:  gcc-c++
-BuildRequires:  libtool-ltdl-devel
-BuildRequires:  pkgconfig(sec-lsm-manager)
-BuildRequires:  rpm-plugins-devel
-BuildRequires:  procps-ng-devel
+%endif
+
 Requires:       nss-localuser
 Requires:       sec-lsm-manager
 Requires:       afb-binder
-Requires:       afb-client
+
+Requires(post): %{name}-users
+Requires(post): afm-utils
+
+Requires(pre): /usr/bin/getent
+Requires(pre): /usr/sbin/useradd
+Requires(pre): /usr/sbin/groupadd
 Requires(post): /usr/bin/chgrp
-Requires(post): /usr/bin/passwd
-Requires(post): /usr/sbin/useradd
+Requires(post): /usr/bin/chown
+Requires(post): /usr/bin/chsmack
+
+Requires(post): systemd-units
 Requires(preun): systemd-units
 Requires(postun): systemd-units
-Requires(post): systemd-units
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
@@ -80,9 +92,10 @@ Framework for installing, uninstalling, running and stopping
 micro services packaged as widgets.
 
 %package devel
-Group:          Development/Libraries/C and C++
-Provides:       pkgconfig(afm-main) = %{version}
-Summary:        Micro service application manager, development files
+Summary:  Micro service application manager, development files
+Group:    Development/Libraries/C and C++
+Provides: pkgconfig(afm-main) = %{version}
+Requires: %{name} = %{version}
 
 %description devel
 Declaration of variables of interest for package connecting to
@@ -90,12 +103,35 @@ the manager for installing, uninstalling, running and stopping
 micro services packaged as widgets.
 
 %package rpm
+Summary:  redpesk rpm plugin
 Requires: rpm-libs
 Requires: %{name} = %{version}
-Summary:  redpesk rpm plugin
 
 %description rpm
 %summary
+
+%package tools
+Summary: Application framework tools
+
+%description tools
+
+%package -n afm-util
+Summary:  launcher tool
+Requires: %{name} = %{version}
+Requires: afb-client
+
+%description -n afm-util
+Launcher afm-util for redpesk framework
+
+%package users
+Summary: Redpesk framework predefined users
+Requires(post): /usr/bin/getent
+Requires(post): /usr/bin/passwd
+Requires(post): /usr/sbin/useradd
+Requires(post): /usr/sbin/groupadd
+
+%description users
+Installs redpesk framework predefined users
 
 %prep
 %autosetup -p1
@@ -117,11 +153,15 @@ Summary:  redpesk rpm plugin
    -Drpm_plugin_dir=%{__plugindir} \
    -Drpm_macros_dir=%{_rpmmacrodir} \
    -DWITH_OPENSSL=%{with_openssl} \
+   -DWITH_CONFIG_XML=%{keep_legacies} \
+   -DWITH_LEGACY_WGTPKG=%{keep_legacies} \
+   -DUSE_LIBZIP=%{keep_legacies} \
    .
 %cmake_build
 
 %install
 %cmake_install
+# sed -i '/selinux/d' %{buildroot}%{_sysconfdir}/pam.d/*
 %{__install} -d %{buildroot}%{afm_units_root}/system
 %{__install} -d %{buildroot}%{afm_units_root}/system/multi-user.target.wants
 %{__install} -d %{buildroot}%{afm_units_root}/system/afm-user-session@.target.wants
@@ -144,13 +184,6 @@ getent passwd display > /dev/null || useradd --gid display --groups video,input 
 
 %post
 %systemd_post afm-system-setup.service afm-system-daemon.service afm-system-daemon.socket afmpkg-installer.service afmpkg-installer.socket
-
-# Users creation
-getent group %{_rp_group_name} > /dev/null || groupadd -g %{_rp_group_id} %{_rp_group_name} ||:
-# The definition of the passwd is in a way secure because echo is a builtin command and will not be displayed with ps command.
-# The definition of the password remains weak due to its complexity.
-%{_libexecdir}/afm/afm-create-user.sh %{_rp_owner_id} %{_rp_owner_name} %{_rp_group_name} && echo %{_rp_owner_name} | passwd %{_rp_owner_name} --stdin ||:
-%{_libexecdir}/afm/afm-create-user.sh %{_rp_guest_id} %{_rp_guest_name} %{_rp_group_name} && echo %{_rp_guest_name} | passwd %{_rp_guest_name} --stdin ||:
 
 chgrp %{afm_name} %{afm_units_root}/system
 chgrp %{afm_name} %{afm_units_root}/system/afm-user-session@.target.wants
@@ -180,6 +213,14 @@ fi
 %postun
 %systemd_postun afm-system-setup.service afm-system-daemon.service afm-system-daemon.socket afmpkg-installer.service afmpkg-installer.socket
 
+%post users
+# Users creation
+getent group %{_rp_group_name} > /dev/null || groupadd -g %{_rp_group_id} %{_rp_group_name} ||:
+# The definition of the passwd is in a way secure because echo is a builtin command and will not be displayed with ps command.
+# The definition of the password remains weak due to its complexity.
+%{_libexecdir}/afm/afm-create-user.sh %{_rp_owner_id} %{_rp_owner_name} %{_rp_group_name} && echo %{_rp_owner_name} | passwd %{_rp_owner_name} --stdin ||:
+%{_libexecdir}/afm/afm-create-user.sh %{_rp_guest_id} %{_rp_guest_name} %{_rp_group_name} && echo %{_rp_guest_name} | passwd %{_rp_guest_name} --stdin ||:
+
 %files
 %defattr(-,root,root)
 %dir %{afm_units_root}/system
@@ -197,7 +238,9 @@ fi
 %config %{_sysconfdir}/dbus-1/system.d/*
 %config %{_sysconfdir}/pam.d/*
 %config %{_presetdir}/%{basename:%{SOURCE1}}
-%{_bindir}/*
+%{_bindir}/afmpkg-installerd
+%{_bindir}/afmpkg-status
+%{_bindir}/afmpkg-offline
 %{_unitdir}/afm-api-afm-main@.service
 %{_unitdir}/afm-system-daemon.service
 %{_unitdir}/afm-system-daemon.socket
@@ -209,7 +252,6 @@ fi
 %{_unitdir}/afm-user-setup@.service
 %{_unitdir}/user-runtime-dir@.service.wants/afm-user-setup@.service
 %{_libexecdir}/afm/afm-system-setup.sh
-%{_libexecdir}/afm/afm-create-user.sh
 %{_libexecdir}/afm/afm-user-setup.sh
 %{_libexecdir}/afm/afm-user-session
 %{_libexecdir}/afm/*so
@@ -223,6 +265,23 @@ fi
 %defattr(-,root,root)
 %{__plugindir}/redpesk.so
 %{_rpmmacrodir}/macros.afm-main
+
+%files tools
+%{_bindir}/afm-check-pkg
+%{_bindir}/afm-domain-spec
+%{_bindir}/afm-translate
+%{_bindir}/afm-check-signature
+%{_bindir}/afm-signed-digest
+%{_bindir}/afm-digest
+%if %{keep_legacies}
+%{_bindir}/wgt-migrate
+%endif
+
+%files users
+%{_libexecdir}/afm/afm-create-user.sh
+
+%files -n afm-util
+%{_bindir}/afm-util
 
 %changelog
 

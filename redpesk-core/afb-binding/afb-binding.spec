@@ -4,7 +4,7 @@
 Name:           afb-binding
 #Hexsha:        cc31c8ce215674c2693c218c593c25d73ce90938
 Version:        4.2.0
-Release:        28%{?dist}
+Release:        29%{?dist}
 License:        LGPL-3.0
 Summary:        Binding headers for Application Framework Binder
 Group:          Development/Libraries/C and C++
@@ -89,7 +89,7 @@ Some documentation on how to write application framework bindings
 #---------------------------------------------
 %changelog
 
-* Thu Jan 05 2023 José Bollo jose.bollo@iot.bzh 4.1.1
+* Thu Jan 05 2023 JosÃ© Bollo jose.bollo@iot.bzh 4.1.1
 - Fix reference to afb_api_new_api
 - Prepare version 4.1.0
 - afb-errno: Improve naming (switch ERROR to ERRNO)
@@ -102,7 +102,7 @@ Some documentation on how to write application framework bindings
 - Add metapkg file
 - Version 4.1.1
 
-* Fri Nov 19 2021 José Bollo jose.bollo@iot.bzh 4.0.3
+* Fri Nov 19 2021 JosÃ© Bollo jose.bollo@iot.bzh 4.0.3
 - [CI] Create MAINTAINERS file
 - tutorial: Add use of patterned verb's name
 - Prepare version 4.0.3
@@ -123,16 +123,16 @@ Some documentation on how to write application framework bindings
 - [DOC] Better signatures for the reply functions
 - Add conversion for parameters of requests
 - Version 4.0.2
-* Tue Apr 13 2021 José Bollo jose.bollo@iot.bzh 4.0.1
+* Tue Apr 13 2021 JosÃ© Bollo jose.bollo@iot.bzh 4.0.1
 
-* Fri Apr 09 2021 José Bollo jose.bollo@iot.bzh 4.0.0
+* Fri Apr 09 2021 JosÃ© Bollo jose.bollo@iot.bzh 4.0.0
 - hello4: Add get file verb
 - afb-binding-v4: Fix missing definitions
 - afb-binding-v4: Fix comments
 - mkbuild: Allow build every where
 - Version 4.0.0
 
-* Thu Mar 25 2021 José Bollo jose.bollo@iot.bzh 4.0.0beta6
+* Thu Mar 25 2021 JosÃ© Bollo jose.bollo@iot.bzh 4.0.0beta6
 - afb-binding-x4-itf: Modify handling of context
 - More change on managing context
 - Version 4.0.0beta6

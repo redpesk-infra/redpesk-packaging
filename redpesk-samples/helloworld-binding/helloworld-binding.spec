@@ -1,6 +1,6 @@
 Name:    helloworld-binding
-#Hexsha: c065b33254cb3d83e99f3fe34e56a2f43a073a5d
-Version: 2.0.1
+#Hexsha: c1d1cd2674e977145efd1d44dd2cad40036ed23d
+Version: 2.0.2
 Release: 1%{?dist}
 License: Apache-2.0
 Summary: helloworld service set to be used in redpesk
@@ -23,6 +23,8 @@ Provides a simple API showcasing the basics of binding development
 %package redtest
 Summary: redtest package (coverage build)
 Requires: lcov
+Requires: afb-test-py
+Requires: afb-libpython
 %description redtest
 This package contains binaries built with coverage instrumentation.
 
