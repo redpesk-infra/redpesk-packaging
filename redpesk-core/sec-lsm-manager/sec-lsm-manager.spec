@@ -1,9 +1,9 @@
 %define secname sec-lsm-manager
 
 Name:           sec-lsm-manager
-#Hexsha: e8c6d7e7f151adb63d4b1a06f48d4d0623d792ed
-Version: 2.6.3
-Release: 51%{?dist}
+#Hexsha: d47db6ebb9fa4e03a48ce2ca0c5b99695dd6aeb6
+Version: 2.6.3+1+gd47db6e
+Release: 52%{?dist}
 Summary:        sec-lsm-manager service (SMACK, SELinux)
 License:        Apache-2.0
 URL:            https://github.com/redpesk-core/sec-lsm-manager
@@ -96,6 +96,7 @@ Provides:       %{name}-smack-redtest = %{version}
 %install
 %cmake_install
 chmod o-x %{buildroot}%{_bindir}/sec-lsm-manager-cmd
+
 mkdir -p %{buildroot}%{_prefix}/lib/%{name}-selinux-redtest/redtest
 mkdir -p %{buildroot}%{_prefix}/lib/%{name}-smack-redtest/redtest
 mv %{buildroot}/%{_datadir}/%{secname}/tests/tests-selinux %{buildroot}%{_prefix}/lib/%{name}-selinux-redtest/redtest/
