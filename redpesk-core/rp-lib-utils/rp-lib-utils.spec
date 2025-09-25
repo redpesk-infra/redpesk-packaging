@@ -1,7 +1,7 @@
 Name: rp-lib-utils
-#Hexsha: 95cc3440ad734ad02be074081abab82611ab1dbe
-Version: 0.2.4
-Release: 34%{?dist}
+#Hexsha:        2584469c1b5874f27430ddb2b85169d8e5815c66
+Version: 0.3.0
+Release: 35%{?dist}
 Summary: Library of utilities
 
 License: MIT
@@ -132,6 +132,8 @@ Headers of library of utilities
 %{_includedir}/rp-utils/rp-uuid.h
 %{_includedir}/rp-utils/sha1.h
 %{_includedir}/rp-utils/rp-verbose.h
+%{_includedir}/rp-utils/rp-str2int.h
+%{_includedir}/rp-utils/rp-version.h
 
 #--------------------------------------------
 %package -n librp-utils-file0
