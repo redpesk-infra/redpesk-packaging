@@ -1,9 +1,9 @@
 %define debug_package %{nil}
 
 Name:           sec-cynagora
-#Hexsha:        ada42aab4cccbaae796cc6afd2dea9dc1e99ea4b
-Version:        2.4.0
-Release:        31%{?dist}
+#Hexsha:        4ab1e5d21e9dbcf8aacc7682aba47cff4ec9969d
+Version:        2.4.1
+Release:        32%{?dist}
 Summary:        Cynara service with client libraries
 
 License:        Apache-2.0
@@ -41,6 +41,7 @@ Provides:       pkgconfig(cynagora) = %{version}
 	-DWITH_SYSTEMD=ON \
 	-DWITH_CYNARA_COMPAT=OFF \
 	-DADD_AGL_RULES=ON \
+	-DADD_SYSADMIN_RULES=ON \
 	-DCMAKE_INSTALL_RUNSTATEDIR=%{_rundir}
 %cmake_build
 
