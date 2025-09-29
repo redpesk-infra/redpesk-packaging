@@ -72,7 +72,7 @@ Requires:       sec-lsm-manager
 Requires:       afb-binder
 
 Requires(post): %{name}-users
-Requires(post): afm-utils
+Requires(post): afm-util
 
 Requires(pre): /usr/bin/getent
 Requires(pre): /usr/sbin/useradd

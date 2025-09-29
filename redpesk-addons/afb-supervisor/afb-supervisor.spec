@@ -3,9 +3,9 @@
 #---------------------------------------------
 
 Name:           afb-supervisor
-#Hexsha: fd51a763e68ba943f8be10846cc650a208c4868c
-Version: 4.2.3
-Release: 11%{?dist}
+#Hexsha:   77dae0511885e25a77847c7090d2ddc9d5936c0c
+Version: 4.3.0
+Release: 12%{?dist}
 License:        GPL-3.0-only
 Summary:        Supervisor of application framework binder
 Url:            https://git.ovh.iot/redpesk/redpesk-addons/afb-supervisor
