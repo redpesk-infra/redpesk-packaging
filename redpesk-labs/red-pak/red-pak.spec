@@ -1,7 +1,7 @@
 Name:           red-pak
-#Hexsha:        170b66f671228d9fc392068c72398eb7688dd797
-Version:        2.4.7+5+g170b66f
-Release:        32%{?dist}
+#Hexsha:        93df6a4c1b85202bfe9799fae56218ecd6227e41
+Version:        2.5.0
+Release:        33%{?dist}
 Summary:        red-pak
 License:        Apache-2.0
 URL:            https://github.com/redpesk-labs/red-pak
