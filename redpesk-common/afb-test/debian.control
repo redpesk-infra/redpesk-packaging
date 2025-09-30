@@ -19,7 +19,7 @@ Homepage: http://git.ovh.iot/redpesk/redpesk-core/afb-test
 Package: afb-test-bin
 Section: libs
 Architecture: any
-Depends: afb-binder, jq, lua5.3, liblua5.3-0
+Depends: afb-binder, jq, procps, lua5.3, liblua5.3-0
 Description: afb-test is a test framework made to test other binding.
 
 Package: afb-test-dev
