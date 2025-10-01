@@ -3,9 +3,9 @@
 #---------------------------------------------
 
 Name:           afb-idl
-#Hexsha:        3b7940f36df301e0968fc18d66a5b5fe63b6ddff
-Version:        0.4.1
-Release:        9%{?dist}
+#Hexsha:        f908ba5023180a8b78c5848b5745fd89428aca04
+Version:        0.4.2
+Release:        10%{?dist}
 License:        Apache-2.0
 Summary:        IDL for micro services
 Url:            https://github.com/redpesk-core/afb-idl
