@@ -18,12 +18,6 @@ Architecture: any
 Depends: afb-binder
 Description: helloworld service set to be used in redpesk
 
-Package: helloworld-binding-test
-Section: libs
-Architecture: any
-Depends: helloworld-binding-bin, afb-test-bin, jq
-Description: helloworld service test suite
-
 Package: helloworld-binding-redtest
 Section: libs
 Architecture: any
