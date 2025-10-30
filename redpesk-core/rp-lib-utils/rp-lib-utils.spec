@@ -49,7 +49,6 @@ Development files for library of utilities
 
 %files -n librp-utils-devel
 %defattr(-,root,root)
-%{_libdir}/librp-utils.so.0
 %{_libdir}/librp-utils.so
 %{_libdir}/pkgconfig/librp-utils.pc
 
@@ -97,7 +96,6 @@ Development files for library of utilities
 
 %files -n librp-utils-core-devel
 %defattr(-,root,root)
-%{_libdir}/librp-utils-core.so.0
 %{_libdir}/librp-utils-core.so
 %{_libdir}/pkgconfig/librp-utils-core.pc
 
@@ -161,7 +159,6 @@ Development files for library of utilities
 
 %files -n librp-utils-file-devel
 %defattr(-,root,root)
-%{_libdir}/librp-utils-file.so.0
 %{_libdir}/librp-utils-file.so
 %{_libdir}/pkgconfig/librp-utils-file.pc
 
@@ -217,7 +214,6 @@ Development files for library of utilities
 
 %files -n librp-utils-socket-devel
 %defattr(-,root,root)
-%{_libdir}/librp-utils-socket.so.0
 %{_libdir}/librp-utils-socket.so
 %{_libdir}/pkgconfig/librp-utils-socket.pc
 
@@ -272,7 +268,6 @@ Development files for library of utilities
 
 %files -n librp-utils-json-c-devel
 %defattr(-,root,root)
-%{_libdir}/librp-utils-json-c.so.0
 %{_libdir}/librp-utils-json-c.so
 %{_libdir}/pkgconfig/librp-utils-json-c.pc
 
@@ -329,7 +324,6 @@ Development files for library of utilities
 
 %files -n librp-utils-yaml-devel
 %defattr(-,root,root)
-%{_libdir}/librp-utils-yaml.so.0
 %{_libdir}/librp-utils-yaml.so
 %{_libdir}/pkgconfig/librp-utils-yaml.pc
 
@@ -383,7 +377,6 @@ Development files for library of utilities
 
 %files -n librp-utils-curl-devel
 %defattr(-,root,root)
-%{_libdir}/librp-utils-curl.so.0
 %{_libdir}/librp-utils-curl.so
 %{_libdir}/pkgconfig/librp-utils-curl.pc
 
