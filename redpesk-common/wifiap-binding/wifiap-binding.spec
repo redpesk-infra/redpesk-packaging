@@ -15,13 +15,13 @@
 ###########################################################################
 
 Name:    wifiap-binding
-#Hexsha: e99f39116b66024d090bbdd816b02ac21dcfa651
-Version: 0.1.3+45+ge99f391
-Release: 19%{?dist}
+#Hexsha: c883ff1d3d9a5d86094d9253a6b7be8f9182ecaf
+Version: 1.0.0
+Release: 20%{?dist}
 Summary: Provide a Redpesk wifi Access Point Binding
 License: GPLv3
-URL:     https://git.ovh.iot/redpesk/redpesk-common/wifiap-binding
-Source0: %{name}-%{version}.tar.gz
+URL:     https://github.com/redpesk/redpesk-common/wifiap-binding
+Source:  %{name}-%{version}.tar.gz
 
 %global _afmappdir %{_prefix}/redpesk
 %global coverage_dir %{_libexecdir}/redtest/%{name}/coverage_data
@@ -33,15 +33,23 @@ BuildRequires:  pkgconfig(afb-binding)
 BuildRequires:  pkgconfig(librp-utils-json-c)
 BuildRequires:  pkgconfig(afb-helpers4)
 BuildRequires:  pkgconfig(liburcu)
+BuildRequires:  afb-idl
 
-Requires: afb-binder hostapd dnsmasq
+Requires: afb-binder
 
 %description
-The wifiap api is using hostapd to generate a wifi access point.
+Provides a WiFi access point using hostapd and dnsmasq (for DHCP).
 
 %package redtest
 Summary: redtest package (coverage build)
 Requires: lcov
+Requires: hostapd
+Requires: dnsmasq
+Requires: findutils
+Requires: procps-ng
+Requires: afb-libpython
+Requires: afb-test-py
+Requires: kernel-modules-internal
 %description redtest
 This package contains binaries built with coverage instrumentation.
 
