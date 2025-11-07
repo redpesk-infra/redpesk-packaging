@@ -25,12 +25,13 @@
 %else
 %define with_openssl 0
 %endif
-%define keep_legacies 0
+%define keep_legacies 1
+%define keep_rp_guest 0
 
 Name:           afb-app-manager
-#Hexsha:        08f5396568ced370b83a55b58bc4212a3ddffd62
-Version:        12.5.0
-Release:        70%{?dist}
+#Hexsha:        7c3bb1a5d6abf0ca87ab7eafd3a6abb7eb04e287
+Version:        12.5.1
+Release:        71%{?dist}
 License:        GPLv3
 Summary:        Micro service application manager
 Group:          Development/Libraries/C and C++
@@ -154,8 +155,6 @@ Installs redpesk framework predefined users
    -Drpm_macros_dir=%{_rpmmacrodir} \
    -DWITH_OPENSSL=%{with_openssl} \
    -DWITH_CONFIG_XML=%{keep_legacies} \
-   -DWITH_LEGACY_WGTPKG=%{keep_legacies} \
-   -DUSE_LIBZIP=%{keep_legacies} \
    .
 %cmake_build
 
@@ -178,9 +177,9 @@ ln -sf %{_unitdir}/afm-user-session@.service %{buildroot}%{afm_units_root}/syste
 
 %pre
 getent group %{afm_name} > /dev/null || groupadd --system %{afm_name} ||:
-getent passwd %{afm_name} > /dev/null || useradd --system --gid %{afm_name} --home-dir / --shell /bin/nologin %{afm_name} || :
+getent passwd %{afm_name} > /dev/null || useradd --system --gid %{afm_name} --home-dir / --shell /sbin/nologin %{afm_name} || :
 getent group display > /dev/null || groupadd --system display ||:
-getent passwd display > /dev/null || useradd --gid display --groups video,input --home-dir /run/platform/display --shell /bin/false --comment "Display daemon" --key PASS_MAX_DAYS=-1 display || :
+getent passwd display > /dev/null || useradd --gid display --groups video,input --home-dir /run/platform/display --shell /sbin/nologin display || :
 
 %post
 %systemd_post afm-system-setup.service afm-system-daemon.service afm-system-daemon.socket afmpkg-installer.service afmpkg-installer.socket
@@ -205,6 +204,10 @@ then
    chsmack -a 'System:Shared' -t %{afm_datadir}
    chsmack -a 'System:Shared' -t %{afm_appdir}
    chsmack -a 'System:Shared' -t %{afm_icondir}
+   if [ -d "/home/0" ]
+   then
+      chsmack -r --if-no-access -a 'User:Home' "/home/0"
+   fi
 fi
 
 %preun
@@ -216,10 +219,10 @@ fi
 %post users
 # Users creation
 getent group %{_rp_group_name} > /dev/null || groupadd -g %{_rp_group_id} %{_rp_group_name} ||:
-# The definition of the passwd is in a way secure because echo is a builtin command and will not be displayed with ps command.
-# The definition of the password remains weak due to its complexity.
-%{_libexecdir}/afm/afm-create-user.sh %{_rp_owner_id} %{_rp_owner_name} %{_rp_group_name} && echo %{_rp_owner_name} | passwd %{_rp_owner_name} --stdin ||:
-%{_libexecdir}/afm/afm-create-user.sh %{_rp_guest_id} %{_rp_guest_name} %{_rp_group_name} && echo %{_rp_guest_name} | passwd %{_rp_guest_name} --stdin ||:
+%{_libexecdir}/afm/afm-create-user.sh %{_rp_owner_id} %{_rp_owner_name} %{_rp_group_name} ||:
+%if %{keep_rp_guest}
+%{_libexecdir}/afm/afm-create-user.sh %{_rp_guest_id} %{_rp_guest_name} %{_rp_group_name} ||:
+%endif
 
 %files
 %defattr(-,root,root)
@@ -251,8 +254,8 @@ getent group %{_rp_group_name} > /dev/null || groupadd -g %{_rp_group_id} %{_rp_
 %{_unitdir}/afm-user-session@.target
 %{_unitdir}/afm-user-setup@.service
 %{_unitdir}/user-runtime-dir@.service.wants/afm-user-setup@.service
-%{_libexecdir}/afm/afm-system-setup.sh
-%{_libexecdir}/afm/afm-user-setup.sh
+%{_libexecdir}/afm/afm-system-setup
+%{_libexecdir}/afm/afm-user-setup
 %{_libexecdir}/afm/afm-user-session
 %{_libexecdir}/afm/*so
 %{afm_units_root}/system/multi-user.target.wants/afm-user-session@%{_rp_owner_id}.service
