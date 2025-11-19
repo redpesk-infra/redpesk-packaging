@@ -1,7 +1,7 @@
 Name: spawn-binding
-#Hexsha: 69d9041c4a57c143e775abea2565882676bc6238
-Version: 2.0.1
-Release: 10%{?dist}
+#Hexsha: ec87517d77d9791202d7b2a30f2c20ad197b4ac7
+Version: 2.0.1+3+gec87517
+Release: 11%{?dist}
 Summary: Shell execution within a secure container, optional output formatting
 Group:   Development/Libraries/C and C++
 License:  Apache-2.0
