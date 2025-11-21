@@ -21,6 +21,8 @@ BuildRequires: pkgconfig
 Requires: libafb-helpers3-static
 Requires: afb-helpers4-static
 
+%global _lto_cflags %{?_lto_cflags} -ffat-lto-objects
+
 %description
 Metapackage for libafb-libhelpers libraries.
 

@@ -49,14 +49,9 @@ Requires: gpsd-libs
 
 %if 0%{?suse_version}
 
-%if %sle_version == 150300
-BuildRequires: libgps23
-Requires: libgps23
-%endif
-
-%if %{?suse_version} == 150400
-BuildRequires: libgps29
-Requires: libgps29
+%if %{?suse_version} == 1600 || %{?suse_version} == 150600
+BuildRequires: libgps30
+Requires: libgps30
 %endif
 
 %endif

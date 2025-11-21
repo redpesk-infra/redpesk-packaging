@@ -15,6 +15,9 @@ BuildRequires: pkgconfig(yaml-0.1)
 BuildRequires: pkgconfig(libsystemd) >= 222
 BuildRequires: libcurl-devel
 
+# OpenSUSE Leap 16 .a LTO
+%global _lto_cflags %{?_lto_cflags} -ffat-lto-objects
+
 %description
 Library of redpesk C utilities
 
@@ -35,7 +38,6 @@ Development files for static library of utilities
 
 %package -n librp-utils-devel
 Summary: Library of utilities, headers and library
-Provides: pkgconfig(librp-utils)
 Requires: librp-utils0
 Requires: rp-lib-utils-core-headers
 Requires: rp-lib-utils-file-headers
@@ -54,7 +56,6 @@ Development files for library of utilities
 
 %package -n librp-utils-static
 Summary: Library of utilities, static library
-Provides: pkgconfig(librp-utils-static)
 Requires: rp-lib-utils-core-headers
 Requires: rp-lib-utils-file-headers
 Requires: rp-lib-utils-socket-headers
@@ -87,7 +88,6 @@ Development files for static library of utilities
 
 %package -n librp-utils-core-devel
 Summary: Library of utilities, headers and library
-Provides: pkgconfig(librp-utils-core)
 Requires: librp-utils-core0
 Requires: rp-lib-utils-core-headers
 
@@ -101,7 +101,6 @@ Development files for library of utilities
 
 %package -n librp-utils-core-static
 Summary: Library of utilities, static library
-Provides: pkgconfig(librp-utils-core-static)
 Requires: rp-lib-utils-core-headers
 
 %description -n librp-utils-core-static
@@ -114,6 +113,7 @@ Development files for static library of utilities
 
 %package -n rp-lib-utils-core-headers
 Summary: Headers of library of utilities
+BuildArch: noarch
 
 %description -n rp-lib-utils-core-headers
 Headers of library of utilities
@@ -150,7 +150,6 @@ Development files for static library of utilities
 
 %package -n librp-utils-file-devel
 Summary: Library of utilities, headers and library
-Provides: pkgconfig(librp-utils-file)
 Requires: librp-utils-file0
 Requires: rp-lib-utils-file-headers
 
@@ -164,7 +163,6 @@ Development files for library of utilities
 
 %package -n librp-utils-file-static
 Summary: Library of utilities, static library
-Provides: pkgconfig(librp-utils-file-static)
 Requires: rp-lib-utils-file-headers
 
 %description -n librp-utils-file-static
@@ -177,6 +175,7 @@ Development files for static library of utilities
 
 %package -n rp-lib-utils-file-headers
 Summary: Headers of library of utilities
+BuildArch: noarch
 
 %description -n rp-lib-utils-file-headers
 Headers of library of utilities
@@ -205,7 +204,6 @@ Development files for static library of utilities
 
 %package -n librp-utils-socket-devel
 Summary: Library of utilities, headers and library
-Provides: pkgconfig(librp-utils-socket)
 Requires: librp-utils-socket0
 Requires: rp-lib-utils-socket-headers
 
@@ -219,7 +217,6 @@ Development files for library of utilities
 
 %package -n librp-utils-socket-static
 Summary: Library of utilities, static library
-Provides: pkgconfig(librp-utils-socket-static)
 Requires: rp-lib-utils-socket-headers
 
 %description -n librp-utils-socket-static
@@ -232,6 +229,7 @@ Development files for static library of utilities
 
 %package -n rp-lib-utils-socket-headers
 Summary: Headers of library of utilities
+BuildArch: noarch
 
 %description -n rp-lib-utils-socket-headers
 Headers of library of utilities
@@ -259,7 +257,6 @@ Development files for static library of utilities
 
 %package -n librp-utils-json-c-devel
 Summary: Library of utilities, headers and library
-Provides: pkgconfig(librp-utils-json-c)
 Requires: librp-utils-json-c0
 Requires: rp-lib-utils-json-c-headers
 
@@ -273,7 +270,6 @@ Development files for library of utilities
 
 %package -n librp-utils-json-c-static
 Summary: Library of utilities, static library
-Provides: pkgconfig(librp-utils-json-c-static)
 Requires: rp-lib-utils-json-c-headers
 
 %description -n librp-utils-json-c-static
@@ -286,6 +282,7 @@ Development files for static library of utilities
 
 %package -n rp-lib-utils-json-c-headers
 Summary: Headers of library of utilities
+BuildArch: noarch
 
 %description -n rp-lib-utils-json-c-headers
 Headers of library of utilities
@@ -315,7 +312,6 @@ Development files for static library of utilities
 
 %package -n librp-utils-yaml-devel
 Summary: Library of utilities, headers and library
-Provides: pkgconfig(librp-utils-yaml)
 Requires: librp-utils-yaml0
 Requires: rp-lib-utils-yaml-headers
 
@@ -329,7 +325,6 @@ Development files for library of utilities
 
 %package -n librp-utils-yaml-static
 Summary: Library of utilities, static library
-Provides: pkgconfig(librp-utils-yaml-static)
 Requires: rp-lib-utils-yaml-headers
 
 %description -n librp-utils-yaml-static
@@ -342,6 +337,7 @@ Development files for static library of utilities
 
 %package -n rp-lib-utils-yaml-headers
 Summary: Headers of library of utilities
+BuildArch: noarch
 
 %description -n rp-lib-utils-yaml-headers
 Headers of library of utilities
@@ -368,7 +364,6 @@ Development files for static library of utilities
 
 %package -n librp-utils-curl-devel
 Summary: Library of utilities, headers and library
-Provides: pkgconfig(librp-utils-curl)
 Requires: librp-utils-curl0
 Requires: rp-lib-utils-curl-headers
 
@@ -382,7 +377,6 @@ Development files for library of utilities
 
 %package -n librp-utils-curl-static
 Summary: Library of utilities, static library
-Provides: pkgconfig(librp-utils-curl-static)
 Requires: rp-lib-utils-curl-headers
 
 %description -n librp-utils-curl-static
@@ -395,6 +389,7 @@ Development files for static library of utilities
 
 %package -n rp-lib-utils-curl-headers
 Summary: Headers of library of utilities
+BuildArch: noarch
 
 %description -n rp-lib-utils-curl-headers
 Headers of library of utilities
@@ -419,3 +414,6 @@ Headers of library of utilities
 %files
 
 %changelog
+
+* Fri Nov 21 2025 Louis-Baptiste Sobolewski <lb.sobolewski@iot.bzh>
+- Update specfile for OpenSUSE Leap 16.0
