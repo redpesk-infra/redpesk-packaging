@@ -14,24 +14,26 @@
 # limitations under the License.
 ###########################################################################
 Name:    gps-binding
-#Hexsha: e10f2abb1f50c3364f840f12454c95d7f9de7995
-Version: 1.1.2
-Release: 13%{?dist}
-License: GPL-3.0-only
-Summary: Gps api for redpesk
-URL:     https://git.ovh.iot/redpesk/redpesk-common/gps-binding
+#Hexsha: 983cdbc2eb48b8045c31cc89abf8e584762ecd2d
+Version: 2.0.0
+Release: 16%{?dist}
+License: APL2.0
+Summary: Gps service set to be used in the redpesk
+URL:     https://github.com/redpesk-common/gps-binding
 Source: %{name}-%{version}.tar.gz
 
-BuildRequires: afm-rpm-macros
+%global _afmappdir %{_prefix}/redpesk
+%global coverage_dir %{_libexecdir}/redtest/%{name}/coverage_data
+
 BuildRequires: cmake
 BuildRequires: gcc gcc-c++
 BuildRequires: pkgconfig(json-c)
-BuildRequires: pkgconfig(libsystemd) >= 222
 BuildRequires: pkgconfig(afb-binding)
-BuildRequires: pkgconfig(afb-helpers)
+BuildRequires: pkgconfig(afb-helpers4)
 BuildRequires: pkgconfig(liburcu)
-BuildRequires: gpsd-devel
-Requires: gpsd-devel
+BuildRequires: pkgconfig(libgps)
+
+Requires: afb-binder
 
 %if 0%{?almalinux} == 9
 BuildRequires: gpsd-minimal-clients gpsd-minimal
@@ -56,31 +58,88 @@ Requires: libgps30
 
 %endif
 
+
 %description
-The gps api is using gpsd to provide GNSS data.
+This binding provide a gps service
 
 
-%afm_package
-
-%afm_package_test
-
-%afm_package_redtest
+%package redtest
+Summary: redtest package (coverage build)
+Requires: lcov
+%description redtest
+This package contains binaries built with coverage instrumentation.
 
 %prep
 %autosetup -p 1
 
 %build
-%afm_configure_cmake
-%afm_build_cmake
+here=$PWD
+
+# Build (no coverage)
+mkdir build-no-coverage && cd build-no-coverage
+%cmake \
+  -DCMAKE_BUILD_TYPE=Release \
+  -DAFM_APP_DIR=%{_afmappdir} \
+  -S $here
+%cmake_build
+
+# Build coverage (with coverage flags)
+cd $here
+mkdir build-coverage && cd build-coverage
+%cmake \
+  -DCMAKE_BUILD_TYPE=Debug \
+  -DCMAKE_C_FLAGS="--coverage -fPIC" \
+  -DCMAKE_CXX_FLAGS="--coverage -fPIC" \
+  -DAFM_APP_DIR=%{coverage_dir} \
+  -S $here
+%cmake_build
+cd $here
 
 %install
-%afm_makeinstall
+here=$PWD
 
-%check
+# Install (base package)
+cd build-no-coverage
+%cmake_install
 
-%clean
+# Install coverage build (for redtest package)
+cd $here
+cd build-coverage
+%cmake_install
+
+# Copy the coverage files (.gcno) into the coverage_data directory for redtest
+find . -name "*.gcno" -exec cp --parents {} %{buildroot}%{coverage_dir}/ \;
+
+# Install redtest scripts (for testing)
+cd $here
+install -Dm755 redtest/run-redtest %{buildroot}%{_libexecdir}/redtest/%{name}/run-redtest
+install -Dm644 test/tests.py %{buildroot}%{_libexecdir}/redtest/%{name}/tests.py
+install -Dm644 test/lorient.nmea %{buildroot}%{_libexecdir}/redtest/%{name}/lorient.nmea
+
+
+%files
+%defattr(-,root,root)
+%dir %{_afmappdir}
+%dir %{_afmappdir}/%{name}
+%{_afmappdir}/%{name}/lib/
+%{_afmappdir}/%{name}/.rpconfig/
+
+
+%files redtest
+%defattr(-,root,root)
+%dir %{_libexecdir}/redtest
+%dir %{_libexecdir}/redtest/%{name}
+%{_libexecdir}/redtest/%{name}/run-redtest
+%{_libexecdir}/redtest/%{name}/tests.py
+%{_libexecdir}/redtest/%{name}/lorient.nmea
+%{coverage_dir}
+
+
 
 %changelog
+* Mon Nov 24 2025 IoT.bzh(iotpkg) <redpesk.list@iot.bzh> 2.0.0
+- refactor of the spec file
+
 * Thu Dec 02 2021 IoT.bzh(iotpkg) <redpesk.list@iot.bzh> 1.1.1
 - Upgrade version from source commit sha: e10f2abb1f50c3364f840f12454c95d7f9de7995
 - Commit message:
