@@ -2,9 +2,9 @@ Name: canbus-binding2
 %global _name      canbus-binding
 %global _afmappdir %{_prefix}/redpesk
 
-#Hexsha: 53af232093b017429f459249f0caee24ff761bfd
-Version: 2.0.4
-Release: 12%{?dist}
+#Hexsha: bf49e6a22a83f5e6e1a3fa1c6e0db1f66f77815b
+Version: 2.0.5
+Release: 13%{?dist}
 Summary: Redpesk binding to connect to CAN-bus
 Group:   Development/Libraries/C and C++
 License: Apache-2.0
@@ -42,7 +42,8 @@ This is the development package for %{_name} 2.
 
 %package plugin-template
 Summary: Template %{name} plugin-template
-Requires: %{name} = %{version}
+Suggests: %{name}-devel = %{version}
+BuildArch: noarch
 
 %description plugin-template
 A template to make plugins for the %{name}.
@@ -86,8 +87,6 @@ A template to make plugins for the %{name}.
 
 
 %check
-
-%clean
 
 %changelog
 
