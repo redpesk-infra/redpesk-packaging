@@ -15,9 +15,9 @@
 ###########################################################################
 
 Name:    wifiap-binding
-#Hexsha: c883ff1d3d9a5d86094d9253a6b7be8f9182ecaf
-Version: 1.0.0
-Release: 22%{?dist}
+#Hexsha: aed00763cdd8f98e2bf87cfee9a568193925af9e
+Version: 1.0.1
+Release: 23%{?dist}
 Summary: Provide a Redpesk wifi Access Point Binding
 License: GPLv3
 URL:     https://github.com/redpesk/redpesk-common/wifiap-binding
