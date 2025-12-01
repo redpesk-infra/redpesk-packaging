@@ -17,7 +17,7 @@
 Name:    wifiap-binding
 #Hexsha: aed00763cdd8f98e2bf87cfee9a568193925af9e
 Version: 1.0.1
-Release: 23%{?dist}
+Release: 24%{?dist}
 Summary: Provide a Redpesk wifi Access Point Binding
 License: GPLv3
 URL:     https://github.com/redpesk/redpesk-common/wifiap-binding
@@ -49,7 +49,7 @@ Requires: findutils
 Requires: procps-ng
 Requires: afb-libpython
 Requires: afb-test-py
-Requires: kmod(mac80211_hwsim.ko)
+Recommends: kmod(mac80211_hwsim.ko)
 %description redtest
 This package contains binaries built with coverage instrumentation.
 
