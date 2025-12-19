@@ -1,9 +1,10 @@
+#Archive: None
+#Hexsha: c760e20821e3bea031f65c45a3629f18e5c47bb5
 #---------------------------------------------
 # spec file for package afb-libafb
 #---------------------------------------------
 
 Name:           afb-libafb
-#Hexsha:        c760e20821e3bea031f65c45a3629f18e5c47bb5
 Version:        5.6.1
 Release:        83%{?dist}
 License:        GPL-3.0-only
