@@ -1,3 +1,5 @@
+#Archive: None
+#Hexsha: 26cbbddc1af13585fa8fd0f865dd901d32cb6885
 #
 # spec file for package afb-app-manager
 #
@@ -29,7 +31,6 @@
 %define keep_rp_guest 0
 
 Name:           afb-app-manager
-#Hexsha:        26cbbddc1af13585fa8fd0f865dd901d32cb6885
 Version:        12.5.1
 Release:        72%{?dist}
 License:        GPLv3
