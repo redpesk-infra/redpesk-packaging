@@ -16,6 +16,8 @@ BuildRequires:	libdnf5-cli-devel
 BuildRequires:  cmake
 BuildRequires:  make
 BuildRequires:  python3-devel
+#needed for corn in cross: TOREMOVE when cross-profile-setup in fixed
+BuildRequires:  python3-setuptools 
 BuildRequires:  pkgconfig(uuid)
 #BuildRequires:  libassuan-devel
 BuildRequires:  check-devel
