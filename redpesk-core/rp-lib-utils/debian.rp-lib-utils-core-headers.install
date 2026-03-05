@@ -7,4 +7,6 @@ usr/include/rp-utils/rp-pearson.h
 usr/include/rp-utils/rp-uuid.h
 usr/include/rp-utils/sha1.h
 usr/include/rp-utils/rp-verbose.h
+usr/include/rp-utils/rp-str2int.h
+usr/include/rp-utils/rp-version.h
 
