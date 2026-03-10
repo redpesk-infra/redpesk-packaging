@@ -7,7 +7,6 @@ Build-Depends:
  pkg-config,	
  cmake,
  python3-dev,
- afb-cmake-modules,
  libjson-c-dev,
  libafb-binder-dev (>= 5.0),
  libafb-dev (>= 5.0),

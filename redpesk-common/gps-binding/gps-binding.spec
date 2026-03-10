@@ -1,3 +1,5 @@
+#Archive: None
+#Hexsha: 91307978c227984245e99d2379d070efc82039d2
 ###########################################################################
 # Copyright 2015 - 2020 IoT.bzh
 #
@@ -14,9 +16,8 @@
 # limitations under the License.
 ###########################################################################
 Name:    gps-binding
-#Hexsha: 983cdbc2eb48b8045c31cc89abf8e584762ecd2d
-Version: 2.0.0
-Release: 16%{?dist}
+Version: 2.0.1
+Release: 17%{?dist}
 License: APL2.0
 Summary: Gps service set to be used in the redpesk
 URL:     https://github.com/redpesk-common/gps-binding
