@@ -1,11 +1,12 @@
+#Archive: None
+#Hexsha: 2600d959e4663453048dd0df52cf81fbdce34e49
 #---------------------------------------------
 # spec file for package afb-libafb
 #---------------------------------------------
 
 Name:           afb-libafb
-#Hexsha:        3c823bddc709d6f32f9f62bd88a21d2c2376c77f
-Version:        5.6.2+2+g3c823bd
-Release:        86%{?dist}
+Version:        5.6.2+5+g2600d95
+Release:        87%{?dist}
 License:        GPL-3.0-only
 Summary:        Library of internals of application framework binder
 Group:          Development/Libraries/C and C++
