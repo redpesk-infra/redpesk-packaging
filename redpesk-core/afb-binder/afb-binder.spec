@@ -1,16 +1,16 @@
 #Archive: None
-#Hexsha: b7e8a97e1cea5723bc683ad714332b80d68fb3f0
+#Hexsha: 86ef352678d403ca2287483284a085a05f3b2b20
 #---------------------------------------------
 # spec file for package afb-binder
 #---------------------------------------------
 
-Name:           afb-binder
-Version: 5.2.2+1+gb7e8a97
-Release: 42%{?dist}
-License:        GPL-3.0-only
-Summary:        Application framework binder
-Url:            https://github.com/redpesk-core/afb-binder
-Source:         %{name}-%{version}.tar.gz
+Name:     afb-binder
+Version:  5.3.0
+Release:  43%{?dist}
+License:  GPL-3.0-only
+Summary:  Application framework binder
+Url:      https://github.com/redpesk-core/afb-binder
+Source:   %{name}-%{version}.tar.gz
 
 BuildRequires:  make
 BuildRequires:  cmake
@@ -63,8 +63,6 @@ Application Framework Binder library - Developement files
 %files
 %defattr(-,root,root)
 %{_bindir}/afb-binder
-%dir %{_datarootdir}/afb-binder
-%{_datarootdir}/afb-binder/*
 %{_datarootdir}/bash-completion/completions/afb-binder-prompt
 
 #---------------------------------------------
