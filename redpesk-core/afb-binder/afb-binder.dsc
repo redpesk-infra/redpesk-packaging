@@ -2,7 +2,7 @@ Format: 1.0
 Source: afb-binder
 Binary: afb-binder
 Architecture: any
-Version: 5.2.2+1+gb7e8a97
+Version: 5.3.0
 Maintainer: José Bollo <jose.bollo@iot.bzh>
 Standards-Version: 3.8.2
 Homepage: https://github.com/redpesk-core/afb-binder
@@ -17,5 +17,5 @@ Build-Depends:
  librp-utils-json-c-dev,
  librp-utils-yaml-dev
 Files:
- afb-binder-5.2.2+1+gb7e8a97.tar.gz
+ afb-binder-5.3.0.tar.gz
 DEBTRANSFORM-RELEASE: 1

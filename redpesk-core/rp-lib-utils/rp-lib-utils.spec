@@ -1,7 +1,8 @@
+#Archive: None
+#Hexsha: 39ae7a4fa85964442ab3017119d1bc60c3c279d1
 Name: rp-lib-utils
-#Hexsha:        2584469c1b5874f27430ddb2b85169d8e5815c66
-Version: 0.3.0
-Release: 35%{?dist}
+Version: 0.3.1
+Release: 36%{?dist}
 Summary: Library of utilities
 
 License: MIT
@@ -292,6 +293,7 @@ Headers of library of utilities
 %dir %{_includedir}/rp-utils
 %{_includedir}/rp-utils/rp-jconf.h
 %{_includedir}/rp-utils/rp-jsonc-expand.h
+%{_includedir}/rp-utils/rp-jsonc-default-expand.h
 %{_includedir}/rp-utils/rp-jsonc-path.h
 %{_includedir}/rp-utils/rp-jsonc.h
 
