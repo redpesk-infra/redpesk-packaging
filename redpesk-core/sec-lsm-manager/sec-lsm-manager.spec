@@ -1,13 +1,15 @@
+#Archive: None
+#Hexsha: 8884b190480bdba6a18fe0fc92d5ec6864eb7499
 %define secname sec-lsm-manager
 
 Name:           sec-lsm-manager
-#Hexsha: 009ef8047ff88b4a89788e4933877102e187c94b
-Version: 2.7.0
-Release: 53%{?dist}
-Summary:        sec-lsm-manager service (SMACK, SELinux)
-License:        Apache-2.0
-URL:            https://github.com/redpesk-core/sec-lsm-manager
-Source:         %{name}-%{version}.tar.gz
+Version: 2.8.0
+Release: 54%{?dist}
+Summary: sec-lsm-manager service (SMACK, SELinux)
+License: Apache-2.0
+URL:     https://github.com/redpesk-core/sec-lsm-manager
+Source:  %{name}-%{version}.tar.gz
+
 BuildRequires:  m4
 BuildRequires:  cmake
 BuildRequires:  check-devel
@@ -18,6 +20,7 @@ BuildRequires:  pkgconfig(libsmack)
 BuildRequires:  pkgconfig(libselinux)
 BuildRequires:  pkgconfig(libsemanage)
 BuildRequires:  pkgconfig(cynagora)
+
 Requires(pre):  shadow-utils
 Requires:       (%{name}-smack = %{version} or %{name}-selinux = %{version})
 
@@ -33,7 +36,6 @@ Requires:       %{name} = %{version}
 
 %package devel
 Summary:        Development libraries and header files for %{name}
-Requires:       %{name} = %{version}
 Provides:       pkgconfig(%{name}) = %{version}
 
 %description devel
@@ -45,7 +47,7 @@ Requires:       %{name} = %{version}
 Requires:       selinux-policy
 Requires:       selinux-policy-devel
 Provides:       %{name}-selinux = %{version}
-
+Conflicts:      %{name}-smack
 
 %description selinux
 %{summary}.
@@ -56,6 +58,7 @@ Requires:       %{name} = %{version}
 Requires:       libsmack-userspace
 Requires:       sec-smack-rules
 Provides:       %{name}-smack = %{version}
+Conflicts:      %{name}-selinux
 
 %description smack
 %{summary}.
@@ -85,7 +88,7 @@ Provides:       %{name}-smack-redtest = %{version}
 
 %build
 %cmake \
-	-DSYSTEMD_UNIT_DIR=/usr/lib/systemd/system \
+	-DSYSTEMD_UNIT_DIR=%{_unitdir} \
 	-DCMAKE_INSTALL_RUNSTATEDIR=%{_rundir} \
 	-DWITH_SYSTEMD=ON \
 	-DWITH_SMACK=ON \
@@ -108,11 +111,22 @@ cp src/tests/run-redtest %{buildroot}%{_prefix}/lib/%{name}-smack-redtest/redtes
 getent group %{secname} >/dev/null || groupadd -r %{secname} ||:
 getent passwd %{secname} >/dev/null || useradd --system --home %{_localstatedir}/lib/empty --no-create-home --shell /bin/false --gid %{secname} %{secname} || :
 
+%post selinux
+ln -s %{_bindir}/sec-lsm-manager-selinuxd %{_bindir}/sec-lsm-managerd
+
+%postun selinux
+rm %{_bindir}/sec-lsm-managerd
+
+%post smack
+ln -s %{_bindir}/sec-lsm-manager-smackd %{_bindir}/sec-lsm-managerd
+
+%postun smack
+rm %{_bindir}/sec-lsm-managerd
+
 %files
 %defattr(-,root,root)
 %{_unitdir}
 %{_unitdir}/sockets.target.wants
-%{_bindir}/sec-lsm-managerd
 
 %files tool
 %defattr(-,root,root)
@@ -149,6 +163,9 @@ getent passwd %{secname} >/dev/null || useradd --system --home %{_localstatedir}
 
 
 %changelog
+
+* Tue Mar 24 2024 José Bollo jose.bollo@iot.bzh 2.8.0
+- change sec-lsm-managerd as link
 
 * Thu Nov 02 2023 JosÃ© Bollo jose.bollo@iot.bzh 2.4.1
 - extract sec-lsm-manager-cmd in seperate package
