@@ -5,8 +5,8 @@
 #---------------------------------------------
 
 Name:           afb-libafb
-Version:        5.6.2+34+g40a665e
-Release:        88%{?dist}
+Version:        5.7.0
+Release:        89%{?dist}
 License:        GPL-3.0-only
 Summary:        Library of internals of application framework binder
 Group:          Development/Libraries/C and C++
