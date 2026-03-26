@@ -1,5 +1,6 @@
-Name:           red-microdnf
+#Archive: red-microdnf-1.0.2+20240827+1+g1ae99d7.tar.gz
 #Hexsha: 1ae99d73cbf7320b3fd9df504bb50467b5fd534e
+Name:           red-microdnf
 Version: 1.0.2+20240827+1+g1ae99d7
 Release: 7%{?dist}
 Summary:        red-microdnf: for of microdnf

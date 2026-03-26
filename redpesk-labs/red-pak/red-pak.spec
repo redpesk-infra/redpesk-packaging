@@ -2,7 +2,7 @@
 #Hexsha: 93df6a4c1b85202bfe9799fae56218ecd6227e41
 Name:           red-pak
 Version:        2.5.1
-Release:        33%{?dist}
+Release:        34%{?dist}
 Summary:        red-pak
 License:        Apache-2.0
 URL:            https://github.com/redpesk-labs/red-pak
@@ -55,7 +55,7 @@ Summary:  redpak integration with red-microdnf
 Requires: redpak-core = %{version}
 Requires: libdnf5
 Requires: redrpm
-Requires: red-microdnf
+Recommends: red-microdnf
 
 %description -n redpak-dnf
 %{summary}.
