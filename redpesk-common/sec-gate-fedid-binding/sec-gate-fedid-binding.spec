@@ -1,25 +1,22 @@
+#Archive: None
+#Hexsha: 74d622efac8a16340dc84c673c780eaf931e8791
 Name:       sec-gate-fedid-binding
-#Hexsha: 2c9a061931441acee2f8d30e1d3934e2e50b9103
-Version: 1.0.6
-Release: 12%{?dist}
+Version: 2.0.2
+Release: 13%{?dist}
 License:    GPL-3.0-only
 Summary:    Handle Federerated social-id and local user-id
 URL:        https://github.com/redpesk-common/sec-gate-fedid-binding
 Source:    %{name}-%{version}.tar.gz
 
-BuildRequires: afm-rpm-macros
+%global _afmappdir %{_prefix}/redpesk
+
 BuildRequires: cmake
 BuildRequires: gcc-c++
-BuildRequires: kernel-headers
 BuildRequires: sqlite-devel
-BuildRequires: afb-cmake-modules
 BuildRequires: pkgconfig(json-c)
-BuildRequires: pkgconfig(libsystemd) >= 222
 BuildRequires: pkgconfig(afb-binding)
-BuildRequires: pkgconfig(afb-libhelpers)
+BuildRequires: pkgconfig(librp-utils-json-c)
 BuildRequires: pkgconfig(sqlite3)
-
-BuildRoot:     %{_tmppath}/%{name}-%{version}-build
 
 %description
 %summary
@@ -36,24 +33,29 @@ sec-gate-fedid-binding-types-devel is the binding to help developping bindings u
 %autosetup -p 1
 
 %build
-%afm_configure_cmake
-%afm_build_cmake
+%cmake -DAFM_APP_DIR=%{_afmappdir} .
+%cmake_build
 
 %install
-%afm_makeinstall
+%cmake_install
 
 %files
-%afm_files
-%{_libdir}/*.so
+%defattr(-,root,root)
+%dir %{_afmappdir}
+%{_afmappdir}/%{name}
+%{_libdir}/libfedid-types.so
 
 %files types-devel
-%afm_files_devel
+%defattr(-,root,root)
 %{_includedir}/*
 %{_libdir}/pkgconfig/*.pc
 
 %clean
 
 %changelog
+* Thu Apr 02 2026 José Bollo <jose.bollo@iot.bzh> 2.0.2
+- New build dependencies
+
 * Thu May 20 2021 IoT.bzh(iotpkg) <redpesk.list@iot.bzh> 1.0.4
 - Upgrade version from source commit sha: d5ea0cc8ab6ab91fc84418ba30095a29ecf74bb4
 - Commit message:

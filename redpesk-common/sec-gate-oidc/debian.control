@@ -4,18 +4,16 @@ Source: sec-gate-oidc
 Build-Depends: debhelper (>=5), 
     pkg-config,
     cmake,
-    g++,
+    gcc,
     sec-gate-fedid-binding-types-dev,
     libpam0g-dev,
     libpcsclite-dev,
-    uthash-dev,
     libcurl4-gnutls-dev,
-    linux-libc-dev,
-    afb-cmake-modules,
+    uthash-dev,
     libjson-c-dev,
-    afb-binding-dev,
-    afb-libhelpers-dev,
     libafb-dev,
+    librp-utils-core-dev,
+    librp-utils-json-c-dev,
 Standards-Version: 3.8.2
 Homepage: https://github.com/redpesk-common/sec-gate-oidc
 
