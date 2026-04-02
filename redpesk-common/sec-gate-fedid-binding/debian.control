@@ -4,14 +4,11 @@ Source: sec-gate-fedid-binding
 Build-Depends: debhelper (>=5), 
     pkg-config,
     cmake,
-    g++,
-    linux-libc-dev,
+    gcc,
     libsqlite3-dev,
-    afb-cmake-modules,
     libjson-c-dev,
-    libsystemd-dev (>= 222),
     afb-binding-dev,
-    afb-libhelpers-dev,
+    librp-utils-json-c-dev,
 Standards-Version: 3.8.2
 Homepage: https://github.com/redpesk-common/sec-gate-fedid-binding
 

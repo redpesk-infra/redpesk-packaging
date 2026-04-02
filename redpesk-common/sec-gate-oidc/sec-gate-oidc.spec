@@ -1,78 +1,61 @@
 Name:       sec-gate-oidc
-#Hexsha:    067fb0d1b5b22272ccfc0e8d8d96539c5a7d7b0e
-Version:    1.1.0
-Release:    3%{?dist}
+#Hexsha:     498c65483ef5ccf58034005842769975efd8229a
+Version:    2.0.0
+Release:    4%{?dist}
 License:    GPLv3
-Summary:    secure gateway protecting Websockets API imported through --ws-client=xxx as well as HTML5 or REST page/api serve by afb-binder
+Summary:    Demonstration of secure gateway for redpesk framework
 URL:        https://github.com/redpesk-common/sec-gate-oidc
 Source:     %{name}-%{version}.tar.gz
 
-Requires: sec-gate-fedid-binding-types-devel
+%global _afmappdir %{_prefix}/redpesk
 
-BuildRequires: afm-rpm-macros
 BuildRequires: sec-gate-fedid-binding-types-devel
 BuildRequires: cmake
-BuildRequires: gcc-c++
-BuildRequires: kernel-headers
+BuildRequires: gcc
 BuildRequires: pam-devel
 BuildRequires: pcsc-lite-devel
 BuildRequires: uthash-devel
-BuildRequires: afb-cmake-modules
 BuildRequires: pkgconfig(json-c)
-BuildRequires: pkgconfig(afb-binding) >= 4.0.1
-BuildRequires: pkgconfig(afb-libhelpers) >= 4.0.1
-BuildRequires: pkgconfig(libafb) >= 5
+BuildRequires: pkgconfig(libafb) >= 5.3.8
 BuildRequires: pkgconfig(libcurl)
 BuildRequires: pkgconfig(fedid-types)
-
-
-BuildRoot:     %{_tmppath}/%{name}-%{version}-build
+BuildRequires: pkgconfig(librp-utils-core)
+BuildRequires: pkgconfig(librp-utils-json-c)
 
 %description
-%summary
+secure gateway protecting Websockets API imported through
+--ws-client=xxx as well as HTML5 or REST page/api serve by afb-binder
 
 %package devel
 Requires: %{name} = %{version}
 Provides: pkgconfig(%{name}) = %{version}
 Summary: %{name} devel
 
-%package sample
-Requires: %{name} = %{version}
-Summary: %{name} sample
-
 %description devel
 sec-sgate-oidc-devel helping developping binding which use the secure gateway
 
-%description sample
-Install htdocs files for the secure gate oidc and samples configurations
-
 %files
-%afm_files
-%exclude %{_afmdatadir}/%{name}/etc/*
+%defattr(-,root,root)
+%dir %{_afmappdir}
+%{_afmappdir}/%{name}
+%{_libdir}/libsgoidc.so
+
 
 %files devel
-%afm_files_devel
-%{_libdir}/pkgconfig/*
+%defattr(-,root,root)
 %{_includedir}/*
-
-%files sample
-%dir %{_datarootdir}/%{name}
-%dir %{_datarootdir}/%{name}/htdocs
-%{_datarootdir}/%{name}/htdocs/*
-%{_afmdatadir}/%{name}/etc/*
+%{_libdir}/pkgconfig/*
 
 %prep
 %autosetup -p 1
 
 %build
-%afm_configure_cmake
-%afm_build_cmake
+%cmake -DAFM_APP_DIR=%{_afmappdir} .
+%cmake_build
 
 %install
-%afm_makeinstall
-mkdir -p %{buildroot}%{_datarootdir}/%{name}/htdocs
-cp -r ./conf.d/project/htdocs/* %{buildroot}%{_datarootdir}/%{name}/htdocs
-rm %{buildroot}%{_datarootdir}/%{name}/htdocs/CMake*
+%cmake_install
+rm -r %{buildroot}%{_datarootdir}/%{name}/ssl
 
 %clean
 
