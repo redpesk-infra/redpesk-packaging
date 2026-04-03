@@ -1,2 +1,2 @@
 usr/redpesk/sec-gate-oidc/*
-usr/lib/libsgoidc.so
+usr/lib/*/libsgoidc.so
