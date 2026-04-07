@@ -1,8 +1,9 @@
+#Archive: signal-composer-binding-1.0.0+4+g92eed99.tar.gz
+#Hexsha: 92eed99ad927ce6e46bcdee336830d71ee8df41f
 %define         debug_package %{nil}
 Name: 	        signal-composer-binding
-#Hexsha: 92eed99ad927ce6e46bcdee336830d71ee8df41f
-Version: 1.0.1
-Release: 5%{?dist}
+Version: 1.0.0+4+g92eed99
+Release: 6%{?dist}
 Summary:        Signal composer API connected to low level AGL services
 Group:          Development/Libraries/C and C++
 License: 	    APL2.0
