@@ -2,7 +2,7 @@ Format: 1.0
 Source:	signal-composer-binding
 Binary: signal-composer-binding-bin, signal-composer-binding-dev, signal-composer-binding-test
 Architecture: any
-Version: 1.0.1
+Version: 1.0.0+4+g92eed99
 Maintainer: Marc-Antoine Riou <marc-antoine.riou@iot.bzh>
 Standards-Version: 3.8.2
 Homepage: https://github.com/redpesk-common/signal-composer-binding
