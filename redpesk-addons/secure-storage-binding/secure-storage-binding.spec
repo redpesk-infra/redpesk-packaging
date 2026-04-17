@@ -1,5 +1,6 @@
+#Archive: secure-storage-binding-1.0.1.tar.gz
+#Hexsha: baaf983c12f6218c218fb567211bf2132a1dbe4c
 Name: secure-storage-binding
-#Hexsha: ffdec00eb9c52a37b52f7fcb17f6141ac474714d
 Version: 1.0.1
 Release: 0%{?dist}
 Summary: Binding provide a database API with key/value semantics
@@ -15,7 +16,7 @@ BuildRequires:  afb-cmake-modules
 BuildRequires:  pkgconfig(json-c)
 BuildRequires:  pkgconfig(lua) >= 5.3
 BuildRequires:  pkgconfig(afb-binding)
-BuildRequires:  pkgconfig(afb-libhelpers)
+BuildRequires:  pkgconfig(afb-helpers4)
 BuildRequires:  pkgconfig(afb-libcontroller)
 BuildRequires:  pkgconfig(libsystemd) >= 222
 
@@ -32,6 +33,16 @@ Requires:       afb-binder
 This binding provide a database API with key/value semantics.
 The backend is currently a Berkeley DB.
 
+%package redtest
+Summary: redtest package (coverage build)
+Requires: %{name}
+Requires: lcov
+Requires: afb-test-py
+Requires: afb-libpython
+
+%description redtest
+This package contains binaries built with coverage instrumentation.v
+
 %prep
 %autosetup -p 1
 
@@ -43,6 +54,9 @@ The backend is currently a Berkeley DB.
 export NO_BRP_STRIP_DEBUG="true"
 %afm_makeinstall
 
+mkdir -p %{buildroot}%{_libexecdir}/redtest/%{name}/
+cp ./redtest/run-redtest %{buildroot}%{_libexecdir}/redtest/%{name}/
+cp ./test/*.py          %{buildroot}%{_libexecdir}/redtest/%{name}/
 
 %check
 
@@ -51,10 +65,12 @@ export NO_BRP_STRIP_DEBUG="true"
 %files
 %afm_files
 
-%afm_package_test
+%files redtest
+%defattr(-,root,root)
+
+%{_libexecdir}/redtest/%{name}/*.py
+%{_libexecdir}/redtest/%{name}/run-redtest
+
 
 
 %%changelog
-
-
-
