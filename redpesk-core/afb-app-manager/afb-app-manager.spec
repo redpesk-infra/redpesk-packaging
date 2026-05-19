@@ -1,5 +1,5 @@
 #Archive: None
-#Hexsha: 26cbbddc1af13585fa8fd0f865dd901d32cb6885
+#Hexsha: 965babc4d808096315eed8e472b3135bd55efa2c
 #
 # spec file for package afb-app-manager
 #
@@ -31,8 +31,8 @@
 %define keep_rp_guest 0
 
 Name:           afb-app-manager
-Version:        12.5.1
-Release:        72%{?dist}
+Version:        12.7.0
+Release:        73%{?dist}
 License:        GPLv3
 Summary:        Micro service application manager
 Group:          Development/Libraries/C and C++
