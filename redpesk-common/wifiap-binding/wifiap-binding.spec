@@ -1,5 +1,5 @@
-#Archive: wifiap-binding-1.0.3.tar.gz
-#Hexsha: 858d566c7ba2dee6a820925e832bf93e33b033b8
+#Archive: wifiap-binding-1.0.4.tar.gz
+#Hexsha: 4e13d92ec2ed4fac031725fda789630eacdbb00a
 ###########################################################################
 # Copyright 2015 - 2026 IoT.bzh
 #
@@ -17,8 +17,8 @@
 ###########################################################################
 
 Name:    wifiap-binding
-Version: 1.0.3
-Release: 26%{?dist}
+Version: 1.0.4
+Release: 27%{?dist}
 Summary: Provide a Redpesk wifi Access Point Binding
 License: GPLv3
 URL:     https://github.com/redpesk/redpesk-common/wifiap-binding
