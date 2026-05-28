@@ -1,5 +1,5 @@
 #Archive: afb-libpython-2.2.2.tar.gz
-#Hexsha: fcbec25f025986bea2752bad1c9fa17bac58eee5
+#Hexsha: facab9a2f9284f6b217de35a3d5515ae7d5b345a
 Name:           afb-libpython
 Version:        2.2.2
 Release:        17%{?dist}

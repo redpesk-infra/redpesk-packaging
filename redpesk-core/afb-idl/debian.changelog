@@ -1,4 +1,4 @@
-afb-idl (0.4.2-1) stretch buster; urgency=medium
+afb-idl (0.5.0-1) stretch buster; urgency=medium
 
 * Version 0.2.0
   - [CI] Create MAINTAINERS file

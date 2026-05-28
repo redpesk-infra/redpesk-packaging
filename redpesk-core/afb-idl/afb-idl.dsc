@@ -2,7 +2,7 @@ Format: 1.0
 Source: afb-idl
 Binary: afb-idl
 Architecture: any
-Version: 0.4.2
+Version: 0.5.0
 Maintainer: José Bollo <jose.bollo@iot.bzh>
 Standards-Version: 3.8.2
 Homepage: https://github.com/redpesk-core/afb-idl
@@ -16,5 +16,5 @@ Build-Depends:
 Depends:
  mustach
 Files:
- afb-idl-0.4.2.tar.gz
+ afb-idl-0.5.0.tar.gz
 DEBTRANSFORM-RELEASE: 1
