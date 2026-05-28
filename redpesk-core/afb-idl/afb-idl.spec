@@ -1,11 +1,12 @@
+#Archive: None
+#Hexsha: 36bfcb0f910ee54f5a6038a3d9215b8ad151c7db
 #---------------------------------------------
 # spec file for package afb-idl
 #---------------------------------------------
 
 Name:           afb-idl
-#Hexsha:        f908ba5023180a8b78c5848b5745fd89428aca04
-Version:        0.4.2
-Release:        10%{?dist}
+Version:        0.5.0
+Release:        11%{?dist}
 License:        Apache-2.0
 Summary:        IDL for micro services
 Url:            https://github.com/redpesk-core/afb-idl
@@ -44,6 +45,7 @@ IDL for micro services
 %{_bindir}/afb-genskel
 %{_bindir}/afb-exprefs
 %{_bindir}/afb-json2c
+%{_libdir}/cmake/afb-genskel
 
 %{_bindir}/afb-fbgen
 %{_libexecdir}/bfbs2json
@@ -52,6 +54,9 @@ IDL for micro services
 
 #---------------------------------------------
 %changelog
+
+* Tue May 28 2026 José Bollo jose.bollo@iot.bzh 0.5.0
+- Package CMake package
 
 * Fri Nov 19 2021 José Bollo jose.bollo@iot.bzh 0.2.0
 - [CI] Create MAINTAINERS file
