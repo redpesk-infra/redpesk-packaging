@@ -1,12 +1,12 @@
 #Archive: None
-#Hexsha: 36bfcb0f910ee54f5a6038a3d9215b8ad151c7db
+#Hexsha: 7de7d70f322dd6d4cd2a1db0edd64054b97d45d3
 #---------------------------------------------
 # spec file for package afb-idl
 #---------------------------------------------
 
 Name:           afb-idl
-Version:        0.5.0
-Release:        11%{?dist}
+Version:        0.5.1
+Release:        12%{?dist}
 License:        Apache-2.0
 Summary:        IDL for micro services
 Url:            https://github.com/redpesk-core/afb-idl
@@ -45,12 +45,12 @@ IDL for micro services
 %{_bindir}/afb-genskel
 %{_bindir}/afb-exprefs
 %{_bindir}/afb-json2c
-%{_libdir}/cmake/afb-genskel
 
 %{_bindir}/afb-fbgen
 %{_libexecdir}/bfbs2json
 %{_libexecdir}/jfbsextr
 %{_datadir}/afb-idl
+%{_datadir}/cmake/afb-genskel
 
 #---------------------------------------------
 %changelog
