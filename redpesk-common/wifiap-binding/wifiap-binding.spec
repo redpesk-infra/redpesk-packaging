@@ -1,5 +1,5 @@
 #Archive: wifiap-binding-1.0.4.tar.gz
-#Hexsha: 4e13d92ec2ed4fac031725fda789630eacdbb00a
+#Hexsha: dc5fc1411349e34a82a4087c5ce8644e983d01c0
 ###########################################################################
 # Copyright 2015 - 2026 IoT.bzh
 #
@@ -95,6 +95,7 @@ cd ..
 %{_afmappdir}/%{name}/lib/
 %{_afmappdir}/%{name}/.rpconfig/
 %{_afmappdir}/%{name}/etc/wifiap-config.json
+%{_afmappdir}/%{name}/usr/share/polkit-1/rules.d/*daemon.rules
 %{_afmappdir}/%{name}/var/wifi_setup.sh
 %{_afmappdir}/%{name}/var/wifi_setup_test.sh
 
