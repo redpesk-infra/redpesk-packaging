@@ -1,8 +1,9 @@
+#Archive: None
+#Hexsha: 4dc2ff6336a735ec0ee17fb7e62fe8fa4dba3ded
 Name:           afb-cmake-modules
 # WARNING {name} is not used for tar file name in source nor for setup
 #         Check hard coded values required to match git directory naming
 BuildArchitectures: noarch
-#Hexsha: 4dc2ff6336a735ec0ee17fb7e62fe8fa4dba3ded
 Version: 10.0.10
 Release: 9%{?dist}
 License:        Apache-2.0

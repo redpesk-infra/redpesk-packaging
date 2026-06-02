@@ -1,5 +1,5 @@
-#Archive: wifiap-binding-1.0.4.tar.gz
-#Hexsha: dc5fc1411349e34a82a4087c5ce8644e983d01c0
+#Archive: wifiap-binding-1.0.5.tar.gz
+#Hexsha: 1c1be8a1842f592ba2613b187efada6d92dd1ff4
 ###########################################################################
 # Copyright 2015 - 2026 IoT.bzh
 #
@@ -17,8 +17,8 @@
 ###########################################################################
 
 Name:    wifiap-binding
-Version: 1.0.4
-Release: 27%{?dist}
+Version: 1.0.5
+Release: 28%{?dist}
 Summary: Provide a Redpesk wifi Access Point Binding
 License: GPLv3
 URL:     https://github.com/redpesk/redpesk-common/wifiap-binding
@@ -95,7 +95,8 @@ cd ..
 %{_afmappdir}/%{name}/lib/
 %{_afmappdir}/%{name}/.rpconfig/
 %{_afmappdir}/%{name}/etc/wifiap-config.json
-%{_afmappdir}/%{name}/usr/share/polkit-1/rules.d/*daemon.rules
+%{_datarootdir}/polkit-1/rules.d/nm-daemon.rules
+%{_datarootdir}/polkit-1/rules.d/fd-daemon.rules
 %{_afmappdir}/%{name}/var/wifi_setup.sh
 %{_afmappdir}/%{name}/var/wifi_setup_test.sh
 

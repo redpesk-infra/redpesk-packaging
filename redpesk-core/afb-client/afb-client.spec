@@ -1,9 +1,10 @@
+#Archive: None
+#Hexsha: 9d3a64505c9ff67e12783e50727e832bffcb27bc
 #---------------------------------------------
 # spec file for package afb-client
 #---------------------------------------------
 
 Name:           afb-client
-#Hexsha:        9d3a64505c9ff67e12783e50727e832bffcb27bc
 Version:        4.2.2
 Release:        16%{?dist}
 License:        GPL-3.0-only

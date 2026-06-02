@@ -1,7 +1,8 @@
+#Archive: None
+#Hexsha: 5c05dfed7a7550c1c82cff287d85aab34c7e5a9a
 %define debug_package %{nil}
 
 Name: afb-libhelpers
-#Hexsha: 5c05dfed7a7550c1c82cff287d85aab34c7e5a9a
 Version: 10.0.7
 Release: 22%{?dist}
 Summary: Helpers library for AFB

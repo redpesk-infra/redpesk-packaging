@@ -1,9 +1,10 @@
+#Archive: afb-test-10.2.0+20260601+2+gcadc64a.tar.gz
+#Hexsha: cadc64af629e535feb56b9f1bfda214fe2036ed0
 #
 # spec file for package app-afb-test
 #
 Name:           afb-test
-#Hexsha: 6f614a879ab1a52cc17574613c05b19cf088f970
-Version: 10.2.0+20241030+1+g6f614a8
+Version: 10.2.0+20260601+2+gcadc64a
 Release:        31%{?dist}
 License:        Apache-2.0
 Summary:        afb-test
@@ -21,6 +22,7 @@ BuildRequires:  pkgconfig(afb-libcontroller)
 BuildRequires:  pkgconfig(afb-libhelpers)
 BuildRequires:  pkgconfig(libsystemd) >= 222
 Requires:       jq
+Requires:       pkill
 
 %description
 afb-test is a test framework made to test other binding.
