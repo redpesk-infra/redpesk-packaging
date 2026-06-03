@@ -1,6 +1,7 @@
+#Archive: helloworld-binding-2.0.2+20260603+6+g91477b0.tar.gz
+#Hexsha: 91477b0e5ca038f0d8b74a8893a8f90191a03023
 Name:    helloworld-binding
-#Hexsha: 3ee09886f2a90d2edca0bdd604fb91432c17fb86
-Version: 2.0.2+20250930+1+g3ee0988
+Version: 2.0.2+20260603+6+g91477b0
 Release: 1%{?dist}
 License: Apache-2.0
 Summary: helloworld service set to be used in redpesk
