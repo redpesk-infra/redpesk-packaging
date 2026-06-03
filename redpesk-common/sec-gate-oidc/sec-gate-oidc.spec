@@ -1,8 +1,8 @@
-#Archive: sec-gate-oidc-2.0.0.tar.gz
-#Hexsha: 263e679ff0cebaf97f96e6057c8c6f9b38d024ce
+#Archive: sec-gate-oidc-2.0.1.tar.gz
+#Hexsha: 0241cf9a0e2d44d0e64ba370d8ce776901d553dd
 Name:       sec-gate-oidc
-Version:    2.0.0
-Release:    5%{?dist}
+Version:    2.0.1
+Release:    6%{?dist}
 License:    GPLv3
 Summary:    Demonstration of secure gateway for redpesk framework
 URL:        https://github.com/redpesk-common/sec-gate-oidc
