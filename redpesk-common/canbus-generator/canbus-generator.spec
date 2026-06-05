@@ -1,6 +1,7 @@
+#Archive: canbus-generator-2.0.1.tar.gz
+#Hexsha: 1b194fc305f312086ba70e5714114fd090047853
 
 Name: canbus-generator
-#Hexsha: 1b194fc305f312086ba70e5714114fd090047853
 Version: 2.0.1
 Release: 10%{?dist}
 Summary: Generate canbus-plugins source files

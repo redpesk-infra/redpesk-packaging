@@ -1,6 +1,7 @@
+#Archive: None
+#Hexsha: 2e3f9162c79bcfc91c1e959fc3aa1cf5da0ff006
 
 Name:	cloud-publication-binding
-#Hexsha: 2e3f9162c79bcfc91c1e959fc3aa1cf5da0ff006
 Version: 2.0.2+20210713+2+g2e3f916
 Release: 1%{?dist}
 Summary: Cloud Publication Binding

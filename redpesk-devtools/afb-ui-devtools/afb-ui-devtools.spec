@@ -1,5 +1,5 @@
 #Archive: afb-ui-devtools-1.1.0.tar.gz
-#Hexsha: e497291a709d3f855cfe1b7e14afb23a5905abc7
+#Hexsha: ad3bace4ade659998588260489c20246a7311baa
 %define debug_package %{nil}
 
 Name: afb-ui-devtools

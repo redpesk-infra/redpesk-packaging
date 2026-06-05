@@ -1,6 +1,7 @@
+#Archive: None
+#Hexsha: 12b6470c5e12e8e79aeadecf4f196a43910c0095
 
 Name: canopen-binding
-#Hexsha: 12b6470c5e12e8e79aeadecf4f196a43910c0095
 Version: 2.1.1
 Release: 34%{?dist}
 Summary: canopen-binding is a binding that allows the control of a CANopen field network
@@ -21,6 +22,7 @@ BuildRequires: liblely-coapp2
 Requires: afb-binder
 Requires: liblely-coapp2
 
+%global _lto_cflags %{?_lto_cflags} -ffat-lto-objects
 %global _afmappdir %{_prefix}/redpesk
 
 %description

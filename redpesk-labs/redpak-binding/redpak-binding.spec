@@ -1,5 +1,6 @@
+#Archive: redpak-binding-1.0.0+12+gb8f7fa4.tar.gz
+#Hexsha: b8f7fa4f6788cffa9ad5d6e95eb9b0468307b121
 Name:           redpak-binding
-#Hexsha:        b8f7fa4f6788cffa9ad5d6e95eb9b0468307b121
 Version:        1.0.0+12+gb8f7fa4
 Release: 2%{?dist}
 Summary:        This service aims to manage Rednode on target.

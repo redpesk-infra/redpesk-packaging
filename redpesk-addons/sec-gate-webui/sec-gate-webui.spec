@@ -1,7 +1,8 @@
+#Archive: None
+#Hexsha: d09667950cff935b34bd96d7dc4fb0e9229af23f
 %define debug_package %{nil}
 
 Name:sec-gate-webui
-#Hexsha: d09667950cff935b34bd96d7dc4fb0e9229af23f
 Version: 1.0.0
 Release: 1%{?dist}
 Summary: Web interface for the secure gateway

@@ -1,3 +1,5 @@
+#Archive: None
+#Hexsha: 8612491b2a22c8325ac8dc264406fd3b0e1e1ad7
 ###########################################################################
 # Copyright 2021 IoT.bzh
 #
@@ -24,7 +26,6 @@
 
 
 Name:       platform-runtime-tools
-#Hexsha: 8612491b2a22c8325ac8dc264406fd3b0e1e1ad7
 Version: 0.2.3
 Release: 5%{?dist}
 License:    GPL-3.0-only
