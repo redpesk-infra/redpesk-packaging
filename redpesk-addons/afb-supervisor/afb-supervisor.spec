@@ -1,9 +1,10 @@
+#Archive: None
+#Hexsha: 77dae0511885e25a77847c7090d2ddc9d5936c0c
 #---------------------------------------------
 # spec file for package afb-supervisor
 #---------------------------------------------
 
 Name:           afb-supervisor
-#Hexsha:   77dae0511885e25a77847c7090d2ddc9d5936c0c
 Version: 4.3.0
 Release: 12%{?dist}
 License:        GPL-3.0-only

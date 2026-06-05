@@ -1,5 +1,6 @@
-Name: spawn-binding
+#Archive: None
 #Hexsha: ec87517d77d9791202d7b2a30f2c20ad197b4ac7
+Name: spawn-binding
 Version: 2.0.1+3+gec87517
 Release: 11%{?dist}
 Summary: Shell execution within a secure container, optional output formatting

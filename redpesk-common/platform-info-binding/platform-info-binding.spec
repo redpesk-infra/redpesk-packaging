@@ -1,3 +1,5 @@
+#Archive: None
+#Hexsha: 94d4112237dc2cb8fd10226ff06d55f6def1f8fa
 ###########################################################################
 # Copyright 2021 IoT.bzh
 #
@@ -15,7 +17,6 @@
 ###########################################################################
 
 Name:    platform-info-binding
-#Hexsha: 94d4112237dc2cb8fd10226ff06d55f6def1f8fa
 Version: 9.0.2+9+g94d4112
 Release: 16%{?dist}
 License: GPL-3.0-only
@@ -51,6 +52,9 @@ This package contains binaries built with coverage instrumentation.
 %autosetup -p 1
 
 %build
+# redpesk build with and without coverage
+%if %{defined redpesk}
+
 # Build (no coverage)
 mkdir build-no-coverage && cd build-no-coverage
 %cmake \
@@ -69,7 +73,16 @@ mkdir build-coverage && cd build-coverage
 %cmake_build
 cd ..
 
+# SDK build, without coverage only (OpenSUSE doesn't like the cd shenanigans)
+%else
+
+%cmake -DCMAKE_BUILD_TYPE=Release -DAFM_APP_DIR=%{_afmappdir} .
+%cmake_build
+
+%endif
+
 %install
+%if %{defined redpesk}
 # Install (base package)
 cd build-no-coverage
 %cmake_install
@@ -83,22 +96,35 @@ cd build-coverage
 find . -name "*.gcno" -exec cp --parents {} %{buildroot}%{coverage_dir}/ \;
 cd ..
 
+%else
+
+%cmake_install
+rm %{buildroot}%{_libexecdir}/redtest/platform-info-binding/run-redtest
+rm %{buildroot}%{_libexecdir}/redtest/platform-info-binding/test-basic.py
+rm %{buildroot}%{_libexecdir}/redtest/platform-info-binding/test-event.py
+
+%endif
+
 %files
 %defattr(-,root,root)
+%dir %{_afmappdir}
 %dir %{_afmappdir}/%{name}
 %{_afmappdir}/%{name}/lib/
 %{_afmappdir}/%{name}/.rpconfig/
+%{_afmappdir}/%{name}/var/
 %{_afmappdir}/%{name}/var/afm_packages_installed.sh
 %{_afmappdir}/%{name}/var/packages_installed.sh
 %{_afmappdir}/%{name}/var/packages_number.sh
 
 
+%if %{defined redpesk}
 %files redtest
 %defattr(-,root,root)
 %{_libexecdir}/redtest/%{name}/run-redtest
 %{_libexecdir}/redtest/%{name}/test-basic.py
 %{_libexecdir}/redtest/%{name}/test-event.py
 %{coverage_dir}
+%endif
 
 %changelog
 * Thu Aug 07 2025 jobol <jobol@iot.bzh> 1.4.2

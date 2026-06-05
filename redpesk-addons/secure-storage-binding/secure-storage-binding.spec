@@ -1,5 +1,5 @@
 #Archive: secure-storage-binding-1.0.1.tar.gz
-#Hexsha: baaf983c12f6218c218fb567211bf2132a1dbe4c
+#Hexsha: 1d974e69a68fcc99659f4f456c7c1a53435af97d
 Name: secure-storage-binding
 Version: 1.0.1
 Release: 0%{?dist}

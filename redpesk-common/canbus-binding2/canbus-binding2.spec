@@ -1,8 +1,9 @@
+#Archive: None
+#Hexsha: bf49e6a22a83f5e6e1a3fa1c6e0db1f66f77815b
 Name: canbus-binding2
 %global _name      canbus-binding
 %global _afmappdir %{_prefix}/redpesk
 
-#Hexsha: bf49e6a22a83f5e6e1a3fa1c6e0db1f66f77815b
 Version: 2.0.5
 Release: 13%{?dist}
 Summary: Redpesk binding to connect to CAN-bus
@@ -74,7 +75,7 @@ A template to make plugins for the %{name}.
 %{_libdir}/libcanbus.so.*
 
 %files devel
-%dir %{_libdir}/pkgconfig
+#%dir %{_libdir}/pkgconfig
 %{_libdir}/libcanbus.so
 %{_libdir}/pkgconfig/*.pc
 %{_includedir}/*

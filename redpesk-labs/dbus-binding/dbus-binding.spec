@@ -1,5 +1,6 @@
-Name: dbus-binding
+#Archive: dbus-binding-1.0.0.tar.gz
 #Hexsha: eecd6b41b34865ec699f145f4d9216e8717b545d
+Name: dbus-binding
 Version: 1.0.0
 Release: 2%{?dist}
 Summary: Binding to serve an API connected to dbus

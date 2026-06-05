@@ -1,9 +1,10 @@
+#Archive: None
+#Hexsha: 4ca7f2409d6cfc03e3f5cef9c83f938264621da2
 
 Name: canbus-plugins-community2
 %global _name canbus-plugins-community
 %global _afmappdir %{_prefix}/redpesk
 
-#Hexsha: 4ca7f2409d6cfc03e3f5cef9c83f938264621da2
 Version: 2.0.2
 Release: 12%{?dist}
 Summary: Plugins for canbus-binding
