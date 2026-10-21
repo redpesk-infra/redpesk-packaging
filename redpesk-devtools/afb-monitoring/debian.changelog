@@ -1,0 +1,6 @@
+afb-monitoring (1.2.0) stretch buster; urgency=medium
+
+* Version 0.99.0
+  - creation
+
+ -- José Bollo jose.bollo@iot.bzh  Wed, 25 Mar 2026 10:21:56 +0100

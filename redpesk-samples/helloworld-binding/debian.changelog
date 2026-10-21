@@ -1,0 +1,10 @@
+helloworld-binding (0.7.0) unstable; urgency=low
+
+* Version 1.0.2
+  Fix debian packaging
+
+ -- José Bollo jose.bollo@iot.bzh  Tue, 16 May 2023 12:28:06 +0200
+
+  * Init build
+
+ -- Corentin LE GALL <corentin.legall@iot.bzh>  Wed, 05 May 2021 09:33:25 +0100

@@ -1,0 +1,5 @@
+sec-gate-oidc (1.6.1-0) unstable; urgency=low
+
+  * Fix openSUSE build
+
+ -- Ronan Le Martret <ronan.lemartret@iot.bzh>  Tue, 6 Jul 2021 10:50:38 +0100

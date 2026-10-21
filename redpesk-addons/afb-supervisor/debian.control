@@ -1,0 +1,20 @@
+Priority: medium
+Maintainer: José Bollo <jose.bollo@iot.bzh>
+Source: afb-supervisor
+Build-Depends:
+ debhelper (>= 5),
+ dpkg-dev,
+ pkg-config,	
+ cmake,
+ gcc,
+ libjson-c-dev,
+ libafb-dev (>= 5.0)
+Standards-Version: 3.8.2
+Homepage: https://github.com/redpesk-addons/afb-supervisor
+
+Package: afb-supervisor
+Section: libs
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: afb-supervisor
+

@@ -1,0 +1,32 @@
+Priority: optional
+Maintainer: unknown <unknown@debian.org>
+Source: canbus-binding2
+Build-Depends: debhelper (>= 5),pkg-config,	
+ cmake,
+ g++, 
+ afb-binding-dev,
+ libjson-c-dev,
+ librp-utils-dev,
+ afb-libhelpers4-dev,
+ afb-idl
+Standards-Version: 3.8.2
+Homepage: http://git.ovh.iot/redpesk/redpesk-common/canbus-binding
+
+Package: canbus-binding2-bin
+Section: libs
+Architecture: any
+Depends: afb-binder
+Description: canbus-binding2
+
+Package: canbus-binding2-dev
+Section: libs
+Architecture: any
+Depends: canbus-binding2-bin
+Description: canbus-binding-devel
+
+Package: canbus-plugins2-template
+Section: libs
+Architecture: any
+Depends: canbus-binding2-bin
+Description: canbus-plugins-template
+

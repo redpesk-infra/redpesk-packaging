@@ -1,0 +1,5 @@
+sec-gate-webui (1.0.0-0) unstable; urgency=low
+
+  * [CHANGE] Angular version & new url routing with #
+
+ -- rfernandez <rodrigo.fernandez@iot.bzh>

@@ -1,0 +1,4 @@
+usr/lib/*/libafb-binder.so
+usr/lib/*/pkgconfig/libafb-binder.pc
+usr/include/libafb-binder.h
+

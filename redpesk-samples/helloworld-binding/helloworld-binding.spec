@@ -1,0 +1,130 @@
+#Archive: helloworld-binding-2.0.2+20260925+16+g66436d2.tar.gz
+#Hexsha: 66436d25891a94103778584a876ffa6ff9d06284
+Name:    helloworld-binding
+Version: 2.0.2+20260925+16+g66436d2
+Release: 1%{?dist}
+License: MIT
+Summary: helloworld service set to be used in redpesk
+URL:     https://github.com/redpesk-samples/helloworld-binding
+Source:  %{name}-%{version}.tar.gz
+
+%bcond_with no_coverage
+%bcond_with cpp
+
+%if %{without no_coverage}
+# Coverage builds remap source paths outside the RPM build tree, which makes
+# automatic debugsource generation empty. Coverage data is provided by the
+# redtest subpackage instead.
+%global debug_package %{nil}
+%endif
+
+%if %{with cpp}
+%global cpp_build ON
+%else
+%global cpp_build OFF
+%endif
+
+%global _afmappdir %{_prefix}/redpesk
+
+%if %{without no_coverage}
+%global coverage_dir %{_libexecdir}/redtest/%{name}/coverage_data
+%global redtest_srcdir %{_libexecdir}/redtest/%{name}/sources
+%endif
+
+BuildRequires: cmake
+BuildRequires: gcc
+BuildRequires: gcc-c++
+%if %{without no_coverage}
+BuildRequires: lcov
+%endif
+BuildRequires: pkgconfig(json-c)
+BuildRequires: pkgconfig(afb-binding)
+
+%description
+Provides a simple API showcasing the basics of binding development
+
+%if %{without no_coverage}
+%package redtest
+Summary: redtest package (coverage build)
+Requires: %{name} = %{version}-%{release}
+Requires: lcov
+Requires: afb-test-py
+Requires: afb-libpython
+Requires: pkgconfig(afb-binding)
+Requires: python3-pip
+
+%description redtest
+This package contains binaries built with coverage instrumentation.
+%endif
+
+%prep
+%autosetup -p 1
+
+%build
+%if %{without no_coverage}
+# Remap build-time source paths to the source tree packaged with redtest.
+SRCROOT="$(pwd)"
+COVSRC="%{redtest_srcdir}"
+%endif
+
+mkdir build && cd build
+%cmake \
+  -DCPP=%{cpp_build} \
+  -DAFM_APP_DIR=%{_afmappdir} \
+%if %{without no_coverage}
+  -DCMAKE_BUILD_TYPE=Debug \
+  -DCMAKE_C_FLAGS="--coverage -fPIC -ffile-prefix-map=${SRCROOT}=${COVSRC} -fdebug-prefix-map=${SRCROOT}=${COVSRC}" \
+  -DCMAKE_CXX_FLAGS="--coverage -fPIC -ffile-prefix-map=${SRCROOT}=${COVSRC} -fdebug-prefix-map=${SRCROOT}=${COVSRC}" \
+%else
+  -DCMAKE_BUILD_TYPE=Release \
+%endif
+  ..
+%cmake_build
+cd ..
+
+%install
+# Install the selected implementation (C by default, C++ with --with cpp)
+cd build
+%cmake_install
+cd ..
+
+%if %{without no_coverage}
+# The main package already contains the instrumented binding used by redtest.
+# Preserve the CMake build directory in the coverage metadata layout. Runtime
+# .gcda files generated through GCOV_PREFIX/GCOV_PREFIX_STRIP keep this level
+# (for example redhat-linux-build/), so .gcno files must use the same path.
+mkdir -p %{buildroot}%{coverage_dir}
+cd build
+find %{__cmake_builddir} -name "*.gcno" \
+  -exec cp --parents {} %{buildroot}%{coverage_dir}/ \;
+cd ..
+
+# Install redtest scripts (for testing)
+install -Dm755 redtest/run-redtest %{buildroot}%{_libexecdir}/redtest/%{name}/run-redtest
+install -Dm644 redtest/tests.py %{buildroot}%{_libexecdir}/redtest/%{name}/tests.py
+
+# Install sources needed by coverage tools.
+mkdir -p %{buildroot}%{redtest_srcdir}
+cp -a src %{buildroot}%{redtest_srcdir}/
+%else
+# CMake installs these helper files unconditionally; remove them when
+# the redtest subpackage is disabled.
+rm -rf %{buildroot}%{_libexecdir}/redtest/%{name}
+%endif
+
+%files
+%defattr(-,root,root)
+%license LICENSE
+%doc README.md CHANGELOG
+%dir %{_afmappdir}/%{name}
+%{_afmappdir}/%{name}/lib/
+%{_afmappdir}/%{name}/.rpconfig/
+
+%if %{without no_coverage}
+%files redtest
+%defattr(-,root,root)
+%{_libexecdir}/redtest/%{name}/run-redtest
+%{_libexecdir}/redtest/%{name}/tests.py
+%{coverage_dir}
+%{redtest_srcdir}/src/*
+%endif

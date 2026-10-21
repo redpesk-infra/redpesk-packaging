@@ -1,0 +1,5 @@
+signal-composer-binding (10.0.4) unstable; urgency=low
+
+  * Init build
+
+ -- Marc-Antoine Riou <marc-antoine.riou@iot.bzh>  Wed, 16 Dec 2020 11:40:13 +0100

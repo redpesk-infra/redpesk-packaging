@@ -1,0 +1,22 @@
+afb-libhelpers (2.0-0) unstable; urgency=low
+
+* Version 10.0.0
+  - Update doc
+  - [DOCS] Remove github users account links
+  - Remove some unreachable link
+  - Remove packaging files
+  - Update doc and remove useless packaging files
+  - Fix a broken link
+  - [Doc] Typo Redpesk/redpesk #2025
+  - Merge divergent branches
+  - forced timer source to be free
+  - cleanup
+  - Upgrade wrap-json and add wrap-base64
+  - Fix when strncpy doesn't append null
+  - Version 10.0.0
+
+ -- José Bollo jose.bollo@iot.bzh  Thu, 17 Jun 2021 14:02:54 +0200
+
+  * init build
+
+ -- Romain Forlot <romain.forlot@iot.bzh>  Fri, 28 Dec 2018 10:50:38 +0100

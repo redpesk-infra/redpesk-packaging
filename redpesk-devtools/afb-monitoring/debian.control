@@ -1,0 +1,16 @@
+Source: afb-monitoring
+Maintainer: José Bollo <jose.bollo@iot.bzh>
+Section: libs
+Priority: optional
+Build-Depends:
+ debhelper (>= 5),
+ dpkg-dev,
+ cmake
+Standards-Version: 3.8.2
+Homepage: http://github.com/redpesk-core/afb-monitoring
+
+Package: afb-monitoring
+Section: libs
+Architecture: any
+Description: Monitoring files for afb-binder
+

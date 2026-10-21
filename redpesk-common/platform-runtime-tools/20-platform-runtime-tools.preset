@@ -1,0 +1,3 @@
+enable platform-os-detection.service
+enable platform-core-detection.service
+enable platform-devices-detection.service

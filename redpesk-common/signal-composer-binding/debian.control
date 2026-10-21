@@ -1,0 +1,29 @@
+Priority: optional
+Maintainer: Marc-Antoine Riou <marc-antoine.riou@iot.bzh>
+Source: signal-composer-binding
+Build-Depends: debhelper (>= 5),pkg-config,	
+ cmake,
+ afb-cmake-modules,
+ g++,
+ libsystemd-dev (>= 222),
+ afb-binding-dev,
+ libjson-c-dev,
+ liblua5.3-dev,
+ afb-libhelpers-dev,
+ afb-libcontroller-dev,
+ uuid-dev,
+Standards-Version: 3.8.2
+Homepage: https://github.com/redpesk-common/signal-composer-binding
+
+Package: signal-composer-binding
+Section: libs
+Architecture: any
+Depends:  afb-binder
+Description: signal composer binding
+
+Package: signal-composer-binding-dev
+Section: libs
+Architecture: any
+Depends: signal-composer-binding
+Description: signal composer binding dev 
+

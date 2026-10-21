@@ -1,0 +1,3 @@
+usr/include/spawn-binding/*.h
+usr/include/spawn-binding/lib/*.h
+usr/lib/*/pkgconfig/*.pc

@@ -1,0 +1,22 @@
+Priority: medium
+Maintainer: José Bollo <jose.bollo@iot.bzh>
+Source: afb-client
+Build-Depends:
+ debhelper (>= 5),
+ dpkg-dev,
+ pkg-config,	
+ cmake,
+ gcc,
+ libjson-c-dev,
+ libsystemd-dev,
+ libafbcli-dev,
+ libreadline-dev
+Standards-Version: 3.8.2
+Homepage: https://github.com/redpesk-core/afb-client
+
+Package: afb-client
+Section: libs
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: afb-client
+

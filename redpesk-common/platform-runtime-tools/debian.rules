@@ -1,0 +1,13 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+# Uncomment this to turn on verbose mode.
+export DH_VERBOSE=1
+export NAME=platform-runtime-tools
+export DEB_BASE_DIR=debian/$(NAME)
+
+%:
+	dh $@
+
+override_dh_auto_install:
+	install -d ${DEB_BASE_DIR}/etc/platform-info
+	dh_auto_install

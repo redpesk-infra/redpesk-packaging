@@ -1,0 +1,14 @@
+Source: sec-gate-webui
+Section: devel
+Priority: optional
+Version: 1.0.0
+Maintainer: Valentin Lefebvre <valentin.lefebvre@iot.bzh>
+Build-Depends:
+ debhelper (>= 10),
+ fdupes
+Standards-Version: 3.8.2
+Homepage: https://github.com/redpesk-common/sec-gate-webui
+
+Package: sec-gate-webui
+Architecture: any
+Description: Web interface for the secure gateway

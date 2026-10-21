@@ -1,0 +1,6 @@
+/usr/lib/*/libafb-helpers3.a
+/usr/lib/*/pkgconfig/afb-helpers3.pc
+/usr/lib/*/pkgconfig/afb-helpers.pc
+/usr/lib/*/pkgconfig/afb-libhelpers.pc
+/usr/include/afb-helpers/*
+

@@ -1,0 +1,10 @@
+afb-test (2.0-0) unstable; urgency=low
+
+* Version 9.99.1+60+gf9e75c0
+  Bump version 10.0.0
+
+ -- José Bollo jose.bollo@iot.bzh  Fri, 20 Jan 2023 17:46:51 +0100
+
+  * init build
+
+ -- Romain Forlot <romain.forlot@iot.bzh>  Thu, 25 Oct 2018 10:50:38 +0100
