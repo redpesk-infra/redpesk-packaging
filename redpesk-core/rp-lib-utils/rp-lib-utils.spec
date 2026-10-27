@@ -1,8 +1,8 @@
-#Archive: rp-lib-utils-0.4.1.tar.gz
-#Hexsha: 8097c3861127dc13a7aa3634a970fce11d98e43f
+#Archive: rp-lib-utils-0.4.2.tar.gz
+#Hexsha: a8841ee324752a0b31ae6a3a33e48cadae19a465
 Name: rp-lib-utils
-Version: 0.4.1
-Release: 41%{?dist}
+Version: 0.4.2
+Release: 42%{?dist}
 Summary: Library of utilities
 
 License: MIT

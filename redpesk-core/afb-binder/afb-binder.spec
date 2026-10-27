@@ -1,12 +1,12 @@
 #Archive: afb-binder-5.4.0.tar.gz
-#Hexsha: 8b68a427a16cbf93e1a4fc5dd7c5ab52a26f76f8
+#Hexsha: 4f0ffde2d01a160233bb3e09bf919d1585f6af4a
 #---------------------------------------------
 # spec file for package afb-binder
 #---------------------------------------------
 
 Name:     afb-binder
 Version:  5.4.0
-Release:  45%{?dist}
+Release:  46%{?dist}
 License:  GPL-3.0-only
 Summary:  Application framework binder
 Url:      https://github.com/redpesk-core/afb-binder

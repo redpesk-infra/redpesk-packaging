@@ -1,10 +1,10 @@
-#Archive: afb-ui-devtools-1.1.0+8+g635f43e.tar.gz
-#Hexsha: 635f43ea40732d5a0311b6c302ffe912b46ee8c0
+#Archive: afb-ui-devtools-1.2.0.tar.gz
+#Hexsha: 032431651bc021eb5dbdf219bc57511496ffb1a3
 %define debug_package %{nil}
 
 Name: afb-ui-devtools
-Version: 1.1.0+8+g635f43e
-Release: 6%{?dist}
+Version: 1.2.0
+Release: 7%{?dist}
 Summary: Web interface for the binder
 License: AFL-2.0
 Group:   Development/Tools/Other

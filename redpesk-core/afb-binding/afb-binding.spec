@@ -1,11 +1,11 @@
-#Archive: None
-#Hexsha: 486d6fd8df8cad264814722aa23d2f675772f9db
+#Archive: afb-binding-4.3.1.tar.gz
+#Hexsha: e10bf764569237dd939ac195407addfd8a206451
 #---------------------------------------------
 # spec file for package afb-binding
 #---------------------------------------------
 Name:           afb-binding
-Version:        4.3.0
-Release:        31%{?dist}
+Version:        4.3.1
+Release:        32%{?dist}
 License:        LGPL-3.0
 Summary:        Binding headers for Application Framework Binder
 Group:          Development/Libraries/C and C++

@@ -2,7 +2,7 @@ Format: 1.0
 Source: afb-ui-devtools
 Binary: afb-ui-devtools
 Architecture: any
-Version: 1.1.0+8+g635f43e
+Version: 1.2.0
 Maintainer: Valentin Lefebvre <valentin.lefebvre@iot.bzh>
 Standards-Version: 3.8.2
 #Homepage: https://github.com/redpesk-devtools/afb-ui-devtools
