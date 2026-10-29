@@ -1,8 +1,8 @@
-#Archive: None
-#Hexsha: 93df6a4c1b85202bfe9799fae56218ecd6227e41
+#Archive: red-pak-2.5.1.tar.gz
+#Hexsha: 459fc8727f02c35ba76fea3865d7668efa3d1d78
 Name:           red-pak
 Version:        2.5.1
-Release:        34%{?dist}
+Release:        35%{?dist}
 Summary:        red-pak
 License:        Apache-2.0
 URL:            https://github.com/redpesk-labs/red-pak
